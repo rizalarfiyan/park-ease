@@ -1,29 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Windows.Forms;
 
 namespace ParkEase.View
 {
     public partial class SplashScreen : Form
     {
-        private bool isClosing = false;
+        private List<string> informations = new List<string>();
 
         public SplashScreen()
         {
             InitializeComponent();
-            // Set the label text
-            labelLoadingInformation.Text = "Preparing the application ...";
-
-            // Create a new thread to rotate the text
-            Thread thread = new Thread(new ThreadStart(this.RotateText));
-            thread.Start();
+            InitializeLoadingInformation();
         }
 
-        private void RotateText()
+        private void InitializeLoadingInformation()
         {
-            // Create a list of text to rotate
-            List<string> texts = new List<string>()
+            this.informations = new List<string>()
             {
                 "Preparing the application ...",
                 "Optimizing performance ...",
@@ -33,35 +24,35 @@ namespace ParkEase.View
                 "Welcome to Park Ease!"
             };
 
-            // Create a random object outside the loop
-            Random random = new Random();
-
-            // Loop through the list and rotate the text
-            while (!isClosing)
-            {
-                // Get a random text from the list
-                int index = random.Next(texts.Count);
-                string text = texts[index];
-
-                // Check if the form handle has been created
-                if (this.IsHandleCreated)
-                {
-                    // Set the label text using Invoke to update UI from another thread
-                    this.Invoke((MethodInvoker)delegate
-                    {
-                        labelLoadingInformation.Text = text;
-                    });
-
-                    if (labelLoadingInformation.Text == "Welcome to Park Ease!")
-                    {
-                        Application.Run(new frmLogin());
-                    }
-                }
-
-                // Sleep for a random amount of time
-                Thread.Sleep(random.Next(1000, 5000));
-            }
+            labelLoadingInformation.Text = this.informations[0];
+            Thread thread = new Thread(new ThreadStart(this.ShowLoadingInformation));
+            thread.Start();
         }
 
+        private void ShowLoadingInformation()
+        {
+            Random random = new Random();
+
+            for (int idx = 0; idx < this.informations.Count; idx++)
+            {
+                if (this.IsHandleCreated)
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        labelLoadingInformation.Text = this.informations[idx];
+                    });
+                }
+
+                Thread.Sleep(random.Next(100, 600));
+            }
+
+            this.SplashScreenFinished();
+        }
+
+        private void SplashScreenFinished()
+        {
+            Application.Exit();
+            Application.Run(new frmLogin());
+        }
     }
 }
