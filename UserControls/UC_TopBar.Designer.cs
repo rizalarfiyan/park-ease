@@ -30,64 +30,64 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            pictureBox4 = new PictureBox();
+            Close = new PictureBox();
+            Maximize = new PictureBox();
+            Minimize = new PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Close).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Maximize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Minimize).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.FromArgb(226, 139, 0);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(pictureBox4);
+            panel1.Controls.Add(Close);
+            panel1.Controls.Add(Maximize);
+            panel1.Controls.Add(Minimize);
             panel1.Cursor = Cursors.Hand;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1054, 45);
             panel1.TabIndex = 0;
             // 
-            // pictureBox2
+            // Close
             // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox2.Image = Properties.Resources.icon_close;
-            pictureBox2.Location = new Point(1017, 10);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(25, 25);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
+            Close.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Close.Image = Properties.Resources.icon_close;
+            Close.Location = new Point(1017, 10);
+            Close.Name = "Close";
+            Close.Size = new Size(25, 25);
+            Close.SizeMode = PictureBoxSizeMode.StretchImage;
+            Close.TabIndex = 5;
+            Close.TabStop = false;
+            Close.Click += Close_Click;
             // 
-            // pictureBox1
+            // Maximize
             // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox1.Image = Properties.Resources.icon_maximize;
-            pictureBox1.Location = new Point(978, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(25, 25);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            Maximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Maximize.Image = Properties.Resources.icon_maximize;
+            Maximize.Location = new Point(978, 10);
+            Maximize.Name = "Maximize";
+            Maximize.Size = new Size(25, 25);
+            Maximize.SizeMode = PictureBoxSizeMode.StretchImage;
+            Maximize.TabIndex = 5;
+            Maximize.TabStop = false;
+            Maximize.Click += Maximize_Click;
             // 
-            // pictureBox4
+            // Minimize
             // 
-            pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox4.Image = Properties.Resources.icon_minimize;
-            pictureBox4.Location = new Point(936, 10);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(25, 25);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 5;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
+            Minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Minimize.Image = Properties.Resources.icon_minimize;
+            Minimize.Location = new Point(936, 10);
+            Minimize.Name = "Minimize";
+            Minimize.Size = new Size(25, 25);
+            Minimize.SizeMode = PictureBoxSizeMode.StretchImage;
+            Minimize.TabIndex = 5;
+            Minimize.TabStop = false;
+            Minimize.Click += Minimize_Click;
             // 
             // guna2Elipse1
             // 
@@ -102,17 +102,17 @@
             Name = "UC_TopBar";
             Size = new Size(1054, 45);
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Close).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Maximize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Minimize).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private PictureBox pictureBox4;
+        private PictureBox Minimize;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
+        private PictureBox Close;
+        private PictureBox Maximize;
         public Panel panel1;
     }
 }

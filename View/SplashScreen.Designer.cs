@@ -37,7 +37,7 @@
             pictureBox4 = new PictureBox();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
+            labelLoadingInformation = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -134,16 +134,16 @@
             label4.TabIndex = 4;
             label4.Text = "© 2023 - Now ParkEase. All right reserved.";
             // 
-            // label5
+            // labelLoadingInformation
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Ubuntu", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.ControlDarkDark;
-            label5.Location = new Point(35, 256);
-            label5.Name = "label5";
-            label5.Size = new Size(178, 18);
-            label5.TabIndex = 5;
-            label5.Text = "Preparing the application ...";
+            labelLoadingInformation.AutoSize = true;
+            labelLoadingInformation.Font = new Font("Ubuntu", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            labelLoadingInformation.ForeColor = SystemColors.ControlDarkDark;
+            labelLoadingInformation.Location = new Point(35, 256);
+            labelLoadingInformation.Name = "labelLoadingInformation";
+            labelLoadingInformation.Size = new Size(178, 18);
+            labelLoadingInformation.TabIndex = 5;
+            labelLoadingInformation.Text = "Preparing the application ...";
             // 
             // SplashScreen
             // 
@@ -151,7 +151,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 254, 234);
             ClientSize = new Size(1072, 708);
-            Controls.Add(label5);
+            Controls.Add(labelLoadingInformation);
             Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(label3);
@@ -180,6 +180,6 @@
         private PictureBox pictureBox4;
         private Label label3;
         private Label label4;
-        private Label label5;
+        private Label labelLoadingInformation;
     }
 }

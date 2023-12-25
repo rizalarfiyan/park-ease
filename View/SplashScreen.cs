@@ -13,7 +13,7 @@ namespace ParkEase.View
         {
             InitializeComponent();
             // Set the label text
-            label5.Text = "Preparing the application ...";
+            labelLoadingInformation.Text = "Preparing the application ...";
 
             // Create a new thread to rotate the text
             Thread thread = new Thread(new ThreadStart(this.RotateText));
@@ -49,10 +49,10 @@ namespace ParkEase.View
                     // Set the label text using Invoke to update UI from another thread
                     this.Invoke((MethodInvoker)delegate
                     {
-                        label5.Text = text;
+                        labelLoadingInformation.Text = text;
                     });
 
-                    if (label5.Text == "Welcome to Park Ease!")
+                    if (labelLoadingInformation.Text == "Welcome to Park Ease!")
                     {
                         Application.Run(new frmLogin());
                     }

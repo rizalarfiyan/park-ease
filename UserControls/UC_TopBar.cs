@@ -12,7 +12,7 @@ namespace ParkEase.UserControls
             InitializeComponent();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void Minimize_Click(object sender, EventArgs e)
         {
             if (FindForm() is Form parentForm)
             {
@@ -20,7 +20,7 @@ namespace ParkEase.UserControls
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void Maximize_Click(object sender, EventArgs e)
         {
             if (FindForm() is Form parentForm)
             {
@@ -35,10 +35,9 @@ namespace ParkEase.UserControls
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
     }
 }
