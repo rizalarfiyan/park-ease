@@ -127,6 +127,15 @@
   <data name="icon_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_close_oranye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-close-oranye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_location_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-location-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +145,14 @@
   <data name="icon_maximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-maximize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_maximize_oranye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-maximize-oranye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_minimize_oranye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-minimize-oranye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_parking_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-parking-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,7 +184,22 @@
   <data name="logo_park_ease" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-park-ease.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo_park_ease_oranye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-park-ease-oranye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parking_amico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parking-amico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Parking_bro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Parking-bro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="parking_picture_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\parking-picture-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sidebar_item_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sidebar_item_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wave_pictures" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wave-pictures.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

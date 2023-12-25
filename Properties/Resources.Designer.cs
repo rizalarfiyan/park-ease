@@ -73,6 +73,16 @@ namespace ParkEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icon_close_oranye {
+            get {
+                object obj = ResourceManager.GetObject("icon_close_oranye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icon_dashboards_active {
             get {
                 object obj = ResourceManager.GetObject("icon-dashboards-active", resourceCulture);
@@ -86,6 +96,26 @@ namespace ParkEase.Properties {
         public static System.Drawing.Bitmap icon_dashboards_default {
             get {
                 object obj = ResourceManager.GetObject("icon-dashboards-default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icon_eye {
+            get {
+                object obj = ResourceManager.GetObject("icon_eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icon_key {
+            get {
+                object obj = ResourceManager.GetObject("icon_key", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,29 @@ namespace ParkEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icon_maximize_oranye {
+            get {
+                object obj = ResourceManager.GetObject("icon_maximize_oranye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icon_minimize {
             get {
                 object obj = ResourceManager.GetObject("icon_minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icon_minimize_oranye {
+            get {
+                object obj = ResourceManager.GetObject("icon_minimize_oranye", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +283,59 @@ namespace ParkEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap logo_park_ease_oranye {
+            get {
+                object obj = ResourceManager.GetObject("logo_park_ease_oranye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Parking_amico {
+            get {
+                object obj = ResourceManager.GetObject("Parking_amico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Parking_bro {
+            get {
+                object obj = ResourceManager.GetObject("Parking_bro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap parking_picture_login {
+            get {
+                object obj = ResourceManager.GetObject("parking_picture_login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap sidebar_item_active {
             get {
                 object obj = ResourceManager.GetObject("sidebar_item_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap wave_pictures {
+            get {
+                object obj = ResourceManager.GetObject("wave_pictures", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
