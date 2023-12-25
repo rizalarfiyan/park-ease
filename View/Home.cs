@@ -1,6 +1,6 @@
 ﻿using Guna.UI2.WinForms;
-using ParkEase.Constants;
 using System.Runtime.InteropServices;
+
 
 namespace ParkEase.View
 {
@@ -9,7 +9,7 @@ namespace ParkEase.View
         public frmHome()
         {
             InitializeComponent();
-            this.Text = $"{App.APP_NAME} - Home";
+            //this.Text = $"{App.APP_NAME} - Home";
         }
 
         private void MoveImageBox(object sender)
@@ -22,29 +22,6 @@ namespace ParkEase.View
         private void guna2Button1_CheckedChanged(object sender, EventArgs e)
         {
             MoveImageBox(sender);
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
-
-            }
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;

@@ -56,19 +56,12 @@
             imgSlide = new PictureBox();
             pictureBox1 = new PictureBox();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            panel2 = new Panel();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            uC_TopBar1 = new UserControls.UC_TopBar();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgSlide).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2CustomGradientPanel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // guna2Elipse1
@@ -87,9 +80,9 @@
             panel1.Controls.Add(imgSlide);
             panel1.Controls.Add(pictureBox1);
             panel1.Font = new Font("Ubuntu", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            panel1.Location = new Point(0, 49);
+            panel1.Location = new Point(0, 44);
             panel1.Name = "panel1";
-            panel1.Size = new Size(244, 659);
+            panel1.Size = new Size(244, 664);
             panel1.TabIndex = 0;
             panel1.MouseDown += OnMouseDown;
             // 
@@ -338,7 +331,6 @@
             guna2CustomGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel1.AutoSize = true;
             guna2CustomGradientPanel1.BackColor = Color.FromArgb(255, 183, 3);
-            guna2CustomGradientPanel1.Controls.Add(panel2);
             guna2CustomGradientPanel1.Controls.Add(guna2Panel1);
             guna2CustomGradientPanel1.Cursor = Cursors.Hand;
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges3;
@@ -346,61 +338,12 @@
             guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(226, 139, 0);
             guna2CustomGradientPanel1.FillColor3 = Color.FromArgb(226, 139, 0);
             guna2CustomGradientPanel1.FillColor4 = Color.FromArgb(255, 244, 133);
-            guna2CustomGradientPanel1.Location = new Point(244, 0);
+            guna2CustomGradientPanel1.Location = new Point(239, 44);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2CustomGradientPanel1.Size = new Size(831, 708);
+            guna2CustomGradientPanel1.Size = new Size(831, 664);
             guna2CustomGradientPanel1.TabIndex = 1;
             guna2CustomGradientPanel1.MouseDown += OnMouseDown;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(226, 139, 0);
-            panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(pictureBox3);
-            panel2.Controls.Add(pictureBox4);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(831, 51);
-            panel2.TabIndex = 2;
-            panel2.MouseDown += OnMouseDown;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox2.Image = Properties.Resources.icon_close;
-            pictureBox2.Location = new Point(794, 12);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(25, 25);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox3.Image = Properties.Resources.icon_maximize;
-            pictureBox3.Location = new Point(758, 12);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(25, 25);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox4.Image = Properties.Resources.icon_minimize;
-            pictureBox4.Location = new Point(720, 12);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(25, 25);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
             // 
             // guna2Panel1
             // 
@@ -415,19 +358,30 @@
             guna2Panel1.TabIndex = 0;
             guna2Panel1.MouseDown += OnMouseDown;
             // 
+            // uC_TopBar1
+            // 
+            uC_TopBar1.Dock = DockStyle.Top;
+            uC_TopBar1.Location = new Point(0, 0);
+            uC_TopBar1.Name = "uC_TopBar1";
+            uC_TopBar1.Size = new Size(1072, 38);
+            uC_TopBar1.TabIndex = 2;
+            uC_TopBar1.MouseDown += OnMouseDown;
+            // 
             // frmHome
             // 
             AccessibleRole = AccessibleRole.RadioButton;
             AutoScaleMode = AutoScaleMode.None;
-            AutoSize = true;
             BackColor = Color.FromArgb(226, 139, 0);
+            BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(1072, 708);
+            Controls.Add(uC_TopBar1);
             Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(panel1);
             DoubleBuffered = true;
             Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
+            HelpButton = true;
             Margin = new Padding(3, 4, 3, 4);
             Name = "frmHome";
             StartPosition = FormStartPosition.CenterScreen;
@@ -438,10 +392,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2CustomGradientPanel1.ResumeLayout(false);
             guna2CustomGradientPanel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -458,10 +408,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private PictureBox imgSlide;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Panel panel2;
+        private UserControls.UC_TopBar uC_TopBar1;
     }
 }
