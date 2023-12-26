@@ -8,9 +8,65 @@ namespace ParkEase.Controller
     {
         private AuthRepository _repo;
 
+        //Directory.GetCurrentDirectory()
+        private readonly string persistanceAuthLocation = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath) ?? "./", ".persistanceauth");
+
         public AuthController()
         {
             _repo = new AuthRepository();
+        }
+
+        public string? GetPersistanceAuth()
+        {
+            try
+            {
+                string? getUserToken = File.ReadLines(persistanceAuthLocation).FirstOrDefault();
+                if (getUserToken != null)
+                {
+                    return getUserToken;
+                }
+            }
+            catch (IOException e)
+            {
+                System.Diagnostics.Debug.Print($"An error occurred while writing to the file: {e.Message}");
+            }
+
+            return null;
+        }
+
+        public void SetPersistanceAuth(string userToken)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(persistanceAuthLocation, false))
+                {
+                    writer.Write(userToken);
+                }
+            }
+            catch (IOException e)
+            {
+                System.Diagnostics.Debug.Print($"An error occurred while writing to the file: {e.Message}");
+            }
+        }
+
+        public void RemovePersistanceAuth()
+        {
+            try
+            {
+                if (File.Exists(persistanceAuthLocation))
+                {
+                    File.Delete(persistanceAuthLocation);
+                    System.Diagnostics.Debug.Print("File successfully deleted.");
+                }
+                else
+                {
+                    System.Diagnostics.Debug.Print("File does not exist.");
+                }
+            }
+            catch (IOException e)
+            {
+                System.Diagnostics.Debug.Print($"An error occurred while writing to the file: {e.Message}");
+            }
         }
 
         public void Login(string username, string password)
@@ -36,7 +92,8 @@ namespace ParkEase.Controller
                 throw new Exception(res.Message);
             }
 
-            //! Set session here
+            SetPersistanceAuth(res.Data.Token);
+            Program.UserToken = res.Data.Token;
             Program.UserData = new User()
             {
                 Id = res.Data.Id,

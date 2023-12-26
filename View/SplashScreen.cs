@@ -1,4 +1,6 @@
-﻿using ParkEase.Model.Repository;
+﻿using Guna.UI2.AnimatorNS;
+using ParkEase.Controller;
+using ParkEase.Model.Repository;
 
 namespace ParkEase.View
 {
@@ -14,9 +16,13 @@ namespace ParkEase.View
 
         private Task? authMeTask = null;
 
+        private AuthController _controller;
+
         public SplashScreen()
         {
             InitializeComponent();
+            _controller = new AuthController();
+            Program.UserToken = _controller.GetPersistanceAuth();
             InitializeLoadingInformation();
         }
 
@@ -36,7 +42,6 @@ namespace ParkEase.View
             Thread thread = new Thread(new ThreadStart(ShowLoadingInformation));
             thread.Start();
 
-            //! check session here
             authMeTask = Task.Run(async () => await AuthenticateAsync());
         }
 
@@ -58,7 +63,13 @@ namespace ParkEase.View
                 var data = await new AuthRepository().Me();
                 if (data == null)
                 {
+                    _controller.RemovePersistanceAuth();
                     return;
+                }
+
+                if (data.Data == null)
+                {
+                    _controller.RemovePersistanceAuth();
                 }
 
                 if (data.Data != null)
@@ -68,12 +79,12 @@ namespace ParkEase.View
                 }
 
                 isFinished = true;
-                System.Diagnostics.Debug.Print("Authentication successful!");
+                System.Diagnostics.Debug.Print("Check user successful!");
             }
             catch (Exception ex)
             {
                 errorMessage = ex.Message;
-                System.Diagnostics.Debug.Print($"Error during authentication: {ex.Message}");
+                System.Diagnostics.Debug.Print($"Error during check user: {ex.Message}");
             }
         }
 
