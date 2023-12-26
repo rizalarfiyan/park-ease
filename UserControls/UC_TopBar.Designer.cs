@@ -49,17 +49,19 @@
             panel1.Controls.Add(Minimize);
             panel1.Cursor = Cursors.Hand;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1054, 45);
+            panel1.Size = new Size(922, 34);
             panel1.TabIndex = 0;
             // 
             // Close
             // 
             Close.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Close.Image = Properties.Resources.icon_close;
-            Close.Location = new Point(1017, 10);
+            Close.Location = new Point(890, 8);
+            Close.Margin = new Padding(3, 2, 3, 2);
             Close.Name = "Close";
-            Close.Size = new Size(25, 25);
+            Close.Size = new Size(22, 19);
             Close.SizeMode = PictureBoxSizeMode.StretchImage;
             Close.TabIndex = 5;
             Close.TabStop = false;
@@ -69,9 +71,10 @@
             // 
             Maximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Maximize.Image = Properties.Resources.icon_maximize;
-            Maximize.Location = new Point(978, 10);
+            Maximize.Location = new Point(856, 8);
+            Maximize.Margin = new Padding(3, 2, 3, 2);
             Maximize.Name = "Maximize";
-            Maximize.Size = new Size(25, 25);
+            Maximize.Size = new Size(22, 19);
             Maximize.SizeMode = PictureBoxSizeMode.StretchImage;
             Maximize.TabIndex = 5;
             Maximize.TabStop = false;
@@ -81,9 +84,10 @@
             // 
             Minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Minimize.Image = Properties.Resources.icon_minimize;
-            Minimize.Location = new Point(936, 10);
+            Minimize.Location = new Point(819, 8);
+            Minimize.Margin = new Padding(3, 2, 3, 2);
             Minimize.Name = "Minimize";
-            Minimize.Size = new Size(25, 25);
+            Minimize.Size = new Size(22, 19);
             Minimize.SizeMode = PictureBoxSizeMode.StretchImage;
             Minimize.TabIndex = 5;
             Minimize.TabStop = false;
@@ -96,11 +100,12 @@
             // 
             // UC_TopBar
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_TopBar";
-            Size = new Size(1054, 45);
+            Size = new Size(922, 34);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Close).EndInit();
             ((System.ComponentModel.ISupportInitialize)Maximize).EndInit();

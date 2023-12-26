@@ -6,6 +6,7 @@ namespace ParkEase
     internal static class Program
     {
         public static User? UserData = null;
+        public static string? UserToken = null;
 
         /// <summary>
         ///  The main entry point for the application.

@@ -10,6 +10,7 @@ namespace ParkEase.View
         {
             InitializeComponent();
             //this.Text = $"{App.APP_NAME} - Home";
+            System.Diagnostics.Debug.Print($"{Program.UserData?.Id} - {Program.UserData?.Username} - {Program.UserData?.Name} - {Program.UserData?.Role} - {Program.UserData?.Status}");
         }
 
         private void MoveImageBox(object sender)

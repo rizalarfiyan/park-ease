@@ -19,5 +19,17 @@ namespace ParkEase.Model.Repository
             var res = await _api.ExecuteAsync<BaseResponse<User>>(req);
             return res.Data;
         }
+
+        public BaseResponse<AuthLogin>? Login(string username, string password)
+        {
+            var req = new RestRequest("/auth/login", Method.Post);
+            req.AddJsonBody(new
+            {
+                username,
+                password
+            });
+            var res = _api.Execute<BaseResponse<AuthLogin>>(req);
+            return res.Data;
+        }
     }
 }
