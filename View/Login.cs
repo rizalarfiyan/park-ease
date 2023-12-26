@@ -32,7 +32,9 @@ namespace ParkEase.View
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } finally {
+            }
+            finally
+            {
                 btnLogin.Enabled = true;
                 txtPassword.Text = "";
             }
