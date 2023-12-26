@@ -36,6 +36,7 @@ namespace ParkEase.View
             Thread thread = new Thread(new ThreadStart(ShowLoadingInformation));
             thread.Start();
 
+            //! check session here
             authMeTask = Task.Run(async () => await AuthenticateAsync());
         }
 
