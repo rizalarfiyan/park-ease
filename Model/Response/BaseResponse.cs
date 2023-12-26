@@ -1,22 +1,17 @@
-﻿using RestSharp;
+﻿using System.Text.Json.Serialization;
 
 namespace ParkEase.Model.Response
 {
     public class BaseResponse<T>
     {
-        public BaseResponse(RestResponse<BaseResponse<T>> res)
-        {
-            if (res.Data != null)
-            {
-                this.Code = res.Data.Code;
-                this.Message = res.Data.Message;
-                this.Data = res.Data.Data;
-            }
-        }
-
+        [JsonPropertyName("code")]
         public int Code { get; set; }
+
+        [JsonPropertyName("message")]
+        public required string Message { get; set; }
+
+        [JsonPropertyName("data")]
         public T? Data { get; set; }
-        public string? Message { get; set; }
 
         public bool IsErrorConfirmation()
         {
@@ -27,18 +22,23 @@ namespace ParkEase.Model.Response
 
     public class BaseResponsePagination<T> : BaseResponse<T>
     {
-        public BaseResponsePagination(RestResponse<BaseResponse<T>> res) : base(res)
-        {
-        }
 
-        public Metadata? Metadata { get; set; }
+        [JsonPropertyName("metadata")]
+        public required Metadata Metadata { get; set; }
     }
 
     public partial class Metadata
     {
+        [JsonPropertyName("has_next")]
         public bool HasNext { get; set; }
+
+        [JsonPropertyName("page")]
         public int Page { get; set; }
+
+        [JsonPropertyName("per_page")]
         public int PerPage { get; set; }
+
+        [JsonPropertyName("total")]
         public int Total { get; set; }
     }
 }

@@ -1,9 +1,12 @@
+using ParkEase.Model.Entity;
 using ParkEase.View;
 
 namespace ParkEase
 {
     internal static class Program
     {
+        public static User? UserData = null;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

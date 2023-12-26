@@ -14,6 +14,8 @@ namespace ParkEase.Libs
         public RestClient Get()
         {
             //! FIX ME LATER add header
+            _api.AddDefaultHeader("Content-Type", "application/json");
+            _api.AddDefaultHeader("Accept", "application/json");
             return _api;
         }
     }
