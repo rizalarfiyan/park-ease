@@ -202,6 +202,18 @@
   <data name="sidebar_item_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sidebar_item_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="String" xml:space="preserve">
+    <value>&lt;data name="picture_changepassword" type="System.Resources.ResXFileRef, System.Windows.Forms"&gt;</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>&lt;value&gt;..\Resources\picture-changepassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&lt;/value&gt;</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>&gt;&gt;&gt;&gt;&gt;&gt;&gt; master</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>&lt;/data&gt;</value>
+  </data>
   <data name="wave_pictures" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wave-pictures.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
