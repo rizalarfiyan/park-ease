@@ -323,6 +323,16 @@ namespace ParkEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap picture_changepassword {
+            get {
+                object obj = ResourceManager.GetObject("picture_changepassword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap picture_entry {
             get {
                 object obj = ResourceManager.GetObject("picture_entry", resourceCulture);
