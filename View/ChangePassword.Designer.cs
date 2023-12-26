@@ -47,13 +47,11 @@
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            label3 = new Label();
             label2 = new Label();
             label1 = new Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -94,13 +92,11 @@
             // 
             guna2CustomGradientPanel1.AutoSize = true;
             guna2CustomGradientPanel1.BackColor = Color.White;
-            guna2CustomGradientPanel1.Controls.Add(linkLabel1);
             guna2CustomGradientPanel1.Controls.Add(pictureBox1);
             guna2CustomGradientPanel1.Controls.Add(guna2TextBox3);
             guna2CustomGradientPanel1.Controls.Add(guna2TextBox1);
             guna2CustomGradientPanel1.Controls.Add(guna2TextBox2);
             guna2CustomGradientPanel1.Controls.Add(guna2Button1);
-            guna2CustomGradientPanel1.Controls.Add(label3);
             guna2CustomGradientPanel1.Controls.Add(label2);
             guna2CustomGradientPanel1.Controls.Add(label1);
             guna2CustomGradientPanel1.Controls.Add(guna2Panel1);
@@ -115,18 +111,6 @@
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2CustomGradientPanel1.Size = new Size(536, 617);
             guna2CustomGradientPanel1.TabIndex = 5;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Ubuntu", 7F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel1.LinkColor = SystemColors.ControlDarkDark;
-            linkLabel1.Location = new Point(156, 545);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(80, 16);
-            linkLabel1.TabIndex = 5;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Back to login";
             // 
             // pictureBox1
             // 
@@ -258,19 +242,6 @@
             guna2Button1.TabIndex = 3;
             guna2Button1.Text = "Change Password";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(255, 254, 234);
-            label3.Font = new Font("Ubuntu", 7F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlDarkDark;
-            label3.Location = new Point(94, 545);
-            label3.Name = "label3";
-            label3.Size = new Size(62, 16);
-            label3.TabIndex = 2;
-            label3.Text = "Not sure?";
-            label3.TextAlign = ContentAlignment.TopCenter;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -346,8 +317,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Label label3;
-        private LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
     }
 }
