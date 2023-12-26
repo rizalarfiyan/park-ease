@@ -53,7 +53,7 @@
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             tableLayoutPanel1 = new TableLayoutPanel();
-            uC_TopBar1 = new UserControls.UC_TopBar();
+            ucTopBar = new UserControls.UC_TopBar();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lblLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lblIllustrator).BeginInit();
@@ -112,7 +112,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
-            txtPassword.PlaceholderText = "*******";
+            txtPassword.PlaceholderText = "Password";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtPassword.Size = new Size(360, 46);
@@ -266,14 +266,14 @@
             tableLayoutPanel1.Size = new Size(938, 489);
             tableLayoutPanel1.TabIndex = 5;
             // 
-            // uC_TopBar1
+            // ucTopBar
             // 
-            uC_TopBar1.Dock = DockStyle.Top;
-            uC_TopBar1.Location = new Point(0, 0);
-            uC_TopBar1.Margin = new Padding(3, 2, 3, 2);
-            uC_TopBar1.Name = "uC_TopBar1";
-            uC_TopBar1.Size = new Size(938, 42);
-            uC_TopBar1.TabIndex = 4;
+            ucTopBar.Dock = DockStyle.Top;
+            ucTopBar.Location = new Point(0, 0);
+            ucTopBar.Margin = new Padding(3, 2, 3, 2);
+            ucTopBar.Name = "ucTopBar";
+            ucTopBar.Size = new Size(938, 42);
+            ucTopBar.TabIndex = 4;
             // 
             // frmLogin
             // 
@@ -282,7 +282,7 @@
             BackColor = Color.FromArgb(255, 254, 234);
             ClientSize = new Size(938, 531);
             Controls.Add(tableLayoutPanel1);
-            Controls.Add(uC_TopBar1);
+            Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmLogin";
@@ -310,6 +310,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private TableLayoutPanel tableLayoutPanel1;
-        private UserControls.UC_TopBar uC_TopBar1;
+        private UserControls.UC_TopBar ucTopBar;
     }
 }
