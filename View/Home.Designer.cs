@@ -58,6 +58,7 @@
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             uC_TopBar1 = new UserControls.UC_TopBar();
+            uC_Header1 = new UserControls.UC_Header();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgSlide).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -331,13 +332,10 @@
             guna2CustomGradientPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2CustomGradientPanel1.AutoSize = true;
             guna2CustomGradientPanel1.BackColor = Color.FromArgb(255, 183, 3);
+            guna2CustomGradientPanel1.Controls.Add(uC_Header1);
             guna2CustomGradientPanel1.Controls.Add(guna2Panel1);
             guna2CustomGradientPanel1.Cursor = Cursors.Hand;
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges3;
-            guna2CustomGradientPanel1.FillColor = Color.FromArgb(226, 139, 0);
-            guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(226, 139, 0);
-            guna2CustomGradientPanel1.FillColor3 = Color.FromArgb(226, 139, 0);
-            guna2CustomGradientPanel1.FillColor4 = Color.FromArgb(255, 244, 133);
             guna2CustomGradientPanel1.Location = new Point(239, 44);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -366,6 +364,15 @@
             uC_TopBar1.Size = new Size(1072, 38);
             uC_TopBar1.TabIndex = 2;
             uC_TopBar1.MouseDown += OnMouseDown;
+            // 
+            // uC_Header1
+            // 
+            uC_Header1.BackColor = Color.White;
+            uC_Header1.Dock = DockStyle.Top;
+            uC_Header1.Location = new Point(0, 0);
+            uC_Header1.Name = "uC_Header1";
+            uC_Header1.Size = new Size(831, 89);
+            uC_Header1.TabIndex = 1;
             // 
             // frmHome
             // 
@@ -410,5 +417,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private UserControls.UC_TopBar uC_TopBar1;
+        private UserControls.UC_Header uC_Header1;
     }
 }
