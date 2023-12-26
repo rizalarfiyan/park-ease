@@ -252,9 +252,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1072, 708);
-            Controls.Add(uC_TopBar1);
-            Controls.Add(guna2CustomGradientPanel1);
             Controls.Add(guna2PictureBox1);
+            Controls.Add(guna2CustomGradientPanel1);
+            Controls.Add(uC_TopBar1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
