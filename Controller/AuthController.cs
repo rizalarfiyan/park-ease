@@ -8,7 +8,6 @@ namespace ParkEase.Controller
     {
         private AuthRepository _repo;
 
-        //Directory.GetCurrentDirectory()
         private readonly string persistanceAuthLocation = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath) ?? "./", ".persistanceauth");
 
         public AuthController()
