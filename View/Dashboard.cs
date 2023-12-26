@@ -1,15 +1,15 @@
 ﻿using Guna.UI2.WinForms;
 using System.Runtime.InteropServices;
-
+using ParkEase.Constants;
 
 namespace ParkEase.View
 {
-    public partial class frmHome : Form
+    public partial class frmDashboard : Form
     {
-        public frmHome()
+        public frmDashboard()
         {
             InitializeComponent();
-            //this.Text = $"{App.APP_NAME} - Home";
+            this.Text = $"{App.APP_NAME} - Dashboard";
             System.Diagnostics.Debug.Print($"{Program.UserData?.Id} - {Program.UserData?.Username} - {Program.UserData?.Name} - {Program.UserData?.Role} - {Program.UserData?.Status}");
         }
 

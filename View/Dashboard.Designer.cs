@@ -1,6 +1,6 @@
 ﻿namespace ParkEase.View
 {
-    partial class frmHome
+    partial class frmDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -374,7 +374,7 @@
             uC_Header1.Size = new Size(831, 89);
             uC_Header1.TabIndex = 1;
             // 
-            // frmHome
+            // frmDashboard
             // 
             AccessibleRole = AccessibleRole.RadioButton;
             AutoScaleMode = AutoScaleMode.None;
@@ -390,7 +390,7 @@
             FormBorderStyle = FormBorderStyle.None;
             HelpButton = true;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "frmHome";
+            Name = "frmDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Home";
             MouseDown += OnMouseDown;

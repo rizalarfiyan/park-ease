@@ -124,7 +124,7 @@ namespace ParkEase.View
             Application.Exit();
             if (isLoggedIn)
             {
-                Application.Run(new frmHome());
+                Application.Run(new frmDashboard());
                 return;
             }
             Application.Run(new frmLogin());

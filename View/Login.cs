@@ -25,8 +25,8 @@ namespace ParkEase.View
             try
             {
                 _controller.Login(username, password);
-                var home = new frmHome();
-                home.Show();
+                var dashboard = new frmDashboard();
+                dashboard.Show();
                 this.Hide();
             }
             catch (Exception ex)
