@@ -1,67 +1,121 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Windows.Forms;
+﻿using ParkEase.Model.Repository;
 
 namespace ParkEase.View
 {
     public partial class SplashScreen : Form
     {
-        private bool isClosing = false;
+        private List<string> informations = new List<string>();
+
+        private bool isLoggedIn = false;
+
+        private bool isFinished = false;
+
+        private string errorMessage = "Could't connect to server, please try again later!";
+
+        private Task? authMeTask = null;
 
         public SplashScreen()
         {
             InitializeComponent();
-            // Set the label text
-            labelLoadingInformation.Text = "Preparing the application ...";
-
-            // Create a new thread to rotate the text
-            Thread thread = new Thread(new ThreadStart(this.RotateText));
-            thread.Start();
+            InitializeLoadingInformation();
         }
 
-        private void RotateText()
+        private void InitializeLoadingInformation()
         {
-            // Create a list of text to rotate
-            List<string> texts = new List<string>()
+            informations = new List<string>()
             {
                 "Preparing the application ...",
                 "Optimizing performance ...",
                 "Establishing secure connection ...",
                 "Loading essential resources ...",
                 "Completing final touches ...",
-                "Welcome to Park Ease!"
+                "Getting User info ...",
             };
 
-            // Create a random object outside the loop
-            Random random = new Random();
+            labelLoadingInformation.Text = informations[0];
+            Thread thread = new Thread(new ThreadStart(ShowLoadingInformation));
+            thread.Start();
 
-            // Loop through the list and rotate the text
-            while (!isClosing)
+            authMeTask = Task.Run(async () => await AuthenticateAsync());
+        }
+
+        private void SetLoadingInformation(string message)
+        {
+            if (this.IsHandleCreated)
             {
-                // Get a random text from the list
-                int index = random.Next(texts.Count);
-                string text = texts[index];
-
-                // Check if the form handle has been created
-                if (this.IsHandleCreated)
+                this.Invoke((MethodInvoker)delegate
                 {
-                    // Set the label text using Invoke to update UI from another thread
-                    this.Invoke((MethodInvoker)delegate
-                    {
-                        labelLoadingInformation.Text = text;
-                    });
-
-                    if (labelLoadingInformation.Text == "Welcome to Park Ease!")
-                    {
-                        Application.Run(new frmLogin());
-                    }
-                }
-
-                // Sleep for a random amount of time
-                Thread.Sleep(random.Next(1000, 5000));
+                    labelLoadingInformation.Text = message;
+                });
             }
         }
 
+        async Task AuthenticateAsync()
+        {
+            try
+            {
+                var data = await new AuthRepository().Me();
+                if (data == null)
+                {
+                    return;
+                }
+
+                if (data.Data != null)
+                {
+                    Program.UserData = data.Data;
+                    isLoggedIn = true;
+                }
+
+                isFinished = true;
+                System.Diagnostics.Debug.Print("Authentication successful!");
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                System.Diagnostics.Debug.Print($"Error during authentication: {ex.Message}");
+            }
+        }
+
+        private void ShowLoadingInformation()
+        {
+            Random random = new Random();
+
+            for (int idx = 0; idx < informations.Count; idx++)
+            {
+                SetLoadingInformation(informations[idx]);
+                Thread.Sleep(random.Next(800, 2500));
+            }
+
+            if (authMeTask != null && !authMeTask.IsCompleted)
+            {
+                authMeTask.Wait();
+            }
+
+            if (isFinished)
+            {
+                SetLoadingInformation("Welcome to Park Ease!");
+                Thread.Sleep(random.Next(300, 1200));
+
+                SplashScreenFinished();
+                return;
+            }
+
+            DialogResult dialog = MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            if (dialog == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void SplashScreenFinished()
+        {
+            Application.Exit();
+            if (isLoggedIn)
+            {
+                Application.Run(new frmHome());
+                return;
+            }
+            Application.Run(new frmLogin());
+        }
     }
 }
