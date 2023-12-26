@@ -22,42 +22,21 @@ namespace ParkEase.View
 
         private void InitializeLoadingInformation()
         {
-            this.informations = new List<string>()
+            informations = new List<string>()
             {
                 "Preparing the application ...",
                 "Optimizing performance ...",
                 "Establishing secure connection ...",
                 "Loading essential resources ...",
-                "Completing final touches ..."
+                "Completing final touches ...",
+                "Getting User info ...",
             };
 
-            labelLoadingInformation.Text = this.informations[0];
-            Thread thread = new Thread(new ThreadStart(this.ShowLoadingInformation));
+            labelLoadingInformation.Text = informations[0];
+            Thread thread = new Thread(new ThreadStart(ShowLoadingInformation));
             thread.Start();
 
-            authMeTask = Task.Run(async () =>
-            {
-                try
-                {
-                    var data = await new AuthRepository().Me();
-                    if (data == null)
-                    {
-                        return;
-                    }
-
-                    if (data.Data != null)
-                    {
-                        Program.UserData = data.Data;
-                        isLoggedIn = true;
-                    }
-
-                    isFinished = true;
-                }
-                catch (Exception ex)
-                {
-                    errorMessage = ex.Message;
-                }
-            });
+            authMeTask = Task.Run(async () => await AuthenticateAsync());
         }
 
         private void SetLoadingInformation(string message)
@@ -71,14 +50,40 @@ namespace ParkEase.View
             }
         }
 
+        async Task AuthenticateAsync()
+        {
+            try
+            {
+                var data = await new AuthRepository().Me();
+                if (data == null)
+                {
+                    return;
+                }
+
+                if (data.Data != null)
+                {
+                    Program.UserData = data.Data;
+                    isLoggedIn = true;
+                }
+
+                isFinished = true;
+                System.Diagnostics.Debug.Print("Authentication successful!");
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
+                System.Diagnostics.Debug.Print($"Error during authentication: {ex.Message}");
+            }
+        }
+
         private void ShowLoadingInformation()
         {
             Random random = new Random();
 
-            for (int idx = 0; idx < this.informations.Count; idx++)
+            for (int idx = 0; idx < informations.Count; idx++)
             {
-                SetLoadingInformation(this.informations[idx]);
-                Thread.Sleep(random.Next(300, 1200));
+                SetLoadingInformation(informations[idx]);
+                Thread.Sleep(random.Next(800, 2500));
             }
 
             if (authMeTask != null && !authMeTask.IsCompleted)
@@ -91,7 +96,7 @@ namespace ParkEase.View
                 SetLoadingInformation("Welcome to Park Ease!");
                 Thread.Sleep(random.Next(300, 1200));
 
-                this.SplashScreenFinished();
+                SplashScreenFinished();
                 return;
             }
 
