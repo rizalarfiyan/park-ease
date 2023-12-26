@@ -199,9 +199,12 @@
   <data name="picture_changepassword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picture-changepassword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+<<<<<<< HEAD
   <data name="picture_entry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\picture-entry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+=======
+>>>>>>> 8b7a23afab89ffd88fba888d6eb9901b63984ec9
   <data name="sidebar_item_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sidebar_item_active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
