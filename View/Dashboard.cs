@@ -23,7 +23,7 @@ namespace ParkEase.View
         private void MoveImageBox(object sender)
         {
             Guna2Button btn = (Guna2Button)sender;
-            imgSlide.Location = new Point(btn.Location.X + 33, btn.Location.Y - 22);
+            imgSlide.Location = new Point(btn.Location.X + 58, btn.Location.Y - 22);
             imgSlide.SendToBack();
         }
 
