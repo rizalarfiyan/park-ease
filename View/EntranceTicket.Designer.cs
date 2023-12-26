@@ -325,6 +325,8 @@
             // guna2TextBox4
             // 
             guna2TextBox4.Anchor = AnchorStyles.None;
+            guna2TextBox4.AutoScroll = true;
+            guna2TextBox4.AutoSize = true;
             guna2TextBox4.BackColor = Color.Transparent;
             guna2TextBox4.BorderColor = Color.FromArgb(255, 249, 197);
             guna2TextBox4.BorderRadius = 15;
@@ -343,15 +345,16 @@
             guna2TextBox4.HoverState.BorderColor = Color.Transparent;
             guna2TextBox4.IconLeftOffset = new Point(10, 0);
             guna2TextBox4.IconRightOffset = new Point(10, 0);
-            guna2TextBox4.Location = new Point(168, 422);
-            guna2TextBox4.Margin = new Padding(3, 5, 3, 5);
+            guna2TextBox4.Location = new Point(168, 421);
+            guna2TextBox4.Margin = new Padding(0);
             guna2TextBox4.Name = "guna2TextBox4";
+            guna2TextBox4.Padding = new Padding(0, 0, 0, 10);
             guna2TextBox4.PasswordChar = '\0';
             guna2TextBox4.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
             guna2TextBox4.PlaceholderText = " ";
             guna2TextBox4.SelectedText = "";
             guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox4.Size = new Size(308, 36);
+            guna2TextBox4.Size = new Size(308, 42);
             guna2TextBox4.TabIndex = 7;
             guna2TextBox4.TextOffset = new Point(20, 0);
             // 
