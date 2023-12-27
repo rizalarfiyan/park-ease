@@ -66,7 +66,6 @@
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -443,6 +442,5 @@
         private Guna.UI2.WinForms.Guna2Button btnCencel;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
     }
 }
