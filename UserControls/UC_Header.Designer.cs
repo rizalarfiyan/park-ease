@@ -31,48 +31,54 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            label3 = new Label();
-            label2 = new Label();
-            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            lblUsername = new Label();
+            lblRole = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            label1 = new Label();
+            lblAvatar = new Label();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            tableLayoutPanel2 = new TableLayoutPanel();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
-            // label3
+            // lblUsername
             // 
-            label3.Anchor = AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Ubuntu", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(64, 64, 64);
-            label3.Location = new Point(624, 12);
-            label3.Name = "label3";
-            label3.Size = new Size(61, 21);
-            label3.TabIndex = 10;
-            label3.Text = "Admin";
-            label3.TextAlign = ContentAlignment.MiddleRight;
+            lblUsername.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            lblUsername.AutoSize = true;
+            lblUsername.BackColor = Color.Transparent;
+            lblUsername.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblUsername.ForeColor = Color.FromArgb(64, 64, 64);
+            lblUsername.Location = new Point(308, 1);
+            lblUsername.Margin = new Padding(0, 0, 0, 1);
+            lblUsername.Name = "lblUsername";
+            lblUsername.RightToLeft = RightToLeft.Yes;
+            lblUsername.Size = new Size(57, 21);
+            lblUsername.TabIndex = 10;
+            lblUsername.Text = "Admin";
+            lblUsername.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lblRole
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(255, 254, 234);
-            label2.Font = new Font("Ubuntu", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(226, 139, 0);
-            label2.Location = new Point(648, 35);
-            label2.Name = "label2";
-            label2.Size = new Size(37, 18);
-            label2.TabIndex = 9;
-            label2.Text = "Role";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.BorderRadius = 50;
+            lblRole.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblRole.AutoSize = true;
+            lblRole.BackColor = Color.FromArgb(226, 139, 0);
+            lblRole.Font = new Font("Ubuntu", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRole.ForeColor = Color.White;
+            lblRole.Location = new Point(327, 24);
+            lblRole.Margin = new Padding(0, 1, 5, 0);
+            lblRole.Name = "lblRole";
+            lblRole.Padding = new Padding(2, 1, 2, 1);
+            lblRole.RightToLeft = RightToLeft.Yes;
+            lblRole.Size = new Size(33, 18);
+            lblRole.TabIndex = 9;
+            lblRole.Text = "Role";
+            lblRole.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // guna2Button1
             // 
+            guna2Button1.Anchor = AnchorStyles.None;
             guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.Transparent;
             guna2Button1.DisabledState.CustomBorderColor = Color.Transparent;
@@ -86,52 +92,94 @@
             guna2Button1.HoverState.Image = Properties.Resources.icon_key;
             guna2Button1.Image = Properties.Resources.icon_key;
             guna2Button1.ImageSize = new Size(25, 25);
-            guna2Button1.Location = new Point(773, 15);
+            guna2Button1.Location = new Point(677, 11);
+            guna2Button1.Margin = new Padding(3, 2, 3, 2);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(40, 40);
+            guna2Button1.Size = new Size(35, 30);
             guna2Button1.TabIndex = 13;
             // 
-            // label1
+            // lblAvatar
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(226, 139, 0);
-            label1.Font = new Font("Ubuntu", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(700, 9);
-            label1.Name = "label1";
-            label1.Padding = new Padding(5, 10, 5, 10);
-            label1.Size = new Size(59, 52);
-            label1.TabIndex = 14;
-            label1.Text = "AA";
+            lblAvatar.Anchor = AnchorStyles.None;
+            lblAvatar.AutoSize = true;
+            lblAvatar.BackColor = Color.FromArgb(226, 139, 0);
+            lblAvatar.Font = new Font("Ubuntu", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAvatar.ForeColor = Color.White;
+            lblAvatar.Location = new Point(608, 5);
+            lblAvatar.Name = "lblAvatar";
+            lblAvatar.Padding = new Padding(3, 8, 3, 8);
+            lblAvatar.Size = new Size(49, 42);
+            lblAvatar.TabIndex = 14;
+            lblAvatar.Text = "AA";
+            lblAvatar.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 4;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38.3720932F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 61.6279068F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 61F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 63F));
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 1, 0);
+            tableLayoutPanel1.Controls.Add(guna2Button1, 3, 0);
+            tableLayoutPanel1.Controls.Add(lblAvatar, 2, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Size = new Size(727, 53);
+            tableLayoutPanel1.TabIndex = 15;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 1;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(lblRole, 0, 1);
+            tableLayoutPanel2.Controls.Add(lblUsername, 0, 0);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(234, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 2;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Size = new Size(365, 47);
+            tableLayoutPanel2.TabIndex = 16;
             // 
             // guna2Elipse2
             // 
             guna2Elipse2.BorderRadius = 8;
-            guna2Elipse2.TargetControl = label1;
+            guna2Elipse2.TargetControl = lblAvatar;
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.TargetControl = lblRole;
             // 
             // UC_Header
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(label2);
-            Controls.Add(label3);
-            Controls.Add(label1);
-            Controls.Add(guna2Button1);
+            Controls.Add(tableLayoutPanel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Header";
-            Size = new Size(831, 71);
-            Load += UC_Header_Load;
+            Size = new Size(727, 53);
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label label3;
-        private Label label2;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Label lblUsername;
+        private Label lblRole;
         public Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Label label1;
+        private Label lblAvatar;
+        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

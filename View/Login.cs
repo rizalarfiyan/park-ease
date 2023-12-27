@@ -12,6 +12,7 @@ namespace ParkEase.View
             InitializeComponent();
             this.Text = $"{App.APP_NAME} - Login";
             _controller = new AuthController();
+            ucTopBar.HideMaximize();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -20,19 +21,19 @@ namespace ParkEase.View
             string password = txtPassword.Text.Trim();
             btnLogin.Enabled = false;
 
-            System.Diagnostics.Debug.Print($"{username} - {password}");
-
             try
             {
                 _controller.Login(username, password);
-                var home = new frmHome();
-                home.Show();
+                var dashboard = new frmDashboard();
+                dashboard.Show();
                 this.Hide();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            } finally {
+            }
+            finally
+            {
                 btnLogin.Enabled = true;
                 txtPassword.Text = "";
             }
