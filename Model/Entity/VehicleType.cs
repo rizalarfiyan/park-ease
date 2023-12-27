@@ -11,6 +11,6 @@ namespace ParkEase.Model.Entity
         public required string Name { get; set; }
 
         [JsonPropertyName("price")]
-        public long Price { get; set; }
+        public int Price { get; set; }
     }
 }
