@@ -181,7 +181,7 @@
             btnLogin.Margin = new Padding(0);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnLogin.Size = new Size(360, 40);
+            btnLogin.Size = new Size(360, 46);
             btnLogin.TabIndex = 3;
             btnLogin.Text = "Log In";
             btnLogin.TextOffset = new Point(0, -2);
