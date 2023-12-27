@@ -15,6 +15,7 @@ namespace ParkEase.View
         protected string? _order;
         protected string? _orderBy;
         protected bool _hasNext = false;
+        private DataGridViewColumn? lastColumn;
         Subject<string> _searchSubject;
 
         public TableVehicleType()
@@ -94,6 +95,54 @@ namespace ParkEase.View
         private void DebounceSearch(string searchText)
         {
             _search = searchText;
+            lvwTable.Invoke((MethodInvoker)(() => LoadData()));
+        }
+
+        private void onSort(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewColumn column = lvwTable.Columns[e.ColumnIndex];
+
+            if (lastColumn != null && column != lastColumn)
+            {
+                lastColumn.HeaderCell.SortGlyphDirection = SortOrder.None;
+            }
+
+            switch (column.HeaderCell.SortGlyphDirection)
+            {
+                case SortOrder.Ascending:
+                    column.HeaderCell.SortGlyphDirection = SortOrder.None;
+                    _order = null;
+                    break;
+                case SortOrder.Descending:
+                    column.HeaderCell.SortGlyphDirection = SortOrder.Ascending;
+                    _order = "asc";
+                    break;
+                default:
+                    column.HeaderCell.SortGlyphDirection = SortOrder.Descending;
+                    _order = "desc";
+                    break;
+            }
+
+            switch (column.Name)
+            {
+                case "columnNo":
+                    _orderBy = "date";
+                    break;
+                case "columnName":
+                    _orderBy = "name";
+                    break;
+                case "columnCode":
+                    _orderBy = "code";
+                    break;
+                case "columnPrice":
+                    _orderBy = "price";
+                    break;
+                default:
+                    _orderBy = null;
+                    break;
+            }
+
+            lastColumn = column;
             lvwTable.Invoke((MethodInvoker)(() => LoadData()));
         }
     }
