@@ -44,15 +44,15 @@
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             lvwTable = new Guna.UI2.WinForms.Guna2DataGridView();
+            columnNo = new DataGridViewTextBoxColumn();
+            columnCode = new DataGridViewTextBoxColumn();
+            columnName = new DataGridViewTextBoxColumn();
+            columnPrice = new DataGridViewTextBoxColumn();
             lblTitle = new Label();
             lblDescription = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
             btnPrev = new Guna.UI2.WinForms.Guna2Button();
             btnNext = new Guna.UI2.WinForms.Guna2Button();
-            columnNo = new DataGridViewTextBoxColumn();
-            columnCode = new DataGridViewTextBoxColumn();
-            columnName = new DataGridViewTextBoxColumn();
-            columnPrice = new DataGridViewTextBoxColumn();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lvwTable).BeginInit();
@@ -120,6 +120,7 @@
             btnAdd.TabIndex = 18;
             btnAdd.Text = "Add";
             btnAdd.TextOffset = new Point(0, -2);
+            btnAdd.Click += btnAdd_Click;
             // 
             // txtSearch
             // 
@@ -219,6 +220,38 @@
             lvwTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             lvwTable.ColumnHeaderMouseClick += onSort;
             // 
+            // columnNo
+            // 
+            columnNo.HeaderText = "No.";
+            columnNo.MinimumWidth = 6;
+            columnNo.Name = "columnNo";
+            columnNo.ReadOnly = true;
+            columnNo.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnCode
+            // 
+            columnCode.HeaderText = "Code";
+            columnCode.MinimumWidth = 6;
+            columnCode.Name = "columnCode";
+            columnCode.ReadOnly = true;
+            columnCode.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnName
+            // 
+            columnName.HeaderText = "Name";
+            columnName.MinimumWidth = 6;
+            columnName.Name = "columnName";
+            columnName.ReadOnly = true;
+            columnName.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnPrice
+            // 
+            columnPrice.HeaderText = "Price";
+            columnPrice.MinimumWidth = 6;
+            columnPrice.Name = "columnPrice";
+            columnPrice.ReadOnly = true;
+            columnPrice.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
             // lblTitle
             // 
             lblTitle.Anchor = AnchorStyles.Left;
@@ -307,38 +340,6 @@
             btnNext.TabIndex = 18;
             btnNext.Text = "Next";
             btnNext.TextOffset = new Point(0, -2);
-            // 
-            // columnNo
-            // 
-            columnNo.HeaderText = "No.";
-            columnNo.MinimumWidth = 6;
-            columnNo.Name = "columnNo";
-            columnNo.ReadOnly = true;
-            columnNo.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnCode
-            // 
-            columnCode.HeaderText = "Code";
-            columnCode.MinimumWidth = 6;
-            columnCode.Name = "columnCode";
-            columnCode.ReadOnly = true;
-            columnCode.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnName
-            // 
-            columnName.HeaderText = "Name";
-            columnName.MinimumWidth = 6;
-            columnName.Name = "columnName";
-            columnName.ReadOnly = true;
-            columnName.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnPrice
-            // 
-            columnPrice.HeaderText = "Price";
-            columnPrice.MinimumWidth = 6;
-            columnPrice.Name = "columnPrice";
-            columnPrice.ReadOnly = true;
-            columnPrice.SortMode = DataGridViewColumnSortMode.Programmatic;
             // 
             // TableVehicleType
             // 

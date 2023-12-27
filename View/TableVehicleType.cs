@@ -145,5 +145,13 @@ namespace ParkEase.View
             lastColumn = column;
             lvwTable.Invoke((MethodInvoker)(() => LoadData()));
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            var frmInput = new FormVehicleType();
+            frmInput.IsCreate(true);
+            frmInput.OnLoadData += LoadData;
+            frmInput.Show();
+        }
     }
 }
