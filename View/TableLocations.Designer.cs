@@ -32,25 +32,25 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             label1 = new Label();
             label2 = new Label();
+            guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             tableUsers = new Guna.UI2.WinForms.Guna2DataGridView();
             No = new DataGridViewTextBoxColumn();
-            code = new DataGridViewTextBoxColumn();
             Name = new DataGridViewTextBoxColumn();
             Price = new DataGridViewTextBoxColumn();
+            Code = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
@@ -88,28 +88,6 @@
             guna2Panel1.Size = new Size(825, 210);
             guna2Panel1.TabIndex = 0;
             // 
-            // guna2Panel2
-            // 
-            guna2Panel2.Controls.Add(txtUsername);
-            guna2Panel2.CustomizableEdges = customizableEdges5;
-            guna2Panel2.Dock = DockStyle.Fill;
-            guna2Panel2.Location = new Point(3, 219);
-            guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Panel2.Size = new Size(825, 66);
-            guna2Panel2.TabIndex = 1;
-            // 
-            // guna2Panel3
-            // 
-            guna2Panel3.Controls.Add(tableUsers);
-            guna2Panel3.CustomizableEdges = customizableEdges7;
-            guna2Panel3.Dock = DockStyle.Fill;
-            guna2Panel3.Location = new Point(3, 291);
-            guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Panel3.Size = new Size(825, 370);
-            guna2Panel3.TabIndex = 2;
-            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
@@ -137,6 +115,17 @@
             label2.TabIndex = 12;
             label2.Text = "Welcome to Park Ease, an application that makes it easier for you \r\nto manage parking safely and comfortably.";
             label2.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // guna2Panel2
+            // 
+            guna2Panel2.Controls.Add(txtUsername);
+            guna2Panel2.CustomizableEdges = customizableEdges5;
+            guna2Panel2.Dock = DockStyle.Fill;
+            guna2Panel2.Location = new Point(3, 219);
+            guna2Panel2.Name = "guna2Panel2";
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Panel2.Size = new Size(825, 66);
+            guna2Panel2.TabIndex = 1;
             // 
             // txtUsername
             // 
@@ -173,6 +162,17 @@
             txtUsername.TabIndex = 2;
             txtUsername.TextOffset = new Point(10, -2);
             // 
+            // guna2Panel3
+            // 
+            guna2Panel3.Controls.Add(tableUsers);
+            guna2Panel3.CustomizableEdges = customizableEdges7;
+            guna2Panel3.Dock = DockStyle.Fill;
+            guna2Panel3.Location = new Point(3, 291);
+            guna2Panel3.Name = "guna2Panel3";
+            guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel3.Size = new Size(825, 370);
+            guna2Panel3.TabIndex = 2;
+            // 
             // tableUsers
             // 
             dataGridViewCellStyle1.BackColor = Color.White;
@@ -188,7 +188,7 @@
             tableUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             tableUsers.ColumnHeadersHeight = 22;
             tableUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            tableUsers.Columns.AddRange(new DataGridViewColumn[] { No, code, Name, Price });
+            tableUsers.Columns.AddRange(new DataGridViewColumn[] { No, Name, Price, Code });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 254, 234);
             dataGridViewCellStyle3.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -233,12 +233,6 @@
             No.MinimumWidth = 6;
             No.Name = "No";
             // 
-            // code
-            // 
-            code.HeaderText = "code";
-            code.MinimumWidth = 6;
-            code.Name = "code";
-            // 
             // Name
             // 
             Name.HeaderText = "Name";
@@ -251,6 +245,12 @@
             Price.MinimumWidth = 6;
             Price.Name = "Price";
             // 
+            // Code
+            // 
+            Code.HeaderText = "Code";
+            Code.MinimumWidth = 6;
+            Code.Name = "Code";
+            // 
             // TableLocations
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -258,7 +258,7 @@
             ClientSize = new Size(831, 664);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            
+            Name = "TableLocations";
             Text = "TableLocations";
             tableLayoutPanel1.ResumeLayout(false);
             guna2Panel1.ResumeLayout(false);
@@ -280,8 +280,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2DataGridView tableUsers;
         private DataGridViewTextBoxColumn No;
-        private DataGridViewTextBoxColumn code;
         private DataGridViewTextBoxColumn Name;
         private DataGridViewTextBoxColumn Price;
+        private DataGridViewTextBoxColumn Code;
     }
 }
