@@ -78,6 +78,7 @@
             // 
             // guna2Panel1
             // 
+            guna2Panel1.BackColor = Color.White;
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.Controls.Add(label2);
             guna2Panel1.CustomizableEdges = customizableEdges1;
@@ -106,7 +107,7 @@
             // 
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(255, 254, 234);
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlDarkDark;
             label2.Location = new Point(6, 119);
@@ -118,6 +119,7 @@
             // 
             // guna2Panel2
             // 
+            guna2Panel2.BackColor = Color.White;
             guna2Panel2.Controls.Add(txtUsername);
             guna2Panel2.CustomizableEdges = customizableEdges5;
             guna2Panel2.Dock = DockStyle.Fill;
@@ -164,6 +166,7 @@
             // 
             // guna2Panel3
             // 
+            guna2Panel3.BackColor = Color.White;
             guna2Panel3.Controls.Add(tableUsers);
             guna2Panel3.CustomizableEdges = customizableEdges7;
             guna2Panel3.Dock = DockStyle.Fill;
