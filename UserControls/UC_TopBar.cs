@@ -39,5 +39,11 @@ namespace ParkEase.UserControls
         {
             Application.Exit();
         }
+
+        public void HideMaximize()
+        {
+            this.Minimize.Location = new Point(856, 8);
+            this.Maximize.Hide();
+        }
     }
 }
