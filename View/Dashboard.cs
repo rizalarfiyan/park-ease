@@ -63,5 +63,10 @@ namespace ParkEase.View
         {
             openChildForm(new TableVehicleType());
         }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            openChildForm(new TableUsers());
+        }
     }
 }
