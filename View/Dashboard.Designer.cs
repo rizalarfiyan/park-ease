@@ -188,6 +188,7 @@
             btnLocation.TextOffset = new Point(10, 0);
             btnLocation.UseTransparentBackground = true;
             btnLocation.CheckedChanged += btnDashboard_CheckedChanged;
+            btnLocation.Click += btnLocation_Click;
             // 
             // btnUsers
             // 
