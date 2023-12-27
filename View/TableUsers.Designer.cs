@@ -44,14 +44,14 @@
             lblDesUsers = new Label();
             lblUsers = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
+            No = new DataGridViewTextBoxColumn();
+            Name = new DataGridViewTextBoxColumn();
+            Username = new DataGridViewTextBoxColumn();
+            Role = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
             tableLayoutPanel1.SuspendLayout();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
@@ -118,7 +118,7 @@
             // 
             // guna2Panel2
             // 
-            guna2Panel2.Controls.Add(txtUsername);
+            guna2Panel2.Controls.Add(txtSearch);
             guna2Panel2.CustomizableEdges = customizableEdges5;
             guna2Panel2.Dock = DockStyle.Fill;
             guna2Panel2.Location = new Point(3, 205);
@@ -127,39 +127,39 @@
             guna2Panel2.Size = new Size(807, 60);
             guna2Panel2.TabIndex = 1;
             // 
-            // txtUsername
+            // txtSearch
             // 
-            txtUsername.Animated = true;
-            txtUsername.BackColor = Color.Transparent;
-            txtUsername.BorderColor = Color.FromArgb(255, 244, 133);
-            txtUsername.BorderRadius = 8;
-            txtUsername.BorderThickness = 2;
-            txtUsername.CustomizableEdges = customizableEdges3;
-            txtUsername.DefaultText = "";
-            txtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtUsername.FillColor = Color.FromArgb(255, 249, 197);
-            txtUsername.FocusedState.BorderColor = Color.Transparent;
-            txtUsername.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
-            txtUsername.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUsername.ForeColor = Color.FromArgb(226, 139, 0);
-            txtUsername.HoverState.BorderColor = Color.Transparent;
-            txtUsername.IconLeftOffset = new Point(10, 0);
-            txtUsername.IconRight = Properties.Resources.icon_search;
-            txtUsername.IconRightOffset = new Point(10, 0);
-            txtUsername.Location = new Point(9, 9);
-            txtUsername.Margin = new Padding(0);
-            txtUsername.Name = "txtUsername";
-            txtUsername.PasswordChar = '\0';
-            txtUsername.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
-            txtUsername.PlaceholderText = "Search";
-            txtUsername.SelectedText = "";
-            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtUsername.Size = new Size(366, 42);
-            txtUsername.TabIndex = 11;
-            txtUsername.TextOffset = new Point(10, -2);
+            txtSearch.Animated = true;
+            txtSearch.BackColor = Color.Transparent;
+            txtSearch.BorderColor = Color.FromArgb(255, 244, 133);
+            txtSearch.BorderRadius = 8;
+            txtSearch.BorderThickness = 2;
+            txtSearch.CustomizableEdges = customizableEdges3;
+            txtSearch.DefaultText = "";
+            txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.FillColor = Color.FromArgb(255, 249, 197);
+            txtSearch.FocusedState.BorderColor = Color.Transparent;
+            txtSearch.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
+            txtSearch.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearch.ForeColor = Color.FromArgb(226, 139, 0);
+            txtSearch.HoverState.BorderColor = Color.Transparent;
+            txtSearch.IconLeftOffset = new Point(10, 0);
+            txtSearch.IconRight = Properties.Resources.icon_search;
+            txtSearch.IconRightOffset = new Point(10, 0);
+            txtSearch.Location = new Point(9, 9);
+            txtSearch.Margin = new Padding(0);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PasswordChar = '\0';
+            txtSearch.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
+            txtSearch.PlaceholderText = "Search";
+            txtSearch.SelectedText = "";
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtSearch.Size = new Size(366, 42);
+            txtSearch.TabIndex = 11;
+            txtSearch.TextOffset = new Point(10, -2);
             // 
             // guna2Panel3
             // 
@@ -187,7 +187,7 @@
             guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             guna2DataGridView1.ColumnHeadersHeight = 22;
             guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { No, Name, Username, Role, Status });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 254, 234);
             dataGridViewCellStyle3.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -226,35 +226,35 @@
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // Column1
+            // No
             // 
-            Column1.HeaderText = "No.";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
+            No.HeaderText = "No.";
+            No.MinimumWidth = 6;
+            No.Name = "No";
             // 
-            // Column2
+            // Name
             // 
-            Column2.HeaderText = "Name";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
+            Name.HeaderText = "Name";
+            Name.MinimumWidth = 6;
+            Name.Name = "Name";
             // 
-            // Column3
+            // Username
             // 
-            Column3.HeaderText = "Username";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
+            Username.HeaderText = "Username";
+            Username.MinimumWidth = 6;
+            Username.Name = "Username";
             // 
-            // Column4
+            // Role
             // 
-            Column4.HeaderText = "Role";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
+            Role.HeaderText = "Role";
+            Role.MinimumWidth = 6;
+            Role.Name = "Role";
             // 
-            // Column5
+            // Status
             // 
-            Column5.HeaderText = "Status";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
+            Status.HeaderText = "Status";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
             // 
             // TableUsers
             // 
@@ -282,12 +282,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private Label lblDesUsers;
         private Label lblUsers;
-        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn No;
+        private DataGridViewTextBoxColumn Name;
+        private DataGridViewTextBoxColumn Username;
+        private DataGridViewTextBoxColumn Role;
+        private DataGridViewTextBoxColumn Status;
     }
 }
