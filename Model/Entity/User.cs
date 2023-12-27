@@ -5,10 +5,13 @@ namespace ParkEase.Model.Entity
     public class User
     {
         [JsonPropertyName("id")]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [JsonPropertyName("name")]
         public required string Name { get; set; }
+        
+        [JsonPropertyName("password")]
+        public required string Password { get; set; }
 
         [JsonPropertyName("role")]
         public required string Role { get; set; }
