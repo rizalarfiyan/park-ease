@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ParkEase.UserControls
+namespace ParkEase.View
 {
-    public partial class UC_TableVehicleType : UserControl
+    public partial class TableUsers : Form
     {
-        public UC_TableVehicleType()
+        public TableUsers()
         {
             InitializeComponent();
         }
