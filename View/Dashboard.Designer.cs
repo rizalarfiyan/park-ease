@@ -221,6 +221,7 @@
             btnUsers.TextOffset = new Point(10, 0);
             btnUsers.UseTransparentBackground = true;
             btnUsers.CheckedChanged += btnDashboard_CheckedChanged;
+            btnUsers.Click += btnUsers_Click;
             // 
             // btnPark
             // 
