@@ -84,7 +84,7 @@
             // 
             Minimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Minimize.Image = Properties.Resources.icon_minimize;
-            Minimize.Location = new Point(819, 8);
+            Minimize.Location = new Point(822, 8);
             Minimize.Margin = new Padding(3, 2, 3, 2);
             Minimize.Name = "Minimize";
             Minimize.Size = new Size(22, 19);

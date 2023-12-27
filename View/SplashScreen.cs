@@ -38,7 +38,7 @@ namespace ParkEase.View
                 "Getting User info ...",
             };
 
-            labelLoadingInformation.Text = informations[0];
+            lblLoadingInformation.Text = informations[0];
             Thread thread = new Thread(new ThreadStart(ShowLoadingInformation));
             thread.Start();
 
@@ -51,7 +51,7 @@ namespace ParkEase.View
             {
                 this.Invoke((MethodInvoker)delegate
                 {
-                    labelLoadingInformation.Text = message;
+                    lblLoadingInformation.Text = message;
                 });
             }
         }
@@ -124,7 +124,7 @@ namespace ParkEase.View
             Application.Exit();
             if (isLoggedIn)
             {
-                Application.Run(new frmHome());
+                Application.Run(new frmDashboard());
                 return;
             }
             Application.Run(new frmLogin());
