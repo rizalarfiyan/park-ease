@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace ParkEase.View
+﻿namespace ParkEase.View
 {
-    public partial class ChangePassword : Form
+    public partial class frmChangePassword : Form
     {
-        public ChangePassword()
+        public frmChangePassword()
         {
             InitializeComponent();
+            InitializeApp();
+        }
+
+        private void InitializeApp()
+        {
+            ucTopBar.SetForm(this);
         }
     }
 }

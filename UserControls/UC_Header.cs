@@ -1,4 +1,6 @@
-﻿namespace ParkEase.UserControls
+﻿using ParkEase.View;
+
+namespace ParkEase.UserControls
 {
     public partial class UC_Header : UserControl
     {
@@ -27,12 +29,19 @@
             }
 
             string[] nameParts = fullName.Split(' ');
-            if (nameParts.Length >= 2 && nameParts[0].Length >= 1 && nameParts[0].Length >= 1) {
+            if (nameParts.Length >= 2 && nameParts[0].Length >= 1 && nameParts[0].Length >= 1)
+            {
                 lblAvatar.Text = (nameParts[0].Substring(0, 1) + nameParts[1].Substring(0, 1)).ToUpper();
                 return;
             }
 
             lblAvatar.Text = fullName.Substring(2).ToUpper();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            var changePassword = new frmChangePassword();
+            changePassword.Show();
         }
     }
 }
