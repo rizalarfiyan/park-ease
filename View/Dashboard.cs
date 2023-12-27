@@ -81,5 +81,10 @@ namespace ParkEase.View
             login.Show();
             this.Hide();
         }
+
+        private void btnLocation_Click(object sender, EventArgs e)
+        {
+            openChildForm(new TableLocations());
+        }
     }
 }
