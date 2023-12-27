@@ -43,4 +43,16 @@ namespace ParkEase.Model.Entity
         [JsonPropertyName("expired_at")]
         public DateTimeOffset ExpiredAt { get; set; }
     }
+
+    public class ChangePasswordRequest
+    {
+        [JsonPropertyName("old_password")]
+        public required string OldPassword { get; set; }
+
+        [JsonPropertyName("password")]
+        public required string Password { get; set; }
+
+        [JsonPropertyName("password_confirmation")]
+        public required string PasswordConfirmation { get; set; }
+    }
 }

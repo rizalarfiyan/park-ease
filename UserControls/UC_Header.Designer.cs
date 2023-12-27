@@ -33,7 +33,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblUsername = new Label();
             lblRole = new Label();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            btnChangePassword = new Guna.UI2.WinForms.Guna2Button();
             lblAvatar = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -76,28 +76,30 @@
             lblRole.Text = "Role";
             lblRole.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // guna2Button1
+            // btnChangePassword
             // 
-            guna2Button1.Anchor = AnchorStyles.None;
-            guna2Button1.CustomizableEdges = customizableEdges1;
-            guna2Button1.DisabledState.BorderColor = Color.Transparent;
-            guna2Button1.DisabledState.CustomBorderColor = Color.Transparent;
-            guna2Button1.DisabledState.FillColor = Color.Transparent;
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Transparent;
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.HoverState.CustomBorderColor = Color.Transparent;
-            guna2Button1.HoverState.FillColor = Color.Transparent;
-            guna2Button1.HoverState.Image = Properties.Resources.icon_key;
-            guna2Button1.Image = Properties.Resources.icon_key;
-            guna2Button1.ImageSize = new Size(25, 25);
-            guna2Button1.Location = new Point(677, 11);
-            guna2Button1.Margin = new Padding(3, 2, 3, 2);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button1.Size = new Size(35, 30);
-            guna2Button1.TabIndex = 13;
+            btnChangePassword.Anchor = AnchorStyles.None;
+            btnChangePassword.Cursor = Cursors.Hand;
+            btnChangePassword.CustomizableEdges = customizableEdges1;
+            btnChangePassword.DisabledState.BorderColor = Color.Transparent;
+            btnChangePassword.DisabledState.CustomBorderColor = Color.Transparent;
+            btnChangePassword.DisabledState.FillColor = Color.Transparent;
+            btnChangePassword.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnChangePassword.FillColor = Color.Transparent;
+            btnChangePassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChangePassword.ForeColor = Color.White;
+            btnChangePassword.HoverState.CustomBorderColor = Color.Transparent;
+            btnChangePassword.HoverState.FillColor = Color.Transparent;
+            btnChangePassword.HoverState.Image = Properties.Resources.icon_key;
+            btnChangePassword.Image = Properties.Resources.icon_key;
+            btnChangePassword.ImageSize = new Size(25, 25);
+            btnChangePassword.Location = new Point(677, 11);
+            btnChangePassword.Margin = new Padding(3, 2, 3, 2);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnChangePassword.Size = new Size(35, 30);
+            btnChangePassword.TabIndex = 13;
+            btnChangePassword.Click += btnChangePassword_Click;
             // 
             // lblAvatar
             // 
@@ -122,7 +124,7 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 61F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 63F));
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 1, 0);
-            tableLayoutPanel1.Controls.Add(guna2Button1, 3, 0);
+            tableLayoutPanel1.Controls.Add(btnChangePassword, 3, 0);
             tableLayoutPanel1.Controls.Add(lblAvatar, 2, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
@@ -175,7 +177,7 @@
         #endregion
         private Label lblUsername;
         private Label lblRole;
-        public Guna.UI2.WinForms.Guna2Button guna2Button1;
+        public Guna.UI2.WinForms.Guna2Button btnChangePassword;
         private Label lblAvatar;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;

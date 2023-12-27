@@ -1,15 +1,19 @@
-﻿using Guna.UI2.WinForms;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+﻿using System.Windows.Forms;
 
 namespace ParkEase.UserControls
 {
     public partial class UC_TopBar : UserControl
     {
+        private Form? _form = null;
+
         public UC_TopBar()
         {
             InitializeComponent();
+        }
+
+        public void SetForm(Form form)
+        {
+            _form = form;
         }
 
         private void Minimize_Click(object sender, EventArgs e)
@@ -37,6 +41,12 @@ namespace ParkEase.UserControls
 
         private void Close_Click(object sender, EventArgs e)
         {
+            if (_form != null)
+            {
+                _form.Close();
+                return;
+            }
+
             Application.Exit();
         }
 

@@ -11,13 +11,25 @@ namespace ParkEase.View
             InitializeComponent();
             this.Text = $"{App.APP_NAME} - Dashboard";
             InitializeHeader();
+            InitializeRole();
         }
 
         private void InitializeHeader()
         {
             ucHeader.SetAvatar(Program.UserData?.Name ?? "AZ");
             ucHeader.SetUsername(Program.UserData?.Username ?? "username");
-            ucHeader.SetRole(Program.UserData?.Role ?? "admin");
+            ucHeader.SetRole(Program.UserData?.Role ?? "karyawan");
+        }
+
+        private void InitializeRole()
+        {
+            if (Program.UserData?.Role != "admin")
+            {
+                btnUsers.Hide();
+                btnLocation.Hide();
+                btnVehicleType.Hide();
+                btnSettings.Hide();
+            }
         }
 
         private void MoveImageBox(object sender)
