@@ -174,7 +174,7 @@
             guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
             guna2CustomCheckBox1.CheckedState.FillColor = Color.FromArgb(226, 139, 0);
             guna2CustomCheckBox1.CustomizableEdges = customizableEdges7;
-            guna2CustomCheckBox1.Location = new Point(168, 378);
+            guna2CustomCheckBox1.Location = new Point(168, 408);
             guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
             guna2CustomCheckBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2CustomCheckBox1.Size = new Size(25, 25);
