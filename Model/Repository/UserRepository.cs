@@ -43,7 +43,7 @@ namespace ParkEase.Model.Repository
             return res.Data;
         }
         
-        public BaseResponse<string?>? CreateUser(User payload)
+        public BaseResponse<string?>? CreateUser(UserRequest payload)
         {
             var req = new RestRequest("/user", Method.Post);
             req.AddJsonBody(new
@@ -58,7 +58,7 @@ namespace ParkEase.Model.Repository
             return res.Data;
         }
         
-        public BaseResponse<string?>? UpdateUser(User payload)
+        public BaseResponse<string?>? UpdateUser(UserRequest payload)
         {
             var req = new RestRequest("/user/{id}", Method.Put);
             req.AddUrlSegment("id", payload.Id);
