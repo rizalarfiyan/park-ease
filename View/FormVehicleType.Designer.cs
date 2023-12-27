@@ -1,6 +1,6 @@
 ﻿namespace ParkEase.View
 {
-    partial class VehicleType
+    partial class FormVehicleType
     {
         /// <summary>
         /// Required designer variable.

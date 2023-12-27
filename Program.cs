@@ -19,7 +19,7 @@ namespace ParkEase
             ApplicationConfiguration.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDashboard());
+            Application.Run(new SplashScreen());
         }
     }
 }

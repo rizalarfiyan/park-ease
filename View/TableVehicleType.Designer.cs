@@ -35,20 +35,28 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            lvwTable = new Guna.UI2.WinForms.Guna2DataGridView();
+            columnNo = new DataGridViewTextBoxColumn();
+            columnCode = new DataGridViewTextBoxColumn();
+            columnName = new DataGridViewTextBoxColumn();
+            columnPrice = new DataGridViewTextBoxColumn();
             lblTitle = new Label();
             lblDescription = new Label();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            btnPrev = new Guna.UI2.WinForms.Guna2Button();
+            btnNext = new Guna.UI2.WinForms.Guna2Button();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lvwTable).BeginInit();
+            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -56,20 +64,22 @@
             tableLayoutPanel2.ColumnCount = 1;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.Controls.Add(tableLayoutPanel1, 0, 3);
-            tableLayoutPanel2.Controls.Add(guna2DataGridView1, 0, 5);
+            tableLayoutPanel2.Controls.Add(lvwTable, 0, 5);
             tableLayoutPanel2.Controls.Add(lblTitle, 0, 0);
             tableLayoutPanel2.Controls.Add(lblDescription, 0, 1);
+            tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 0, 7);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(0, 0);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 7;
+            tableLayoutPanel2.RowCount = 8;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
             tableLayoutPanel2.Size = new Size(800, 355);
             tableLayoutPanel2.TabIndex = 17;
             // 
@@ -144,12 +154,14 @@
             txtSearch.TabIndex = 1;
             txtSearch.TextOffset = new Point(10, -2);
             // 
-            // guna2DataGridView1
+            // lvwTable
             // 
-            guna2DataGridView1.AllowUserToOrderColumns = true;
+            lvwTable.AllowUserToAddRows = false;
+            lvwTable.AllowUserToDeleteRows = false;
+            lvwTable.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            guna2DataGridView1.BackgroundColor = Color.FromArgb(255, 254, 234);
+            lvwTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            lvwTable.BackgroundColor = Color.FromArgb(255, 254, 234);
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(226, 139, 0);
             dataGridViewCellStyle2.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -157,10 +169,10 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 22;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            lvwTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            lvwTable.ColumnHeadersHeight = 22;
+            lvwTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            lvwTable.Columns.AddRange(new DataGridViewColumn[] { columnNo, columnCode, columnName, columnPrice });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 254, 234);
             dataGridViewCellStyle3.Font = new Font("Ubuntu", 10F, FontStyle.Bold, GraphicsUnit.Point);
@@ -168,62 +180,67 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.Dock = DockStyle.Fill;
-            guna2DataGridView1.GridColor = Color.FromArgb(255, 249, 197);
-            guna2DataGridView1.Location = new Point(3, 228);
-            guna2DataGridView1.Margin = new Padding(3, 2, 3, 2);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.RowHeadersVisible = false;
-            guna2DataGridView1.RowHeadersWidth = 51;
-            guna2DataGridView1.RowTemplate.Height = 29;
-            guna2DataGridView1.Size = new Size(794, 66);
-            guna2DataGridView1.TabIndex = 15;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.FromArgb(255, 254, 234);
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(255, 249, 197);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(226, 139, 0);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 22;
-            guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.FromArgb(255, 254, 234);
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Ubuntu", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = SystemColors.ControlDarkDark;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 29;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            lvwTable.DefaultCellStyle = dataGridViewCellStyle3;
+            lvwTable.Dock = DockStyle.Fill;
+            lvwTable.GridColor = Color.FromArgb(255, 249, 197);
+            lvwTable.Location = new Point(3, 228);
+            lvwTable.Margin = new Padding(3, 2, 3, 2);
+            lvwTable.Name = "lvwTable";
+            lvwTable.ReadOnly = true;
+            lvwTable.RowHeadersVisible = false;
+            lvwTable.RowHeadersWidth = 51;
+            lvwTable.RowTemplate.Height = 29;
+            lvwTable.Size = new Size(794, 39);
+            lvwTable.TabIndex = 15;
+            lvwTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            lvwTable.ThemeStyle.AlternatingRowsStyle.Font = null;
+            lvwTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            lvwTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            lvwTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            lvwTable.ThemeStyle.BackColor = Color.FromArgb(255, 254, 234);
+            lvwTable.ThemeStyle.GridColor = Color.FromArgb(255, 249, 197);
+            lvwTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(226, 139, 0);
+            lvwTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            lvwTable.ThemeStyle.HeaderStyle.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
+            lvwTable.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            lvwTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            lvwTable.ThemeStyle.HeaderStyle.Height = 22;
+            lvwTable.ThemeStyle.ReadOnly = true;
+            lvwTable.ThemeStyle.RowsStyle.BackColor = Color.FromArgb(255, 254, 234);
+            lvwTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            lvwTable.ThemeStyle.RowsStyle.Font = new Font("Ubuntu", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lvwTable.ThemeStyle.RowsStyle.ForeColor = SystemColors.ControlDarkDark;
+            lvwTable.ThemeStyle.RowsStyle.Height = 29;
+            lvwTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            lvwTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             // 
-            // Column1
+            // columnNo
             // 
-            Column1.HeaderText = "No.";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
+            columnNo.HeaderText = "No.";
+            columnNo.MinimumWidth = 6;
+            columnNo.Name = "columnNo";
+            columnNo.ReadOnly = true;
             // 
-            // Column2
+            // columnCode
             // 
-            Column2.HeaderText = "Code";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
+            columnCode.HeaderText = "Code";
+            columnCode.MinimumWidth = 6;
+            columnCode.Name = "columnCode";
+            columnCode.ReadOnly = true;
             // 
-            // Column3
+            // columnName
             // 
-            Column3.HeaderText = "Name";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
+            columnName.HeaderText = "Name";
+            columnName.MinimumWidth = 6;
+            columnName.Name = "columnName";
+            columnName.ReadOnly = true;
             // 
-            // Column4
+            // columnPrice
             // 
-            Column4.HeaderText = "Price";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
+            columnPrice.HeaderText = "Price";
+            columnPrice.MinimumWidth = 6;
+            columnPrice.Name = "columnPrice";
+            columnPrice.ReadOnly = true;
             // 
             // lblTitle
             // 
@@ -255,6 +272,61 @@
             lblDescription.Text = "Choose your vehicle type at Park Ease, according to the type of vehicle you park. Safe and comfortable greetings.";
             lblDescription.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(btnPrev, 0, 0);
+            tableLayoutPanel3.Controls.Add(btnNext, 2, 0);
+            tableLayoutPanel3.Location = new Point(3, 302);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel3.Size = new Size(794, 50);
+            tableLayoutPanel3.TabIndex = 18;
+            // 
+            // btnPrev
+            // 
+            btnPrev.Anchor = AnchorStyles.Right;
+            btnPrev.CustomizableEdges = customizableEdges5;
+            btnPrev.DisabledState.BorderColor = Color.DarkGray;
+            btnPrev.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPrev.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPrev.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPrev.FillColor = Color.FromArgb(226, 139, 0);
+            btnPrev.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPrev.ForeColor = Color.White;
+            btnPrev.Location = new Point(275, 2);
+            btnPrev.Margin = new Padding(0);
+            btnPrev.Name = "btnPrev";
+            btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnPrev.Size = new Size(112, 46);
+            btnPrev.TabIndex = 19;
+            btnPrev.Text = "Prev";
+            btnPrev.TextOffset = new Point(0, -2);
+            // 
+            // btnNext
+            // 
+            btnNext.Anchor = AnchorStyles.Left;
+            btnNext.CustomizableEdges = customizableEdges7;
+            btnNext.DisabledState.BorderColor = Color.DarkGray;
+            btnNext.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnNext.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnNext.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNext.FillColor = Color.FromArgb(226, 139, 0);
+            btnNext.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNext.ForeColor = Color.White;
+            btnNext.Location = new Point(407, 2);
+            btnNext.Margin = new Padding(0);
+            btnNext.Name = "btnNext";
+            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnNext.Size = new Size(112, 46);
+            btnNext.TabIndex = 18;
+            btnNext.Text = "Next";
+            btnNext.TextOffset = new Point(0, -2);
+            // 
             // TableVehicleType
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -268,7 +340,8 @@
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lvwTable).EndInit();
+            tableLayoutPanel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -278,12 +351,15 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private Guna.UI2.WinForms.Guna2DataGridView lvwTable;
         private Label lblTitle;
         private Label lblDescription;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Guna.UI2.WinForms.Guna2Button btnPrev;
+        private Guna.UI2.WinForms.Guna2Button btnNext;
+        private DataGridViewTextBoxColumn columnNo;
+        private DataGridViewTextBoxColumn columnCode;
+        private DataGridViewTextBoxColumn columnName;
+        private DataGridViewTextBoxColumn columnPrice;
     }
 }
