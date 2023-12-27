@@ -258,7 +258,7 @@
             ClientSize = new Size(831, 664);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "TableLocations";
+            
             Text = "TableLocations";
             tableLayoutPanel1.ResumeLayout(false);
             guna2Panel1.ResumeLayout(false);
