@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -39,203 +37,35 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            lblLogo = new PictureBox();
-            txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            btnLogin = new Guna.UI2.WinForms.Guna2Button();
-            lblDescription = new Label();
-            lblTitle = new Label();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             lblIllustrator = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            btnLogin = new Guna.UI2.WinForms.Guna2Button();
             tableLayoutPanel1 = new TableLayoutPanel();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            lblLogo = new PictureBox();
+            lblTitle = new Label();
+            lblDescription = new Label();
+            txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             ucTopBar = new UserControls.UC_TopBar();
-            guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)lblLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lblIllustrator).BeginInit();
             tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)lblLogo).BeginInit();
             SuspendLayout();
-            // 
-            // guna2CustomGradientPanel1
-            // 
-            guna2CustomGradientPanel1.AutoSize = true;
-            guna2CustomGradientPanel1.BackColor = Color.White;
-            guna2CustomGradientPanel1.Controls.Add(txtPassword);
-            guna2CustomGradientPanel1.Controls.Add(lblLogo);
-            guna2CustomGradientPanel1.Controls.Add(txtUsername);
-            guna2CustomGradientPanel1.Controls.Add(btnLogin);
-            guna2CustomGradientPanel1.Controls.Add(lblDescription);
-            guna2CustomGradientPanel1.Controls.Add(lblTitle);
-            guna2CustomGradientPanel1.Controls.Add(guna2Panel1);
-            guna2CustomGradientPanel1.Cursor = Cursors.Hand;
-            guna2CustomGradientPanel1.CustomizableEdges = customizableEdges9;
-            guna2CustomGradientPanel1.Dock = DockStyle.Fill;
-            guna2CustomGradientPanel1.FillColor = Color.FromArgb(255, 254, 234);
-            guna2CustomGradientPanel1.FillColor2 = Color.FromArgb(255, 254, 234);
-            guna2CustomGradientPanel1.FillColor3 = Color.FromArgb(255, 254, 234);
-            guna2CustomGradientPanel1.FillColor4 = Color.FromArgb(255, 254, 234);
-            guna2CustomGradientPanel1.Location = new Point(472, 2);
-            guna2CustomGradientPanel1.Margin = new Padding(3, 2, 3, 2);
-            guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2CustomGradientPanel1.Size = new Size(463, 485);
-            guna2CustomGradientPanel1.TabIndex = 2;
-            // 
-            // txtPassword
-            // 
-            txtPassword.Animated = true;
-            txtPassword.BackColor = Color.Transparent;
-            txtPassword.BorderColor = Color.FromArgb(255, 244, 133);
-            txtPassword.BorderRadius = 8;
-            txtPassword.BorderThickness = 2;
-            txtPassword.CustomizableEdges = customizableEdges1;
-            txtPassword.DefaultText = "";
-            txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPassword.FillColor = Color.FromArgb(255, 249, 197);
-            txtPassword.FocusedState.BorderColor = Color.Transparent;
-            txtPassword.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
-            txtPassword.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPassword.ForeColor = Color.FromArgb(226, 139, 0);
-            txtPassword.HoverState.BorderColor = Color.Transparent;
-            txtPassword.IconLeft = Properties.Resources.icon_key;
-            txtPassword.IconLeftOffset = new Point(10, 0);
-            txtPassword.IconRightOffset = new Point(10, 0);
-            txtPassword.Location = new Point(64, 300);
-            txtPassword.Margin = new Padding(0);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '*';
-            txtPassword.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
-            txtPassword.PlaceholderText = "Password";
-            txtPassword.SelectedText = "";
-            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtPassword.Size = new Size(360, 46);
-            txtPassword.TabIndex = 5;
-            txtPassword.TextOffset = new Point(10, -2);
-            // 
-            // lblLogo
-            // 
-            lblLogo.BackColor = Color.FromArgb(255, 254, 234);
-            lblLogo.Cursor = Cursors.Hand;
-            lblLogo.Image = Properties.Resources.logo_park_ease_oranye;
-            lblLogo.Location = new Point(165, 40);
-            lblLogo.Margin = new Padding(3, 2, 3, 2);
-            lblLogo.Name = "lblLogo";
-            lblLogo.Padding = new Padding(9, 8, 9, 8);
-            lblLogo.Size = new Size(158, 44);
-            lblLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            lblLogo.TabIndex = 2;
-            lblLogo.TabStop = false;
-            // 
-            // txtUsername
-            // 
-            txtUsername.Animated = true;
-            txtUsername.BackColor = Color.Transparent;
-            txtUsername.BorderColor = Color.FromArgb(255, 244, 133);
-            txtUsername.BorderRadius = 8;
-            txtUsername.BorderThickness = 2;
-            txtUsername.CustomizableEdges = customizableEdges3;
-            txtUsername.DefaultText = "";
-            txtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtUsername.FillColor = Color.FromArgb(255, 249, 197);
-            txtUsername.FocusedState.BorderColor = Color.Transparent;
-            txtUsername.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
-            txtUsername.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUsername.ForeColor = Color.FromArgb(226, 139, 0);
-            txtUsername.HoverState.BorderColor = Color.Transparent;
-            txtUsername.IconLeft = Properties.Resources.icon_users_active;
-            txtUsername.IconLeftOffset = new Point(10, 0);
-            txtUsername.IconRightOffset = new Point(10, 0);
-            txtUsername.Location = new Point(64, 239);
-            txtUsername.Margin = new Padding(0);
-            txtUsername.Name = "txtUsername";
-            txtUsername.PasswordChar = '\0';
-            txtUsername.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
-            txtUsername.PlaceholderText = "Username";
-            txtUsername.SelectedText = "";
-            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtUsername.Size = new Size(360, 46);
-            txtUsername.TabIndex = 4;
-            txtUsername.TextOffset = new Point(10, -2);
-            // 
-            // btnLogin
-            // 
-            btnLogin.CustomizableEdges = customizableEdges5;
-            btnLogin.DisabledState.BorderColor = Color.DarkGray;
-            btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogin.FillColor = Color.FromArgb(226, 139, 0);
-            btnLogin.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(64, 381);
-            btnLogin.Margin = new Padding(0);
-            btnLogin.Name = "btnLogin";
-            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnLogin.Size = new Size(360, 46);
-            btnLogin.TabIndex = 3;
-            btnLogin.Text = "Log In";
-            btnLogin.TextOffset = new Point(0, -2);
-            btnLogin.Click += btnLogin_Click;
-            // 
-            // lblDescription
-            // 
-            lblDescription.AutoSize = true;
-            lblDescription.BackColor = Color.FromArgb(255, 254, 234);
-            lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDescription.ForeColor = SystemColors.ControlDarkDark;
-            lblDescription.Location = new Point(75, 152);
-            lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(339, 32);
-            lblDescription.TabIndex = 2;
-            lblDescription.Text = "Easily simplify your parking operations – log in and optimize \r\nyour parking solutions.";
-            lblDescription.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.BackColor = Color.Transparent;
-            lblTitle.Font = new Font("Ubuntu", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
-            lblTitle.Location = new Point(186, 107);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(116, 40);
-            lblTitle.TabIndex = 1;
-            lblTitle.Text = "LOGIN";
-            // 
-            // guna2Panel1
-            // 
-            guna2Panel1.AutoSize = true;
-            guna2Panel1.BackColor = Color.FromArgb(226, 139, 0);
-            guna2Panel1.CustomizableEdges = customizableEdges7;
-            guna2Panel1.Dock = DockStyle.Top;
-            guna2Panel1.Location = new Point(0, 0);
-            guna2Panel1.Margin = new Padding(3, 2, 3, 2);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Panel1.Size = new Size(463, 0);
-            guna2Panel1.TabIndex = 0;
             // 
             // lblIllustrator
             // 
             lblIllustrator.BackColor = Color.FromArgb(255, 254, 234);
-            lblIllustrator.CustomizableEdges = customizableEdges11;
+            lblIllustrator.CustomizableEdges = customizableEdges1;
             lblIllustrator.Dock = DockStyle.Fill;
             lblIllustrator.Image = Properties.Resources.parking_picture_login;
             lblIllustrator.ImageRotate = 0F;
             lblIllustrator.Location = new Point(3, 2);
             lblIllustrator.Margin = new Padding(3, 2, 3, 2);
             lblIllustrator.Name = "lblIllustrator";
-            lblIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            lblIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges2;
             lblIllustrator.Size = new Size(463, 485);
             lblIllustrator.SizeMode = PictureBoxSizeMode.StretchImage;
             lblIllustrator.TabIndex = 3;
@@ -251,12 +81,33 @@
             guna2Elipse4.BorderRadius = 8;
             guna2Elipse4.TargetControl = btnLogin;
             // 
+            // btnLogin
+            // 
+            btnLogin.Anchor = AnchorStyles.None;
+            btnLogin.CustomizableEdges = customizableEdges3;
+            btnLogin.DisabledState.BorderColor = Color.DarkGray;
+            btnLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogin.FillColor = Color.FromArgb(226, 139, 0);
+            btnLogin.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(51, 384);
+            btnLogin.Margin = new Padding(0);
+            btnLogin.Name = "btnLogin";
+            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnLogin.Size = new Size(360, 46);
+            btnLogin.TabIndex = 4;
+            btnLogin.Text = "Login";
+            btnLogin.TextOffset = new Point(0, -2);
+            btnLogin.Click += btnLogin_Click;
+            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(guna2CustomGradientPanel1, 1, 0);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
             tableLayoutPanel1.Controls.Add(lblIllustrator, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 42);
@@ -265,6 +116,146 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(938, 489);
             tableLayoutPanel1.TabIndex = 5;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 1;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.Controls.Add(lblLogo, 0, 1);
+            tableLayoutPanel2.Controls.Add(lblTitle, 0, 2);
+            tableLayoutPanel2.Controls.Add(lblDescription, 0, 3);
+            tableLayoutPanel2.Controls.Add(btnLogin, 0, 7);
+            tableLayoutPanel2.Controls.Add(txtPassword, 0, 6);
+            tableLayoutPanel2.Controls.Add(txtUsername, 0, 5);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(472, 3);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 9;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(463, 483);
+            tableLayoutPanel2.TabIndex = 13;
+            // 
+            // lblLogo
+            // 
+            lblLogo.Anchor = AnchorStyles.None;
+            lblLogo.BackColor = Color.FromArgb(255, 254, 234);
+            lblLogo.Cursor = Cursors.Hand;
+            lblLogo.Image = Properties.Resources.logo_park_ease_oranye;
+            lblLogo.Location = new Point(152, 58);
+            lblLogo.Margin = new Padding(3, 2, 3, 2);
+            lblLogo.Name = "lblLogo";
+            lblLogo.Padding = new Padding(9, 8, 9, 8);
+            lblLogo.Size = new Size(158, 44);
+            lblLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            lblLogo.TabIndex = 7;
+            lblLogo.TabStop = false;
+            // 
+            // lblTitle
+            // 
+            lblTitle.Anchor = AnchorStyles.None;
+            lblTitle.AutoSize = true;
+            lblTitle.BackColor = Color.Transparent;
+            lblTitle.Font = new Font("Ubuntu", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
+            lblTitle.Location = new Point(173, 135);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(116, 40);
+            lblTitle.TabIndex = 6;
+            lblTitle.Text = "LOGIN";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblDescription
+            // 
+            lblDescription.Anchor = AnchorStyles.None;
+            lblDescription.AutoSize = true;
+            lblDescription.BackColor = Color.FromArgb(255, 254, 234);
+            lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDescription.ForeColor = SystemColors.ControlDarkDark;
+            lblDescription.Location = new Point(28, 194);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Size = new Size(407, 32);
+            lblDescription.TabIndex = 8;
+            lblDescription.Text = "Easily simplify your parking operations – log in and optimize your parking solutions.";
+            lblDescription.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Anchor = AnchorStyles.None;
+            txtPassword.Animated = true;
+            txtPassword.BackColor = Color.Transparent;
+            txtPassword.BorderColor = Color.FromArgb(255, 244, 133);
+            txtPassword.BorderRadius = 8;
+            txtPassword.BorderThickness = 2;
+            txtPassword.CustomizableEdges = customizableEdges5;
+            txtPassword.DefaultText = "";
+            txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.FillColor = Color.FromArgb(255, 249, 197);
+            txtPassword.FocusedState.BorderColor = Color.Transparent;
+            txtPassword.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
+            txtPassword.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.ForeColor = Color.FromArgb(226, 139, 0);
+            txtPassword.HoverState.BorderColor = Color.Transparent;
+            txtPassword.IconLeft = Properties.Resources.icon_key;
+            txtPassword.IconLeftOffset = new Point(10, 0);
+            txtPassword.IconRightOffset = new Point(10, 0);
+            txtPassword.Location = new Point(51, 321);
+            txtPassword.Margin = new Padding(0);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
+            txtPassword.PlaceholderText = "Password";
+            txtPassword.SelectedText = "";
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtPassword.Size = new Size(360, 46);
+            txtPassword.TabIndex = 2;
+            txtPassword.TextOffset = new Point(10, -2);
+            // 
+            // txtUsername
+            // 
+            txtUsername.Anchor = AnchorStyles.None;
+            txtUsername.Animated = true;
+            txtUsername.BackColor = Color.Transparent;
+            txtUsername.BorderColor = Color.FromArgb(255, 244, 133);
+            txtUsername.BorderRadius = 8;
+            txtUsername.BorderThickness = 2;
+            txtUsername.CustomizableEdges = customizableEdges7;
+            txtUsername.DefaultText = "";
+            txtUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtUsername.FillColor = Color.FromArgb(255, 249, 197);
+            txtUsername.FocusedState.BorderColor = Color.Transparent;
+            txtUsername.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
+            txtUsername.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsername.ForeColor = Color.FromArgb(226, 139, 0);
+            txtUsername.HoverState.BorderColor = Color.Transparent;
+            txtUsername.IconLeft = Properties.Resources.icon_users_active;
+            txtUsername.IconLeftOffset = new Point(10, 0);
+            txtUsername.IconRightOffset = new Point(10, 0);
+            txtUsername.Location = new Point(51, 265);
+            txtUsername.Margin = new Padding(0);
+            txtUsername.Name = "txtUsername";
+            txtUsername.PasswordChar = '\0';
+            txtUsername.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
+            txtUsername.PlaceholderText = "Username";
+            txtUsername.SelectedText = "";
+            txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtUsername.Size = new Size(360, 46);
+            txtUsername.TabIndex = 1;
+            txtUsername.TextOffset = new Point(10, -2);
             // 
             // ucTopBar
             // 
@@ -288,28 +279,27 @@
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            guna2CustomGradientPanel1.ResumeLayout(false);
-            guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)lblLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)lblIllustrator).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
-            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)lblLogo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox lblIllustrator;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Label lblTitle;
-        private PictureBox lblLogo;
-        private Label lblDescription;
-        private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
-        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private TableLayoutPanel tableLayoutPanel1;
         private UserControls.UC_TopBar ucTopBar;
+        private TableLayoutPanel tableLayoutPanel2;
+        private PictureBox lblLogo;
+        private Label lblTitle;
+        private Label lblDescription;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private Guna.UI2.WinForms.Guna2TextBox txtPasswordConfirmation;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtUsername;
     }
 }

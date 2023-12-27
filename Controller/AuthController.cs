@@ -81,7 +81,7 @@ namespace ParkEase.Controller
             }
 
             BaseResponse<AuthLogin>? res = _repo.Login(username, password);
-            if (res == null || res.Data == null)
+            if (res == null)
             {
                 throw new Exception("Something wrong for your request");
             }
@@ -89,6 +89,11 @@ namespace ParkEase.Controller
             if (res.IsErrorConfirmation())
             {
                 throw new Exception(res.Message);
+            }
+
+            if (res.Data == null)
+            {
+                throw new Exception("Something wrong for your request");
             }
 
             SetPersistanceAuth(res.Data.Token);
