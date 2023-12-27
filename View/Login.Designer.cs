@@ -298,7 +298,6 @@
         private Label lblTitle;
         private Label lblDescription;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private Guna.UI2.WinForms.Guna2TextBox txtPasswordConfirmation;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
     }

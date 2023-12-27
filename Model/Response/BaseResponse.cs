@@ -20,8 +20,10 @@ namespace ParkEase.Model.Response
         }
     }
 
-    public class BaseResponsePagination<T> : BaseResponse<T>
+    public class BaseResponsePagination<T>
     {
+        [JsonPropertyName("content")]
+        public required T[] Content { get; set; }
 
         [JsonPropertyName("metadata")]
         public required Metadata Metadata { get; set; }
