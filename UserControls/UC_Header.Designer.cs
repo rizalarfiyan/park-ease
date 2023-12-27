@@ -79,6 +79,7 @@
             // btnChangePassword
             // 
             btnChangePassword.Anchor = AnchorStyles.None;
+            btnChangePassword.Cursor = Cursors.Hand;
             btnChangePassword.CustomizableEdges = customizableEdges1;
             btnChangePassword.DisabledState.BorderColor = Color.Transparent;
             btnChangePassword.DisabledState.CustomBorderColor = Color.Transparent;

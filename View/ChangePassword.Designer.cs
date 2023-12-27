@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             ucTopBar = new UserControls.UC_TopBar();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -47,11 +47,11 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             lblLogo = new PictureBox();
-            txtPasswordConfirmation = new Guna.UI2.WinForms.Guna2TextBox();
             lblTitle = new Label();
             lblDescription = new Label();
-            txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPasswordConfirmation = new Guna.UI2.WinForms.Guna2TextBox();
             txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -70,14 +70,14 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.BackColor = Color.FromArgb(255, 254, 234);
-            guna2PictureBox1.CustomizableEdges = customizableEdges11;
+            guna2PictureBox1.CustomizableEdges = customizableEdges1;
             guna2PictureBox1.Dock = DockStyle.Fill;
             guna2PictureBox1.Image = Properties.Resources.picture_changepassword;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(478, 2);
             guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2PictureBox1.Size = new Size(469, 574);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 4;
@@ -96,7 +96,7 @@
             // btnChangePassword
             // 
             btnChangePassword.Anchor = AnchorStyles.None;
-            btnChangePassword.CustomizableEdges = customizableEdges13;
+            btnChangePassword.CustomizableEdges = customizableEdges3;
             btnChangePassword.DisabledState.BorderColor = Color.DarkGray;
             btnChangePassword.DisabledState.CustomBorderColor = Color.DarkGray;
             btnChangePassword.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -107,11 +107,12 @@
             btnChangePassword.Location = new Point(54, 457);
             btnChangePassword.Margin = new Padding(0);
             btnChangePassword.Name = "btnChangePassword";
-            btnChangePassword.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnChangePassword.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnChangePassword.Size = new Size(360, 46);
             btnChangePassword.TabIndex = 4;
-            btnChangePassword.Text = "Log In";
+            btnChangePassword.Text = "Change Password";
             btnChangePassword.TextOffset = new Point(0, -2);
+            btnChangePassword.Click += btnChangePassword_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -171,41 +172,6 @@
             lblLogo.TabIndex = 7;
             lblLogo.TabStop = false;
             // 
-            // txtPasswordConfirmation
-            // 
-            txtPasswordConfirmation.Anchor = AnchorStyles.None;
-            txtPasswordConfirmation.Animated = true;
-            txtPasswordConfirmation.BackColor = Color.Transparent;
-            txtPasswordConfirmation.BorderColor = Color.FromArgb(255, 244, 133);
-            txtPasswordConfirmation.BorderRadius = 8;
-            txtPasswordConfirmation.BorderThickness = 2;
-            txtPasswordConfirmation.CustomizableEdges = customizableEdges15;
-            txtPasswordConfirmation.DefaultText = "";
-            txtPasswordConfirmation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPasswordConfirmation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPasswordConfirmation.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPasswordConfirmation.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPasswordConfirmation.FillColor = Color.FromArgb(255, 249, 197);
-            txtPasswordConfirmation.FocusedState.BorderColor = Color.Transparent;
-            txtPasswordConfirmation.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
-            txtPasswordConfirmation.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPasswordConfirmation.ForeColor = Color.FromArgb(226, 139, 0);
-            txtPasswordConfirmation.HoverState.BorderColor = Color.Transparent;
-            txtPasswordConfirmation.IconLeft = Properties.Resources.icon_key;
-            txtPasswordConfirmation.IconLeftOffset = new Point(10, 0);
-            txtPasswordConfirmation.IconRightOffset = new Point(10, 0);
-            txtPasswordConfirmation.Location = new Point(54, 394);
-            txtPasswordConfirmation.Margin = new Padding(0);
-            txtPasswordConfirmation.Name = "txtPasswordConfirmation";
-            txtPasswordConfirmation.PasswordChar = '*';
-            txtPasswordConfirmation.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
-            txtPasswordConfirmation.PlaceholderText = "New Password Confirmation";
-            txtPasswordConfirmation.SelectedText = "";
-            txtPasswordConfirmation.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtPasswordConfirmation.Size = new Size(360, 46);
-            txtPasswordConfirmation.TabIndex = 3;
-            txtPasswordConfirmation.TextOffset = new Point(10, -2);
-            // 
             // lblTitle
             // 
             lblTitle.Anchor = AnchorStyles.None;
@@ -234,40 +200,40 @@
             lblDescription.Text = "Revamp your account's security effortlessly and regain control \r\nwith our user-friendly and secure password change feature.";
             lblDescription.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtOldPassword
+            // txtPasswordConfirmation
             // 
-            txtOldPassword.Anchor = AnchorStyles.None;
-            txtOldPassword.Animated = true;
-            txtOldPassword.BackColor = Color.Transparent;
-            txtOldPassword.BorderColor = Color.FromArgb(255, 244, 133);
-            txtOldPassword.BorderRadius = 8;
-            txtOldPassword.BorderThickness = 2;
-            txtOldPassword.CustomizableEdges = customizableEdges19;
-            txtOldPassword.DefaultText = "";
-            txtOldPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtOldPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtOldPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtOldPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtOldPassword.FillColor = Color.FromArgb(255, 249, 197);
-            txtOldPassword.FocusedState.BorderColor = Color.Transparent;
-            txtOldPassword.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
-            txtOldPassword.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtOldPassword.ForeColor = Color.FromArgb(226, 139, 0);
-            txtOldPassword.HoverState.BorderColor = Color.Transparent;
-            txtOldPassword.IconLeft = Properties.Resources.icon_key;
-            txtOldPassword.IconLeftOffset = new Point(10, 0);
-            txtOldPassword.IconRightOffset = new Point(10, 0);
-            txtOldPassword.Location = new Point(54, 282);
-            txtOldPassword.Margin = new Padding(0);
-            txtOldPassword.Name = "txtOldPassword";
-            txtOldPassword.PasswordChar = '*';
-            txtOldPassword.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
-            txtOldPassword.PlaceholderText = "Old Password";
-            txtOldPassword.SelectedText = "";
-            txtOldPassword.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtOldPassword.Size = new Size(360, 46);
-            txtOldPassword.TabIndex = 1;
-            txtOldPassword.TextOffset = new Point(10, -2);
+            txtPasswordConfirmation.Anchor = AnchorStyles.None;
+            txtPasswordConfirmation.Animated = true;
+            txtPasswordConfirmation.BackColor = Color.Transparent;
+            txtPasswordConfirmation.BorderColor = Color.FromArgb(255, 244, 133);
+            txtPasswordConfirmation.BorderRadius = 8;
+            txtPasswordConfirmation.BorderThickness = 2;
+            txtPasswordConfirmation.CustomizableEdges = customizableEdges5;
+            txtPasswordConfirmation.DefaultText = "";
+            txtPasswordConfirmation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPasswordConfirmation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPasswordConfirmation.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPasswordConfirmation.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPasswordConfirmation.FillColor = Color.FromArgb(255, 249, 197);
+            txtPasswordConfirmation.FocusedState.BorderColor = Color.Transparent;
+            txtPasswordConfirmation.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
+            txtPasswordConfirmation.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPasswordConfirmation.ForeColor = Color.FromArgb(226, 139, 0);
+            txtPasswordConfirmation.HoverState.BorderColor = Color.Transparent;
+            txtPasswordConfirmation.IconLeft = Properties.Resources.icon_key;
+            txtPasswordConfirmation.IconLeftOffset = new Point(10, 0);
+            txtPasswordConfirmation.IconRightOffset = new Point(10, 0);
+            txtPasswordConfirmation.Location = new Point(54, 394);
+            txtPasswordConfirmation.Margin = new Padding(0);
+            txtPasswordConfirmation.Name = "txtPasswordConfirmation";
+            txtPasswordConfirmation.PasswordChar = '*';
+            txtPasswordConfirmation.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
+            txtPasswordConfirmation.PlaceholderText = "New Password Confirmation";
+            txtPasswordConfirmation.SelectedText = "";
+            txtPasswordConfirmation.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtPasswordConfirmation.Size = new Size(360, 46);
+            txtPasswordConfirmation.TabIndex = 3;
+            txtPasswordConfirmation.TextOffset = new Point(10, -2);
             // 
             // txtPassword
             // 
@@ -277,7 +243,7 @@
             txtPassword.BorderColor = Color.FromArgb(255, 244, 133);
             txtPassword.BorderRadius = 8;
             txtPassword.BorderThickness = 2;
-            txtPassword.CustomizableEdges = customizableEdges17;
+            txtPassword.CustomizableEdges = customizableEdges7;
             txtPassword.DefaultText = "";
             txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -299,10 +265,45 @@
             txtPassword.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
             txtPassword.PlaceholderText = "New Password";
             txtPassword.SelectedText = "";
-            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtPassword.Size = new Size(360, 46);
             txtPassword.TabIndex = 2;
             txtPassword.TextOffset = new Point(10, -2);
+            // 
+            // txtOldPassword
+            // 
+            txtOldPassword.Anchor = AnchorStyles.None;
+            txtOldPassword.Animated = true;
+            txtOldPassword.BackColor = Color.Transparent;
+            txtOldPassword.BorderColor = Color.FromArgb(255, 244, 133);
+            txtOldPassword.BorderRadius = 8;
+            txtOldPassword.BorderThickness = 2;
+            txtOldPassword.CustomizableEdges = customizableEdges9;
+            txtOldPassword.DefaultText = "";
+            txtOldPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtOldPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtOldPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtOldPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtOldPassword.FillColor = Color.FromArgb(255, 249, 197);
+            txtOldPassword.FocusedState.BorderColor = Color.Transparent;
+            txtOldPassword.FocusedState.ForeColor = Color.FromArgb(226, 139, 0);
+            txtOldPassword.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtOldPassword.ForeColor = Color.FromArgb(226, 139, 0);
+            txtOldPassword.HoverState.BorderColor = Color.Transparent;
+            txtOldPassword.IconLeft = Properties.Resources.icon_key;
+            txtOldPassword.IconLeftOffset = new Point(10, 0);
+            txtOldPassword.IconRightOffset = new Point(10, 0);
+            txtOldPassword.Location = new Point(54, 282);
+            txtOldPassword.Margin = new Padding(0);
+            txtOldPassword.Name = "txtOldPassword";
+            txtOldPassword.PasswordChar = '*';
+            txtOldPassword.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
+            txtOldPassword.PlaceholderText = "Old Password";
+            txtOldPassword.SelectedText = "";
+            txtOldPassword.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtOldPassword.Size = new Size(360, 46);
+            txtOldPassword.TabIndex = 1;
+            txtOldPassword.TextOffset = new Point(10, -2);
             // 
             // frmChangePassword
             // 

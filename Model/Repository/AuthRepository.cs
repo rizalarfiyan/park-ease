@@ -1,6 +1,6 @@
 ﻿using ParkEase.Libs;
-using ParkEase.Model.Response;
 using ParkEase.Model.Entity;
+using ParkEase.Model.Response;
 using RestSharp;
 
 namespace ParkEase.Model.Repository
