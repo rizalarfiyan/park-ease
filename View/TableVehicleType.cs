@@ -1,10 +1,8 @@
 ﻿using ParkEase.Constants;
 using ParkEase.Controller;
 using ParkEase.Model.Entity;
-using System.Diagnostics;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
-using System.Xml.Linq;
 
 namespace ParkEase.View
 {

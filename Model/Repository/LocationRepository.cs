@@ -44,10 +44,10 @@ public class LocationRepository
         return res.Data;
     }
     
-    public BaseResponse<string?>? UpdateLocation(string code, Location payload)
+    public BaseResponse<string?>? UpdateLocation(Location payload)
     {
         var req = new RestRequest("/location/{code}", Method.Put);
-        req.AddUrlSegment("code", code);
+        req.AddUrlSegment("code", payload.Code);
         req.AddJsonBody(new
         {
             name = payload.Name,
