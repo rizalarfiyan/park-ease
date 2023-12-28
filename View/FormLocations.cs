@@ -3,16 +3,16 @@ using ParkEase.Model.Entity;
 
 namespace ParkEase.View
 {
-    public partial class FormVehicleType : Form
+    public partial class FormLocations : Form
     {
         public event LoadDataEvenHandler? OnLoadData;
         private bool isCreate = false;
-        private VehicleTypeController _controller;
+        private LocationController _controller;
 
-        public FormVehicleType()
+        public FormLocations()
         {
             InitializeComponent();
-            _controller = new VehicleTypeController();
+            _controller = new LocationController();
             ucTopBar.SetForm(this);
         }
 
@@ -20,7 +20,7 @@ namespace ParkEase.View
         {
             string code = txtCode.Text.Trim();
             string name = txtName.Text.Trim();
-            string price = txtPrice.Text.Trim();
+            bool isExit = chbExit.Checked;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
 
@@ -28,15 +28,15 @@ namespace ParkEase.View
             {
                 if (isCreate)
                 {
-                    _controller.CreateVehicleType(code, name, price);
+                    _controller.CreateLocation(code, name, isExit);
                 }
                 else
                 {
-                    _controller.UpdateVehicleType(code, name, price);
+                    _controller.UpdateLocation(code, name, isExit);
                 }
 
-                string message = "Success add Vehicle Type";
-                if (!isCreate) message = "Success update Vehicle Type";
+                string message = "Success add Location";
+                if (!isCreate) message = "Success update Location";
                 if (OnLoadData != null) OnLoadData();
 
                 DialogResult dialog = MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -66,23 +66,23 @@ namespace ParkEase.View
             this.isCreate = isCreate;
             if (isCreate)
             {
-                Text = "Add Vehicle Type";
-                lblTitle.Text = "ADD VEHICLE TYPE";
+                Text = "Add Location";
+                lblTitle.Text = "ADD LOCATION";
                 btnSave.Text = "Add";
                 return;
             }
 
-            Text = "Update Vehicle Type";
-            lblTitle.Text = "UPDATE VEHICLE TYPE";
+            Text = "Update Location";
+            lblTitle.Text = "UPDATE LOCATION";
             btnSave.Text = "Save";
             return;
         }
 
-        public void SetData(VehicleType data)
+        public void SetData(Location data)
         {
             txtCode.Text = data.Code;
             txtName.Text = data.Name;
-            txtPrice.Text = data.Price.ToString();
+            chbExit.Checked = data.IsExit;
         }
     }
 }
