@@ -1,17 +1,20 @@
 ﻿using Guna.UI2.WinForms;
 using System.Runtime.InteropServices;
 using ParkEase.Constants;
+using ParkEase.Controller;
 
 namespace ParkEase.View
 {
     public partial class frmDashboard : Form
     {
         private Form? activeForm = null;
+        private AuthController _controller;
 
         public frmDashboard()
         {
             InitializeComponent();
             this.Text = $"{App.APP_NAME} - Dashboard";
+            _controller = new AuthController();
             InitializeHeader();
             InitializeRole();
         }
@@ -67,6 +70,21 @@ namespace ParkEase.View
         private void btnUsers_Click(object sender, EventArgs e)
         {
             openChildForm(new TableUsers());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Program.UserData = null;
+            Program.UserToken = null;
+            _controller.RemovePersistanceAuth();
+            var login = new frmLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void btnLocation_Click(object sender, EventArgs e)
+        {
+            openChildForm(new TableLocations());
         }
     }
 }
