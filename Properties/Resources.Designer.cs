@@ -203,6 +203,16 @@ namespace ParkEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icon_pencil {
+            get {
+                object obj = ResourceManager.GetObject("icon_pencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icon_plus {
             get {
                 object obj = ResourceManager.GetObject("icon_plus", resourceCulture);
@@ -236,6 +246,16 @@ namespace ParkEase.Properties {
         public static System.Drawing.Bitmap icon_settings_default {
             get {
                 object obj = ResourceManager.GetObject("icon_settings_default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icon_trash {
+            get {
+                object obj = ResourceManager.GetObject("icon_trash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
