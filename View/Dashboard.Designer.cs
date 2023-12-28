@@ -115,6 +115,7 @@
             btnSettings.TextOffset = new Point(10, 0);
             btnSettings.UseTransparentBackground = true;
             btnSettings.CheckedChanged += btnDashboard_CheckedChanged;
+            btnSettings.Click += btnSettings_Click;
             // 
             // btnVehicleType
             // 

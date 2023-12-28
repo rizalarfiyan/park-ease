@@ -86,5 +86,12 @@ namespace ParkEase.View
         {
             openChildForm(new TableLocations());
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            var settings = new Settings();
+            openChildForm(settings);
+            ucHeader.Hide();
+        }
     }
 }
