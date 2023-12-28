@@ -14,6 +14,7 @@ namespace ParkEase.View
         {
             InitializeComponent();
             _controller = new VehicleTypeController();
+            ucTopBar.SetForm(this);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -29,7 +30,8 @@ namespace ParkEase.View
                 if (isCreate)
                 {
                     _controller.CreateVehicleType(code, name, price);
-                } else
+                }
+                else
                 {
                     _controller.UpdateVehicleType(code, name, price);
                 }

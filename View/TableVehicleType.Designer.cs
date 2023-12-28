@@ -32,17 +32,23 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tableLayoutPanel2 = new TableLayoutPanel();
             tableLayoutPanel1 = new TableLayoutPanel();
-            btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            btnDelete = new Guna.UI2.WinForms.Guna2Button();
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            btnEdit = new Guna.UI2.WinForms.Guna2Button();
             lvwTable = new Guna.UI2.WinForms.Guna2DataGridView();
             columnNo = new DataGridViewTextBoxColumn();
             columnCode = new DataGridViewTextBoxColumn();
@@ -85,42 +91,47 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(btnAdd, 1, 0);
+            tableLayoutPanel1.ColumnCount = 6;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
+            tableLayoutPanel1.Controls.Add(btnDelete, 0, 0);
             tableLayoutPanel1.Controls.Add(txtSearch, 0, 0);
+            tableLayoutPanel1.Controls.Add(btnAdd, 5, 0);
+            tableLayoutPanel1.Controls.Add(btnEdit, 3, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(3, 143);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Size = new Size(794, 50);
             tableLayoutPanel1.TabIndex = 17;
             // 
-            // btnAdd
+            // btnDelete
             // 
-            btnAdd.Anchor = AnchorStyles.Right;
-            btnAdd.BorderRadius = 8;
-            btnAdd.Cursor = Cursors.Hand;
-            btnAdd.CustomizableEdges = customizableEdges1;
-            btnAdd.DisabledState.BorderColor = Color.DarkGray;
-            btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAdd.FillColor = Color.FromArgb(226, 139, 0);
-            btnAdd.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdd.ForeColor = Color.White;
-            btnAdd.Image = Properties.Resources.icon_plus;
-            btnAdd.Location = new Point(682, 2);
-            btnAdd.Margin = new Padding(0);
-            btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnAdd.Size = new Size(112, 46);
-            btnAdd.TabIndex = 18;
-            btnAdd.Text = "Add";
-            btnAdd.TextOffset = new Point(0, -2);
-            btnAdd.Click += btnAdd_Click;
+            btnDelete.Anchor = AnchorStyles.Right;
+            btnDelete.BorderRadius = 8;
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.CustomizableEdges = customizableEdges1;
+            btnDelete.DisabledState.BorderColor = Color.DarkGray;
+            btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDelete.FillColor = Color.FromArgb(226, 139, 0);
+            btnDelete.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Image = Properties.Resources.icon_plus;
+            btnDelete.Location = new Point(558, 2);
+            btnDelete.Margin = new Padding(0);
+            btnDelete.Name = "btnDelete";
+            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnDelete.Size = new Size(50, 46);
+            btnDelete.TabIndex = 19;
+            btnDelete.TextOffset = new Point(0, -2);
+            btnDelete.Click += btnDelete_Click;
             // 
             // txtSearch
             // 
@@ -157,6 +168,53 @@
             txtSearch.Size = new Size(228, 46);
             txtSearch.TabIndex = 1;
             txtSearch.TextOffset = new Point(10, -2);
+            // 
+            // btnAdd
+            // 
+            btnAdd.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnAdd.BorderRadius = 8;
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.CustomizableEdges = customizableEdges5;
+            btnAdd.DisabledState.BorderColor = Color.DarkGray;
+            btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAdd.FillColor = Color.FromArgb(226, 139, 0);
+            btnAdd.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Image = Properties.Resources.icon_plus;
+            btnAdd.Location = new Point(674, 2);
+            btnAdd.Margin = new Padding(0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnAdd.Size = new Size(120, 46);
+            btnAdd.TabIndex = 18;
+            btnAdd.Text = "Add";
+            btnAdd.TextOffset = new Point(0, -2);
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Anchor = AnchorStyles.Right;
+            btnEdit.BorderRadius = 8;
+            btnEdit.Cursor = Cursors.Hand;
+            btnEdit.CustomizableEdges = customizableEdges7;
+            btnEdit.DisabledState.BorderColor = Color.DarkGray;
+            btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEdit.FillColor = Color.FromArgb(226, 139, 0);
+            btnEdit.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEdit.ForeColor = Color.White;
+            btnEdit.Image = Properties.Resources.icon_plus;
+            btnEdit.Location = new Point(616, 2);
+            btnEdit.Margin = new Padding(0);
+            btnEdit.Name = "btnEdit";
+            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnEdit.Size = new Size(50, 46);
+            btnEdit.TabIndex = 20;
+            btnEdit.TextOffset = new Point(0, -2);
+            btnEdit.Click += btnEdit_Click;
             // 
             // lvwTable
             // 
@@ -284,12 +342,15 @@
             // 
             // tableLayoutPanel3
             // 
-            tableLayoutPanel3.ColumnCount = 3;
+            tableLayoutPanel3.ColumnCount = 5;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Controls.Add(btnPrev, 0, 0);
-            tableLayoutPanel3.Controls.Add(btnNext, 2, 0);
+            tableLayoutPanel3.Controls.Add(btnPrev, 1, 0);
+            tableLayoutPanel3.Controls.Add(btnNext, 3, 0);
+            tableLayoutPanel3.Dock = DockStyle.Bottom;
             tableLayoutPanel3.Location = new Point(3, 302);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
@@ -302,7 +363,7 @@
             btnPrev.Anchor = AnchorStyles.Right;
             btnPrev.BorderRadius = 8;
             btnPrev.Cursor = Cursors.Hand;
-            btnPrev.CustomizableEdges = customizableEdges5;
+            btnPrev.CustomizableEdges = customizableEdges9;
             btnPrev.DisabledState.BorderColor = Color.DarkGray;
             btnPrev.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPrev.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -310,21 +371,22 @@
             btnPrev.FillColor = Color.FromArgb(226, 139, 0);
             btnPrev.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnPrev.ForeColor = Color.White;
-            btnPrev.Location = new Point(275, 2);
+            btnPrev.Location = new Point(287, 2);
             btnPrev.Margin = new Padding(0);
             btnPrev.Name = "btnPrev";
-            btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnPrev.Size = new Size(112, 46);
+            btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnPrev.Size = new Size(100, 46);
             btnPrev.TabIndex = 19;
             btnPrev.Text = "Prev";
             btnPrev.TextOffset = new Point(0, -2);
+            btnPrev.Click += btnPrev_Click;
             // 
             // btnNext
             // 
             btnNext.Anchor = AnchorStyles.Left;
             btnNext.BorderRadius = 8;
             btnNext.Cursor = Cursors.Hand;
-            btnNext.CustomizableEdges = customizableEdges7;
+            btnNext.CustomizableEdges = customizableEdges11;
             btnNext.DisabledState.BorderColor = Color.DarkGray;
             btnNext.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNext.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -335,11 +397,12 @@
             btnNext.Location = new Point(407, 2);
             btnNext.Margin = new Padding(0);
             btnNext.Name = "btnNext";
-            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnNext.Size = new Size(112, 46);
+            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnNext.Size = new Size(100, 46);
             btnNext.TabIndex = 18;
             btnNext.Text = "Next";
             btnNext.TextOffset = new Point(0, -2);
+            btnNext.Click += btnNext_Click;
             // 
             // TableVehicleType
             // 
@@ -375,5 +438,7 @@
         private DataGridViewTextBoxColumn columnCode;
         private DataGridViewTextBoxColumn columnName;
         private DataGridViewTextBoxColumn columnPrice;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
+        private Guna.UI2.WinForms.Guna2Button btnEdit;
     }
 }
