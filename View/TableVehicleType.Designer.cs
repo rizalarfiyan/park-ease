@@ -123,7 +123,7 @@
             btnDelete.FillColor = Color.FromArgb(226, 139, 0);
             btnDelete.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnDelete.ForeColor = Color.White;
-            btnDelete.Image = Properties.Resources.icon_plus;
+            btnDelete.Image = Properties.Resources.icon_trash;
             btnDelete.Location = new Point(558, 2);
             btnDelete.Margin = new Padding(0);
             btnDelete.Name = "btnDelete";
@@ -206,7 +206,7 @@
             btnEdit.FillColor = Color.FromArgb(226, 139, 0);
             btnEdit.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnEdit.ForeColor = Color.White;
-            btnEdit.Image = Properties.Resources.icon_plus;
+            btnEdit.Image = Properties.Resources.icon_pencil;
             btnEdit.Location = new Point(616, 2);
             btnEdit.Margin = new Padding(0);
             btnEdit.Name = "btnEdit";
