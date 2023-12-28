@@ -1,8 +1,10 @@
 ﻿using ParkEase.Constants;
 using ParkEase.Controller;
 using ParkEase.Model.Entity;
+using System.Diagnostics;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
+using System.Xml.Linq;
 
 namespace ParkEase.View
 {
@@ -11,6 +13,7 @@ namespace ParkEase.View
         protected VehicleTypeController _controller;
         protected VehicleType[]? _content;
         protected int _page = 1;
+        protected int _limit = App.DEFAULT_PAGINATION_LIMIT;
         protected string? _search;
         protected string? _order;
         protected string? _orderBy;
@@ -38,7 +41,7 @@ namespace ParkEase.View
         {
             var param = new BaseRequestPagination()
             {
-                Limit = App.DEFAULT_PAGINATION_LIMIT,
+                Limit = _limit,
                 Order = _order,
                 OrderBy = _orderBy,
                 Page = _page,
@@ -72,7 +75,7 @@ namespace ParkEase.View
                 lvwTable.Rows.Add(
                     new object[]
                     {
-                            idx+1,
+                            _limit*(_page-1)+idx+1,
                             val.Code,
                             val.Name,
                             val.Price,
@@ -144,6 +147,65 @@ namespace ParkEase.View
 
             lastColumn = column;
             lvwTable.Invoke((MethodInvoker)(() => LoadData()));
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            var frmInput = new FormVehicleType();
+            frmInput.IsCreate(true);
+            frmInput.OnLoadData += LoadData;
+            frmInput.Show();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (lvwTable.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            };
+
+            if (_content?.Length <= 0) return;
+            var selectedItem = _content![lvwTable.Rows[0].Index];
+            var frmInput = new FormVehicleType();
+            frmInput.IsCreate(false);
+            frmInput.OnLoadData += LoadData;
+            frmInput.SetData(selectedItem);
+            frmInput.Show();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lvwTable.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            };
+
+            if (_content?.Length <= 0) return;
+            var selectedItem = _content![lvwTable.Rows[0].Index];
+            try
+            {
+                _controller.DeleteVehicleType(selectedItem.Code);
+                LoadData();
+                MessageBox.Show("Success delete Vehicle Type", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            _page += 1;
+            LoadData();
+        }
+
+        private void btnPrev_Click(object sender, EventArgs e)
+        {
+            _page -= 1;
+            LoadData();
         }
     }
 }

@@ -3,6 +3,8 @@ using ParkEase.View;
 
 namespace ParkEase
 {
+    public delegate void LoadDataEvenHandler();
+
     internal static class Program
     {
         public static User? UserData = null;
