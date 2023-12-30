@@ -1,6 +1,6 @@
 ﻿namespace ParkEase.View
 {
-    partial class FormVehicleType
+    partial class FormLocation
     {
         /// <summary>
         /// Required designer variable.
@@ -51,12 +51,12 @@
             lblDescription = new Label();
             tblButtonAction = new TableLayoutPanel();
             tbnFormContent = new TableLayoutPanel();
+            chbExit = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             lblCode = new Label();
             lblName = new Label();
             lblPrice = new Label();
             txtCode = new Guna.UI2.WinForms.Guna2TextBox();
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             picIllustrator = new Guna.UI2.WinForms.Guna2PictureBox();
             tblParent.SuspendLayout();
             tblContent.SuspendLayout();
@@ -180,11 +180,11 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Ubuntu", 20F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
-            lblTitle.Location = new Point(122, 49);
+            lblTitle.Location = new Point(139, 49);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(203, 34);
+            lblTitle.Size = new Size(169, 34);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "VEHICLE TYPE";
+            lblTitle.Text = "LOCATIONS";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblDescription
@@ -194,13 +194,13 @@
             lblDescription.BackColor = Color.FromArgb(255, 254, 234);
             lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblDescription.ForeColor = SystemColors.ControlDarkDark;
-            lblDescription.Location = new Point(60, 93);
+            lblDescription.Location = new Point(67, 93);
             lblDescription.MaximumSize = new Size(340, 0);
             lblDescription.MinimumSize = new Size(0, 32);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(326, 32);
+            lblDescription.Size = new Size(312, 32);
             lblDescription.TabIndex = 0;
-            lblDescription.Text = "Choose your vehicle type at Park Ease, according to the type of vehicle you park. Safe and comfortable greetings.";
+            lblDescription.Text = "This location will help you to determine a good parking place according to your wishes.";
             lblDescription.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tblButtonAction
@@ -228,22 +228,41 @@
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 270F));
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tbnFormContent.Controls.Add(chbExit, 2, 2);
             tbnFormContent.Controls.Add(lblCode, 1, 0);
             tbnFormContent.Controls.Add(lblName, 1, 1);
             tbnFormContent.Controls.Add(lblPrice, 1, 2);
             tbnFormContent.Controls.Add(txtCode, 2, 0);
             tbnFormContent.Controls.Add(txtName, 2, 1);
-            tbnFormContent.Controls.Add(txtPrice, 2, 2);
             tbnFormContent.Dock = DockStyle.Fill;
             tbnFormContent.Location = new Point(40, 159);
             tbnFormContent.Margin = new Padding(0);
             tbnFormContent.Name = "tbnFormContent";
-            tbnFormContent.RowCount = 1;
+            tbnFormContent.RowCount = 3;
             tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
             tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
             tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
             tbnFormContent.Size = new Size(367, 168);
             tbnFormContent.TabIndex = 10;
+            // 
+            // chbExit
+            // 
+            chbExit.Anchor = AnchorStyles.Left;
+            chbExit.CheckedState.BorderColor = Color.FromArgb(187, 98, 2);
+            chbExit.CheckedState.BorderRadius = 6;
+            chbExit.CheckedState.BorderThickness = 0;
+            chbExit.CheckedState.FillColor = Color.FromArgb(226, 139, 0);
+            chbExit.CustomizableEdges = customizableEdges5;
+            chbExit.Location = new Point(102, 127);
+            chbExit.Margin = new Padding(3, 2, 3, 2);
+            chbExit.Name = "chbExit";
+            chbExit.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            chbExit.Size = new Size(26, 26);
+            chbExit.TabIndex = 3;
+            chbExit.UncheckedState.BorderColor = Color.FromArgb(226, 139, 0);
+            chbExit.UncheckedState.BorderRadius = 6;
+            chbExit.UncheckedState.BorderThickness = 0;
+            chbExit.UncheckedState.FillColor = Color.FromArgb(255, 183, 3);
             // 
             // lblCode
             // 
@@ -282,9 +301,9 @@
             lblPrice.ForeColor = Color.FromArgb(187, 98, 2);
             lblPrice.Location = new Point(2, 129);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(47, 21);
+            lblPrice.Size = new Size(56, 21);
             lblPrice.TabIndex = 7;
-            lblPrice.Text = "Price";
+            lblPrice.Text = "Is Exit";
             lblPrice.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // txtCode
@@ -295,7 +314,7 @@
             txtCode.BorderColor = Color.FromArgb(255, 231, 70);
             txtCode.BorderRadius = 8;
             txtCode.BorderThickness = 2;
-            txtCode.CustomizableEdges = customizableEdges5;
+            txtCode.CustomizableEdges = customizableEdges7;
             txtCode.DefaultText = "";
             txtCode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -313,9 +332,9 @@
             txtCode.Name = "txtCode";
             txtCode.PasswordChar = '\0';
             txtCode.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
-            txtCode.PlaceholderText = "DOM001";
+            txtCode.PlaceholderText = "LOC001";
             txtCode.SelectedText = "";
-            txtCode.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtCode.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtCode.Size = new Size(261, 46);
             txtCode.TabIndex = 1;
             txtCode.TextOffset = new Point(10, -2);
@@ -328,7 +347,7 @@
             txtName.BorderColor = Color.FromArgb(255, 231, 70);
             txtName.BorderRadius = 8;
             txtName.BorderThickness = 2;
-            txtName.CustomizableEdges = customizableEdges7;
+            txtName.CustomizableEdges = customizableEdges9;
             txtName.DefaultText = "";
             txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -346,45 +365,12 @@
             txtName.Name = "txtName";
             txtName.PasswordChar = '\0';
             txtName.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
-            txtName.PlaceholderText = "Motorcycle";
+            txtName.PlaceholderText = "Amikom Park";
             txtName.SelectedText = "";
-            txtName.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtName.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtName.Size = new Size(261, 46);
             txtName.TabIndex = 2;
             txtName.TextOffset = new Point(10, -2);
-            // 
-            // txtPrice
-            // 
-            txtPrice.Anchor = AnchorStyles.None;
-            txtPrice.Animated = true;
-            txtPrice.BackColor = Color.Transparent;
-            txtPrice.BorderColor = Color.FromArgb(255, 231, 70);
-            txtPrice.BorderRadius = 8;
-            txtPrice.BorderThickness = 2;
-            txtPrice.CustomizableEdges = customizableEdges9;
-            txtPrice.DefaultText = "";
-            txtPrice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPrice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPrice.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPrice.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPrice.FillColor = Color.FromArgb(255, 249, 197);
-            txtPrice.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
-            txtPrice.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPrice.ForeColor = Color.FromArgb(187, 98, 2);
-            txtPrice.HoverState.BorderColor = Color.Transparent;
-            txtPrice.IconLeftOffset = new Point(10, 0);
-            txtPrice.IconRightOffset = new Point(10, 0);
-            txtPrice.Location = new Point(103, 117);
-            txtPrice.Margin = new Padding(0);
-            txtPrice.Name = "txtPrice";
-            txtPrice.PasswordChar = '\0';
-            txtPrice.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
-            txtPrice.PlaceholderText = "2000";
-            txtPrice.SelectedText = "";
-            txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtPrice.Size = new Size(261, 46);
-            txtPrice.TabIndex = 3;
-            txtPrice.TextOffset = new Point(10, -2);
             // 
             // picIllustrator
             // 
@@ -403,7 +389,7 @@
             picIllustrator.TabIndex = 3;
             picIllustrator.TabStop = false;
             // 
-            // FormVehicleType
+            // FormLocation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -413,8 +399,8 @@
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormVehicleType";
-            Text = "VehicleType";
+            Name = "FormLocation";
+            Text = "Location";
             tblParent.ResumeLayout(false);
             tblContent.ResumeLayout(false);
             tblContent.PerformLayout();
@@ -433,7 +419,6 @@
         private Label lblTitle;
         private Label lblDescription;
         private Guna.UI2.WinForms.Guna2Button btnSave;
-        private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtCode;
         private Guna.UI2.WinForms.Guna2PictureBox picIllustrator;
         private TableLayoutPanel tblButtonAction;
@@ -443,5 +428,6 @@
         private Label lblCode;
         private Label lblName;
         private Label lblPrice;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox chbExit;
     }
 }

@@ -3,24 +3,25 @@ using ParkEase.Model.Entity;
 
 namespace ParkEase.View
 {
-    public partial class FormLocations : Form
+    public partial class FormLocation : Form
     {
         public event LoadDataEvenHandler? OnLoadData;
         private bool isCreate = false;
         private LocationController _controller;
 
-        public FormLocations()
+        public FormLocation()
         {
             InitializeComponent();
             _controller = new LocationController();
             ucTopBar.SetForm(this);
+            ucTopBar.HideMaximize();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             string code = txtCode.Text.Trim();
             string name = txtName.Text.Trim();
-            bool isExit = chbExit.Checked;
+            bool isActive = chbExit.Checked;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
 
@@ -28,11 +29,11 @@ namespace ParkEase.View
             {
                 if (isCreate)
                 {
-                    _controller.CreateLocation(code, name, isExit);
+                    _controller.CreateLocation(code, name, isActive);
                 }
                 else
                 {
-                    _controller.UpdateLocation(code, name, isExit);
+                    _controller.UpdateLocation(code, name, isActive);
                 }
 
                 string message = "Success add Location";
@@ -75,6 +76,7 @@ namespace ParkEase.View
             Text = "Update Location";
             lblTitle.Text = "UPDATE LOCATION";
             btnSave.Text = "Save";
+            txtCode.Enabled = false;
             return;
         }
 
@@ -82,7 +84,7 @@ namespace ParkEase.View
         {
             txtCode.Text = data.Code;
             txtName.Text = data.Name;
-            chbExit.Checked = data.IsExit;
+            chbExit.Checked = false;
         }
     }
 }

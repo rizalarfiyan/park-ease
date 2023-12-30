@@ -6,7 +6,7 @@ using System.Reactive.Subjects;
 
 namespace ParkEase.View
 {
-    public partial class TableLocations : Form
+    public partial class TableLocation : Form
     {
         protected LocationController _controller;
         protected Location[]? _content;
@@ -19,7 +19,7 @@ namespace ParkEase.View
         private DataGridViewColumn? lastColumn;
         Subject<string> _searchSubject;
 
-        public TableLocations()
+        public TableLocation()
         {
             InitializeComponent();
             _controller = new LocationController();
@@ -149,7 +149,7 @@ namespace ParkEase.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var frmInput = new FormLocations();
+            var frmInput = new FormLocation();
             frmInput.IsCreate(true);
             frmInput.OnLoadData += LoadData;
             frmInput.Show();
@@ -165,7 +165,7 @@ namespace ParkEase.View
 
             if (_content?.Length <= 0) return;
             var selectedItem = _content![lvwTable.Rows[0].Index];
-            var frmInput = new FormLocations();
+            var frmInput = new FormLocation();
             frmInput.IsCreate(false);
             frmInput.OnLoadData += LoadData;
             frmInput.SetData(selectedItem);
@@ -186,7 +186,7 @@ namespace ParkEase.View
             {
                 _controller.DeleteLocation(selectedItem.Code);
                 LoadData();
-                MessageBox.Show("Success delete Vehicle Type", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Success delete Location", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
