@@ -61,8 +61,6 @@
             Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
-            Guna.Charts.WinForms.LPoint lPoint1 = new Guna.Charts.WinForms.LPoint();
-            Guna.Charts.WinForms.LPoint lPoint2 = new Guna.Charts.WinForms.LPoint();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -87,7 +85,6 @@
             label2 = new Label();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             chartDashboard = new Guna.Charts.WinForms.GunaChart();
-            dataSet = new Guna.Charts.WinForms.GunaLineDataset();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             guna2Panel1.SuspendLayout();
@@ -137,14 +134,16 @@
             // 
             // guna2Panel1
             // 
-            guna2Panel1.BorderColor = SystemColors.ControlDarkDark;
-            guna2Panel1.BorderRadius = 8;
+            guna2Panel1.BorderColor = Color.FromArgb(226, 139, 0);
+            guna2Panel1.BorderRadius = 20;
+            guna2Panel1.BorderThickness = 2;
             guna2Panel1.Controls.Add(lblDescriptionActive);
             guna2Panel1.Controls.Add(lblValueActive);
             guna2Panel1.Controls.Add(guna2PictureBox4);
             guna2Panel1.Controls.Add(label4);
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.Dock = DockStyle.Fill;
+            guna2Panel1.ForeColor = SystemColors.ControlText;
             guna2Panel1.Location = new Point(585, 3);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -173,7 +172,7 @@
             lblValueActive.BackColor = Color.Transparent;
             lblValueActive.Font = new Font("Ubuntu", 13F, FontStyle.Bold, GraphicsUnit.Point);
             lblValueActive.ForeColor = Color.FromArgb(64, 64, 64);
-            lblValueActive.Location = new Point(13, 97);
+            lblValueActive.Location = new Point(13, 73);
             lblValueActive.Name = "lblValueActive";
             lblValueActive.Size = new Size(64, 27);
             lblValueActive.TabIndex = 24;
@@ -185,7 +184,7 @@
             guna2PictureBox4.CustomizableEdges = customizableEdges1;
             guna2PictureBox4.Image = Properties.Resources.icon_chart;
             guna2PictureBox4.ImageRotate = 0F;
-            guna2PictureBox4.Location = new Point(144, 61);
+            guna2PictureBox4.Location = new Point(144, 23);
             guna2PictureBox4.Name = "guna2PictureBox4";
             guna2PictureBox4.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2PictureBox4.Size = new Size(16, 16);
@@ -200,7 +199,7 @@
             label4.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(226, 139, 0);
             label4.ImageAlign = ContentAlignment.MiddleRight;
-            label4.Location = new Point(13, 59);
+            label4.Location = new Point(13, 21);
             label4.Name = "label4";
             label4.Size = new Size(57, 20);
             label4.TabIndex = 22;
@@ -209,14 +208,16 @@
             // 
             // guna2Panel2
             // 
-            guna2Panel2.BorderColor = SystemColors.ControlDarkDark;
-            guna2Panel2.BorderRadius = 8;
+            guna2Panel2.BorderColor = Color.FromArgb(226, 139, 0);
+            guna2Panel2.BorderRadius = 20;
+            guna2Panel2.BorderThickness = 2;
             guna2Panel2.Controls.Add(lblDescriptionSales);
             guna2Panel2.Controls.Add(lblValueSales);
             guna2Panel2.Controls.Add(guna2PictureBox3);
             guna2Panel2.Controls.Add(label3);
             guna2Panel2.CustomizableEdges = customizableEdges7;
             guna2Panel2.Dock = DockStyle.Fill;
+            guna2Panel2.ForeColor = SystemColors.ControlText;
             guna2Panel2.Location = new Point(391, 3);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -245,7 +246,7 @@
             lblValueSales.BackColor = Color.Transparent;
             lblValueSales.Font = new Font("Ubuntu", 13F, FontStyle.Bold, GraphicsUnit.Point);
             lblValueSales.ForeColor = Color.FromArgb(64, 64, 64);
-            lblValueSales.Location = new Point(13, 97);
+            lblValueSales.Location = new Point(13, 73);
             lblValueSales.Name = "lblValueSales";
             lblValueSales.Size = new Size(95, 27);
             lblValueSales.TabIndex = 24;
@@ -257,7 +258,7 @@
             guna2PictureBox3.CustomizableEdges = customizableEdges5;
             guna2PictureBox3.Image = Properties.Resources.icon_card;
             guna2PictureBox3.ImageRotate = 0F;
-            guna2PictureBox3.Location = new Point(149, 61);
+            guna2PictureBox3.Location = new Point(149, 21);
             guna2PictureBox3.Name = "guna2PictureBox3";
             guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2PictureBox3.Size = new Size(16, 16);
@@ -272,7 +273,7 @@
             label3.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(226, 139, 0);
             label3.ImageAlign = ContentAlignment.MiddleRight;
-            label3.Location = new Point(13, 59);
+            label3.Location = new Point(13, 19);
             label3.Name = "label3";
             label3.Size = new Size(46, 20);
             label3.TabIndex = 22;
@@ -281,8 +282,9 @@
             // 
             // guna2Panel3
             // 
-            guna2Panel3.BorderColor = SystemColors.ControlDarkDark;
-            guna2Panel3.BorderRadius = 8;
+            guna2Panel3.BorderColor = Color.FromArgb(226, 139, 0);
+            guna2Panel3.BorderRadius = 20;
+            guna2Panel3.BorderThickness = 2;
             guna2Panel3.Controls.Add(lblDescriptionSubs);
             guna2Panel3.Controls.Add(lblValueSubs);
             guna2Panel3.Controls.Add(guna2PictureBox2);
@@ -290,6 +292,7 @@
             guna2Panel3.CustomizableEdges = customizableEdges11;
             guna2Panel3.Dock = DockStyle.Fill;
             guna2Panel3.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Panel3.ForeColor = SystemColors.ControlText;
             guna2Panel3.Location = new Point(197, 3);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -318,7 +321,7 @@
             lblValueSubs.BackColor = Color.Transparent;
             lblValueSubs.Font = new Font("Ubuntu", 13F, FontStyle.Bold, GraphicsUnit.Point);
             lblValueSubs.ForeColor = Color.FromArgb(64, 64, 64);
-            lblValueSubs.Location = new Point(12, 97);
+            lblValueSubs.Location = new Point(12, 73);
             lblValueSubs.Name = "lblValueSubs";
             lblValueSubs.Size = new Size(77, 27);
             lblValueSubs.TabIndex = 24;
@@ -330,7 +333,7 @@
             guna2PictureBox2.CustomizableEdges = customizableEdges9;
             guna2PictureBox2.Image = Properties.Resources.icon_users;
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(148, 61);
+            guna2PictureBox2.Location = new Point(148, 23);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2PictureBox2.Size = new Size(16, 16);
@@ -345,7 +348,7 @@
             label1.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(226, 139, 0);
             label1.ImageAlign = ContentAlignment.MiddleRight;
-            label1.Location = new Point(12, 59);
+            label1.Location = new Point(12, 21);
             label1.Name = "label1";
             label1.Size = new Size(106, 20);
             label1.TabIndex = 22;
@@ -354,14 +357,16 @@
             // 
             // guna2Panel4
             // 
-            guna2Panel4.BorderColor = SystemColors.ControlDarkDark;
-            guna2Panel4.BorderRadius = 8;
+            guna2Panel4.BorderColor = Color.FromArgb(226, 139, 0);
+            guna2Panel4.BorderRadius = 20;
+            guna2Panel4.BorderThickness = 2;
             guna2Panel4.Controls.Add(lblDescriptionTR);
             guna2Panel4.Controls.Add(lblValueTR);
             guna2Panel4.Controls.Add(guna2PictureBox1);
             guna2Panel4.Controls.Add(label2);
             guna2Panel4.CustomizableEdges = customizableEdges15;
             guna2Panel4.Dock = DockStyle.Fill;
+            guna2Panel4.ForeColor = SystemColors.ControlText;
             guna2Panel4.Location = new Point(3, 3);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges16;
@@ -390,7 +395,7 @@
             lblValueTR.BackColor = Color.Transparent;
             lblValueTR.Font = new Font("Ubuntu", 13F, FontStyle.Bold, GraphicsUnit.Point);
             lblValueTR.ForeColor = Color.FromArgb(64, 64, 64);
-            lblValueTR.Location = new Point(17, 97);
+            lblValueTR.Location = new Point(17, 73);
             lblValueTR.Name = "lblValueTR";
             lblValueTR.Size = new Size(142, 27);
             lblValueTR.TabIndex = 24;
@@ -402,7 +407,7 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges13;
             guna2PictureBox1.Image = Properties.Resources.icon_money;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(161, 61);
+            guna2PictureBox1.Location = new Point(161, 25);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2PictureBox1.Size = new Size(16, 16);
@@ -417,7 +422,7 @@
             label2.Font = new Font("Ubuntu", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(226, 139, 0);
             label2.ImageAlign = ContentAlignment.MiddleRight;
-            label2.Location = new Point(17, 59);
+            label2.Location = new Point(17, 23);
             label2.Name = "label2";
             label2.Size = new Size(112, 20);
             label2.TabIndex = 22;
@@ -481,16 +486,6 @@
             tick3.Font = chartFont8;
             chartDashboard.ZAxes.Ticks = tick3;
             // 
-            // dataSet
-            // 
-            dataSet.BorderColor = Color.Empty;
-            lPoint1.Y = 10D;
-            lPoint2.Y = 5D;
-            dataSet.DataPoints.AddRange(new Guna.Charts.WinForms.LPoint[] { lPoint1, lPoint2 });
-            dataSet.FillColor = Color.FromArgb(255, 128, 0);
-            dataSet.Label = "Data Set";
-            dataSet.PointBorderColors.AddRange(new Color[] { Color.FromArgb(0, 0, 0, 10), Color.FromArgb(0, 0, 0, 20), Color.FromArgb(0, 0, 0, 30), Color.FromArgb(0, 0, 0, 40), Color.FromArgb(64, 64, 0) });
-            // 
             // DashboardActive
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -548,6 +543,5 @@
         private Label lblDescriptionSales;
         private Label lblDescriptionSubs;
         private Guna.Charts.WinForms.GunaChart chartDashboard;
-        private Guna.Charts.WinForms.GunaLineDataset dataSet;
     }
 }
