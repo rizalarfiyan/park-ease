@@ -15,6 +15,8 @@ namespace ParkEase.View
         protected string? _search;
         protected string? _order;
         protected string? _orderBy;
+        protected string? _role;
+        protected string? _status;
         protected bool _hasNext = false;
         private DataGridViewColumn? lastColumn;
         Subject<string> _searchSubject;
@@ -26,7 +28,9 @@ namespace ParkEase.View
             _searchSubject = new Subject<string>();
             LoadData();
             InitDebounce();
+            FillCombobox();
         }
+
         public void InitDebounce()
         {
             _searchSubject
@@ -35,15 +39,37 @@ namespace ParkEase.View
             txtSearch.TextChanged += onChange;
         }
 
+        private void FillCombobox()
+        {
+            cmbRole.Items.Add("all role");
+            cmbRole.SelectedIndex = 0;
+            foreach (var role in App.LIST_ROLE)
+            {
+                cmbRole.Items.Add(role);
+            }
+
+            cmbStatus.Items.Add("all status");
+            cmbStatus.SelectedIndex = 0;
+            foreach (var status in App.LIST_STATUS)
+            {
+                cmbStatus.Items.Add(status);
+            }
+        }
+
         protected void LoadData()
         {
-            var param = new BaseRequestPagination()
+            var param = new BaseRequestPagination<UserFilterRequest>()
             {
                 Limit = _limit,
                 Order = _order,
                 OrderBy = _orderBy,
                 Page = _page,
                 Search = _search,
+                Additional = new UserFilterRequest()
+                {
+                    Role = _role,
+                    Status = _status,
+                }
             };
 
             try
@@ -186,6 +212,24 @@ namespace ParkEase.View
         private void btnPrev_Click(object sender, EventArgs e)
         {
             _page -= 1;
+            LoadData();
+        }
+
+        private void roleOnChange(object sender, EventArgs e)
+        {
+            string? current = cmbRole.Text;
+            if (current == "all role") current = null;
+            if (current == _role) return;
+            _role = current;
+            LoadData();
+        }
+
+        private void statusOnChange(object sender, EventArgs e)
+        {
+            string? current = cmbStatus.Text;
+            if (current == "all status") current = null;
+            if (current == _status) return;
+            _status = current;
             LoadData();
         }
     }

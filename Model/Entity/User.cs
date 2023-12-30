@@ -61,4 +61,11 @@ namespace ParkEase.Model.Entity
         [JsonPropertyName("password_confirmation")]
         public required string PasswordConfirmation { get; set; }
     }
+
+    public class UserFilterRequest
+    {
+        public string? Role { get; set; }
+
+        public string? Status { get; set; }
+    }
 }

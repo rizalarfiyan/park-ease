@@ -13,7 +13,7 @@ namespace ParkEase.Controller
             _repo = new UserRepository();
         }
 
-        public BaseResponse<BaseResponsePagination<User>>? GetAllUser(BaseRequestPagination param)
+        public BaseResponse<BaseResponsePagination<User>>? GetAllUser(BaseRequestPagination<UserFilterRequest> param)
         {
             var res = _repo.GetAllUser(param);
             if (res == null)

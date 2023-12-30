@@ -41,4 +41,10 @@ namespace ParkEase.Model.Entity
             }
         }
     }
+
+    public class BaseRequestPagination<T> : BaseRequestPagination
+    {
+        [JsonPropertyName("aditional")]
+        public T Additional { get; set; }
+    }
 }

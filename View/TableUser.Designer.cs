@@ -34,20 +34,26 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tblWrapper = new TableLayoutPanel();
             tblAction = new TableLayoutPanel();
-            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
             lvwTable = new Guna.UI2.WinForms.Guna2DataGridView();
             columnNo = new DataGridViewTextBoxColumn();
             columnUsername = new DataGridViewTextBoxColumn();
@@ -91,16 +97,21 @@
             // 
             // tblAction
             // 
-            tblAction.ColumnCount = 4;
+            tblAction.ColumnCount = 9;
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 230F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 140F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 140F));
             tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
             tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
             tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
-            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tblAction.Controls.Add(btnAdd, 8, 0);
+            tblAction.Controls.Add(btnEdit, 6, 0);
             tblAction.Controls.Add(txtSearch, 0, 0);
-            tblAction.Controls.Add(btnAdd, 3, 0);
-            tblAction.Controls.Add(btnEdit, 1, 0);
+            tblAction.Controls.Add(cmbStatus, 4, 0);
+            tblAction.Controls.Add(cmbRole, 2, 0);
             tblAction.Dock = DockStyle.Fill;
             tblAction.Location = new Point(3, 113);
             tblAction.Name = "tblAction";
@@ -108,6 +119,53 @@
             tblAction.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tblAction.Size = new Size(794, 50);
             tblAction.TabIndex = 17;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnAdd.BorderRadius = 8;
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.CustomizableEdges = customizableEdges1;
+            btnAdd.DisabledState.BorderColor = Color.DarkGray;
+            btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAdd.FillColor = Color.FromArgb(226, 139, 0);
+            btnAdd.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Image = Properties.Resources.icon_plus;
+            btnAdd.Location = new Point(674, 2);
+            btnAdd.Margin = new Padding(0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnAdd.Size = new Size(120, 46);
+            btnAdd.TabIndex = 18;
+            btnAdd.Text = "Add";
+            btnAdd.TextOffset = new Point(0, -2);
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.Anchor = AnchorStyles.Right;
+            btnEdit.BorderRadius = 8;
+            btnEdit.Cursor = Cursors.Hand;
+            btnEdit.CustomizableEdges = customizableEdges3;
+            btnEdit.DisabledState.BorderColor = Color.DarkGray;
+            btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEdit.FillColor = Color.FromArgb(226, 139, 0);
+            btnEdit.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEdit.ForeColor = Color.White;
+            btnEdit.Image = Properties.Resources.icon_pencil;
+            btnEdit.Location = new Point(616, 2);
+            btnEdit.Margin = new Padding(0);
+            btnEdit.Name = "btnEdit";
+            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnEdit.Size = new Size(50, 46);
+            btnEdit.TabIndex = 20;
+            btnEdit.TextOffset = new Point(0, -2);
+            btnEdit.Click += btnEdit_Click;
             // 
             // txtSearch
             // 
@@ -118,7 +176,7 @@
             txtSearch.BorderRadius = 8;
             txtSearch.BorderThickness = 2;
             txtSearch.Cursor = Cursors.Hand;
-            txtSearch.CustomizableEdges = customizableEdges1;
+            txtSearch.CustomizableEdges = customizableEdges5;
             txtSearch.DefaultText = "";
             txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -140,57 +198,62 @@
             txtSearch.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
             txtSearch.PlaceholderText = "Search";
             txtSearch.SelectedText = "";
-            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtSearch.Size = new Size(228, 46);
             txtSearch.TabIndex = 1;
             txtSearch.TextOffset = new Point(10, -2);
             // 
-            // btnAdd
+            // cmbStatus
             // 
-            btnAdd.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            btnAdd.BorderRadius = 8;
-            btnAdd.Cursor = Cursors.Hand;
-            btnAdd.CustomizableEdges = customizableEdges3;
-            btnAdd.DisabledState.BorderColor = Color.DarkGray;
-            btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAdd.FillColor = Color.FromArgb(226, 139, 0);
-            btnAdd.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdd.ForeColor = Color.White;
-            btnAdd.Image = Properties.Resources.icon_plus;
-            btnAdd.Location = new Point(674, 2);
-            btnAdd.Margin = new Padding(0);
-            btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnAdd.Size = new Size(120, 46);
-            btnAdd.TabIndex = 18;
-            btnAdd.Text = "Add";
-            btnAdd.TextOffset = new Point(0, -2);
-            btnAdd.Click += btnAdd_Click;
+            cmbStatus.Anchor = AnchorStyles.None;
+            cmbStatus.BackColor = Color.Transparent;
+            cmbStatus.BorderColor = Color.FromArgb(255, 231, 70);
+            cmbStatus.BorderRadius = 8;
+            cmbStatus.BorderThickness = 2;
+            cmbStatus.Cursor = Cursors.Hand;
+            cmbStatus.CustomizableEdges = customizableEdges7;
+            cmbStatus.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatus.FillColor = Color.FromArgb(255, 249, 197);
+            cmbStatus.FocusedColor = Color.FromArgb(226, 139, 0);
+            cmbStatus.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            cmbStatus.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbStatus.ForeColor = Color.FromArgb(187, 98, 2);
+            cmbStatus.ItemHeight = 40;
+            cmbStatus.Location = new Point(386, 2);
+            cmbStatus.Margin = new Padding(0);
+            cmbStatus.Name = "cmbStatus";
+            cmbStatus.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            cmbStatus.Size = new Size(140, 46);
+            cmbStatus.TabIndex = 21;
+            cmbStatus.TextOffset = new Point(10, -2);
+            cmbStatus.SelectedIndexChanged += statusOnChange;
             // 
-            // btnEdit
+            // cmbRole
             // 
-            btnEdit.Anchor = AnchorStyles.Right;
-            btnEdit.BorderRadius = 8;
-            btnEdit.Cursor = Cursors.Hand;
-            btnEdit.CustomizableEdges = customizableEdges5;
-            btnEdit.DisabledState.BorderColor = Color.DarkGray;
-            btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEdit.FillColor = Color.FromArgb(226, 139, 0);
-            btnEdit.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEdit.ForeColor = Color.White;
-            btnEdit.Image = Properties.Resources.icon_pencil;
-            btnEdit.Location = new Point(616, 2);
-            btnEdit.Margin = new Padding(0);
-            btnEdit.Name = "btnEdit";
-            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnEdit.Size = new Size(50, 46);
-            btnEdit.TabIndex = 20;
-            btnEdit.TextOffset = new Point(0, -2);
-            btnEdit.Click += btnEdit_Click;
+            cmbRole.Anchor = AnchorStyles.None;
+            cmbRole.BackColor = Color.Transparent;
+            cmbRole.BorderColor = Color.FromArgb(255, 231, 70);
+            cmbRole.BorderRadius = 8;
+            cmbRole.BorderThickness = 2;
+            cmbRole.Cursor = Cursors.Hand;
+            cmbRole.CustomizableEdges = customizableEdges9;
+            cmbRole.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbRole.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRole.FillColor = Color.FromArgb(255, 249, 197);
+            cmbRole.FocusedColor = Color.FromArgb(226, 139, 0);
+            cmbRole.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            cmbRole.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbRole.ForeColor = Color.FromArgb(187, 98, 2);
+            cmbRole.ItemHeight = 40;
+            cmbRole.Location = new Point(238, 2);
+            cmbRole.Margin = new Padding(0);
+            cmbRole.Name = "cmbRole";
+            cmbRole.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cmbRole.Size = new Size(140, 46);
+            cmbRole.TabIndex = 21;
+            cmbRole.TextOffset = new Point(10, -2);
+            cmbRole.SelectedIndexChanged += roleOnChange;
             // 
             // lvwTable
             // 
@@ -368,7 +431,7 @@
             btnPrev.Anchor = AnchorStyles.Right;
             btnPrev.BorderRadius = 8;
             btnPrev.Cursor = Cursors.Hand;
-            btnPrev.CustomizableEdges = customizableEdges7;
+            btnPrev.CustomizableEdges = customizableEdges11;
             btnPrev.DisabledState.BorderColor = Color.DarkGray;
             btnPrev.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPrev.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -379,7 +442,7 @@
             btnPrev.Location = new Point(287, 2);
             btnPrev.Margin = new Padding(0);
             btnPrev.Name = "btnPrev";
-            btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnPrev.Size = new Size(100, 46);
             btnPrev.TabIndex = 19;
             btnPrev.Text = "Prev";
@@ -391,7 +454,7 @@
             btnNext.Anchor = AnchorStyles.Left;
             btnNext.BorderRadius = 8;
             btnNext.Cursor = Cursors.Hand;
-            btnNext.CustomizableEdges = customizableEdges9;
+            btnNext.CustomizableEdges = customizableEdges13;
             btnNext.DisabledState.BorderColor = Color.DarkGray;
             btnNext.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNext.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -402,7 +465,7 @@
             btnNext.Location = new Point(407, 2);
             btnNext.Margin = new Padding(0);
             btnNext.Name = "btnNext";
-            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnNext.Size = new Size(100, 46);
             btnNext.TabIndex = 18;
             btnNext.Text = "Next";
@@ -445,5 +508,7 @@
         private DataGridViewTextBoxColumn columnName;
         private DataGridViewTextBoxColumn columnRole;
         private DataGridViewTextBoxColumn columnStatus;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbRole;
     }
 }

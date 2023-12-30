@@ -2,6 +2,7 @@
 using ParkEase.Model.Entity;
 using ParkEase.Model.Response;
 using RestSharp;
+using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace ParkEase.Model.Repository
 {
@@ -21,10 +22,18 @@ namespace ParkEase.Model.Repository
             return res.Data;
         }
 
-        public BaseResponse<BaseResponsePagination<User>>? GetAllUser(BaseRequestPagination param)
+        public BaseResponse<BaseResponsePagination<User>>? GetAllUser(BaseRequestPagination<UserFilterRequest> param)
         {
             var req = new RestRequest("/user", Method.Get);
             param.Build(req);
+            if (!string.IsNullOrEmpty(param.Additional.Role))
+            {
+                req.AddParameter("role", param.Additional.Role);
+            }
+            if (!string.IsNullOrEmpty(param.Additional.Status))
+            {
+                req.AddParameter("status", param.Additional.Status);
+            }
             var res = _api.Execute<BaseResponse<BaseResponsePagination<User>>?>(req);
             return res.Data;
         }
