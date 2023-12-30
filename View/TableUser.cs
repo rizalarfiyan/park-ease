@@ -156,6 +156,7 @@ namespace ParkEase.View
             var frmInput = new FormUser();
             frmInput.IsCreate(true);
             frmInput.OnLoadData += LoadData;
+            frmInput.StartPosition = FormStartPosition.CenterScreen;
             frmInput.Show();
         }
 
@@ -173,6 +174,7 @@ namespace ParkEase.View
             frmInput.IsCreate(false);
             frmInput.OnLoadData += LoadData;
             frmInput.SetData(selectedItem);
+            frmInput.StartPosition = FormStartPosition.CenterScreen;
             frmInput.Show();
         }
         private void btnNext_Click(object sender, EventArgs e)
