@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             elipseForm = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
@@ -58,10 +58,6 @@
             lblName = new Label();
             lblPrice = new Label();
             picIllustrator = new Guna.UI2.WinForms.Guna2PictureBox();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            label1 = new Label();
-            label2 = new Label();
-            tableLayoutPanel5 = new TableLayoutPanel();
             tblParent.SuspendLayout();
             tblContent.SuspendLayout();
             tblButtonAction.SuspendLayout();
@@ -76,11 +72,11 @@
             // 
             // btnCancel
             // 
-            btnCancel.Anchor = AnchorStyles.None;
+            btnCancel.Anchor = AnchorStyles.Right;
             btnCancel.BackColor = Color.FromArgb(255, 254, 234);
             btnCancel.BorderRadius = 8;
             btnCancel.Cursor = Cursors.Hand;
-            btnCancel.CustomizableEdges = customizableEdges13;
+            btnCancel.CustomizableEdges = customizableEdges1;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -92,7 +88,7 @@
             btnCancel.Location = new Point(50, 9);
             btnCancel.Margin = new Padding(0);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnCancel.Size = new Size(120, 46);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
@@ -101,13 +97,13 @@
             // 
             // btnSave
             // 
-            btnSave.Anchor = AnchorStyles.None;
+            btnSave.Anchor = AnchorStyles.Left;
             btnSave.BorderColor = Color.FromArgb(226, 139, 0);
             btnSave.BorderRadius = 8;
             btnSave.BorderThickness = 2;
             btnSave.CheckedState.FillColor = Color.FromArgb(187, 98, 2);
             btnSave.Cursor = Cursors.Hand;
-            btnSave.CustomizableEdges = customizableEdges15;
+            btnSave.CustomizableEdges = customizableEdges3;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -122,7 +118,7 @@
             btnSave.Margin = new Padding(0);
             btnSave.Name = "btnSave";
             btnSave.PressedColor = Color.FromArgb(187, 98, 2);
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnSave.Size = new Size(120, 46);
             btnSave.TabIndex = 4;
             btnSave.Text = "Save";
@@ -133,7 +129,7 @@
             // 
             ucTopBar.Dock = DockStyle.Top;
             ucTopBar.Location = new Point(0, 0);
-            ucTopBar.Margin = new Padding(3, 2, 3, 2);
+            ucTopBar.Margin = new Padding(0);
             ucTopBar.Name = "ucTopBar";
             ucTopBar.Size = new Size(906, 42);
             ucTopBar.TabIndex = 2;
@@ -210,11 +206,11 @@
             // tblButtonAction
             // 
             tblButtonAction.ColumnCount = 5;
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
             tblButtonAction.Controls.Add(btnCancel, 1, 0);
             tblButtonAction.Controls.Add(btnSave, 3, 0);
             tblButtonAction.Dock = DockStyle.Fill;
@@ -227,15 +223,17 @@
             // 
             // tbnFormContent
             // 
-            tbnFormContent.ColumnCount = 2;
+            tbnFormContent.ColumnCount = 4;
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
-            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tbnFormContent.Controls.Add(txtName, 1, 1);
-            tbnFormContent.Controls.Add(txtCode, 1, 0);
-            tbnFormContent.Controls.Add(txtPrice, 1, 2);
-            tbnFormContent.Controls.Add(lblCode, 0, 0);
-            tbnFormContent.Controls.Add(lblName, 0, 1);
-            tbnFormContent.Controls.Add(lblPrice, 0, 2);
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 270F));
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tbnFormContent.Controls.Add(lblCode, 1, 0);
+            tbnFormContent.Controls.Add(lblName, 1, 1);
+            tbnFormContent.Controls.Add(lblPrice, 1, 2);
+            tbnFormContent.Controls.Add(txtCode, 2, 0);
+            tbnFormContent.Controls.Add(txtName, 2, 1);
+            tbnFormContent.Controls.Add(txtPrice, 2, 2);
             tbnFormContent.Dock = DockStyle.Fill;
             tbnFormContent.Location = new Point(40, 159);
             tbnFormContent.Margin = new Padding(0);
@@ -255,7 +253,7 @@
             txtName.BorderColor = Color.FromArgb(255, 231, 70);
             txtName.BorderRadius = 8;
             txtName.BorderThickness = 2;
-            txtName.CustomizableEdges = customizableEdges17;
+            txtName.CustomizableEdges = customizableEdges7;
             txtName.DefaultText = "";
             txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -275,7 +273,7 @@
             txtName.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
             txtName.PlaceholderText = "Name";
             txtName.SelectedText = "";
-            txtName.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtName.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtName.Size = new Size(261, 46);
             txtName.TabIndex = 2;
             txtName.TextOffset = new Point(10, -2);
@@ -288,7 +286,7 @@
             txtCode.BorderColor = Color.FromArgb(255, 231, 70);
             txtCode.BorderRadius = 8;
             txtCode.BorderThickness = 2;
-            txtCode.CustomizableEdges = customizableEdges19;
+            txtCode.CustomizableEdges = customizableEdges5;
             txtCode.DefaultText = "";
             txtCode.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCode.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -308,7 +306,7 @@
             txtCode.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
             txtCode.PlaceholderText = "DOM001";
             txtCode.SelectedText = "";
-            txtCode.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtCode.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtCode.Size = new Size(261, 46);
             txtCode.TabIndex = 1;
             txtCode.TextOffset = new Point(10, -2);
@@ -321,7 +319,7 @@
             txtPrice.BorderColor = Color.FromArgb(255, 231, 70);
             txtPrice.BorderRadius = 8;
             txtPrice.BorderThickness = 2;
-            txtPrice.CustomizableEdges = customizableEdges21;
+            txtPrice.CustomizableEdges = customizableEdges9;
             txtPrice.DefaultText = "";
             txtPrice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPrice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -341,7 +339,7 @@
             txtPrice.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
             txtPrice.PlaceholderText = "Price";
             txtPrice.SelectedText = "";
-            txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtPrice.Size = new Size(261, 46);
             txtPrice.TabIndex = 3;
             txtPrice.TextOffset = new Point(10, -2);
@@ -353,7 +351,7 @@
             lblCode.BackColor = Color.Transparent;
             lblCode.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCode.ForeColor = Color.FromArgb(187, 98, 2);
-            lblCode.Location = new Point(3, 17);
+            lblCode.Location = new Point(2, 17);
             lblCode.Name = "lblCode";
             lblCode.Size = new Size(49, 21);
             lblCode.TabIndex = 7;
@@ -367,7 +365,7 @@
             lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblName.ForeColor = Color.FromArgb(187, 98, 2);
-            lblName.Location = new Point(3, 73);
+            lblName.Location = new Point(2, 73);
             lblName.Name = "lblName";
             lblName.Size = new Size(54, 21);
             lblName.TabIndex = 7;
@@ -381,7 +379,7 @@
             lblPrice.BackColor = Color.Transparent;
             lblPrice.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblPrice.ForeColor = Color.FromArgb(187, 98, 2);
-            lblPrice.Location = new Point(3, 129);
+            lblPrice.Location = new Point(2, 129);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(47, 21);
             lblPrice.TabIndex = 7;
@@ -391,7 +389,7 @@
             // picIllustrator
             // 
             picIllustrator.BackColor = Color.FromArgb(255, 254, 234);
-            picIllustrator.CustomizableEdges = customizableEdges23;
+            picIllustrator.CustomizableEdges = customizableEdges11;
             picIllustrator.Dock = DockStyle.Fill;
             picIllustrator.Image = Properties.Resources.Parking_bro;
             picIllustrator.ImageRotate = 0F;
@@ -399,53 +397,11 @@
             picIllustrator.Margin = new Padding(3, 2, 3, 2);
             picIllustrator.Name = "picIllustrator";
             picIllustrator.Padding = new Padding(30);
-            picIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            picIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges12;
             picIllustrator.Size = new Size(447, 474);
             picIllustrator.SizeMode = PictureBoxSizeMode.StretchImage;
             picIllustrator.TabIndex = 3;
             picIllustrator.TabStop = false;
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.Location = new Point(0, 0);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.Size = new Size(200, 100);
-            tableLayoutPanel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Ubuntu", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(64, 64, 64);
-            label1.Location = new Point(24, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(151, 20);
-            label1.TabIndex = 6;
-            label1.Text = "VEHICLE TYPE";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(255, 254, 234);
-            label2.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlDarkDark;
-            label2.Location = new Point(6, 40);
-            label2.Name = "label2";
-            label2.Size = new Size(188, 20);
-            label2.TabIndex = 8;
-            label2.Text = "Choose your vehicle type at Park Ease, according to the type of vehicle you park. Safe and comfortable greetings.";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.Location = new Point(0, 0);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.Size = new Size(200, 100);
-            tableLayoutPanel5.TabIndex = 0;
             // 
             // FormVehicleType
             // 
@@ -483,10 +439,6 @@
         private TableLayoutPanel tblButtonAction;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private TableLayoutPanel tableLayoutPanel4;
-        private Label label1;
-        private Label label2;
-        private TableLayoutPanel tableLayoutPanel5;
         private TableLayoutPanel tbnFormContent;
         private Label lblCode;
         private Label lblName;

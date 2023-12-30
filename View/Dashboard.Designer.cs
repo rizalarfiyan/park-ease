@@ -60,7 +60,6 @@
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             imgSlide = new PictureBox();
             imgLogo = new PictureBox();
-            ucTopBar = new UserControls.UC_TopBar();
             pnlSidebar = new Guna.UI2.WinForms.Guna2Panel();
             btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             pnlContentWrapper = new Guna.UI2.WinForms.Guna2Panel();
@@ -68,6 +67,7 @@
             pnlContent = new Guna.UI2.WinForms.Guna2Panel();
             ucHeader = new UserControls.UC_Header();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            ucTopBar = new UserControls.UC_TopBar();
             ((System.ComponentModel.ISupportInitialize)imgSlide).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
             pnlSidebar.SuspendLayout();
@@ -325,15 +325,6 @@
             imgLogo.TabIndex = 1;
             imgLogo.TabStop = false;
             // 
-            // ucTopBar
-            // 
-            ucTopBar.Dock = DockStyle.Top;
-            ucTopBar.Location = new Point(0, 0);
-            ucTopBar.Margin = new Padding(3, 2, 3, 2);
-            ucTopBar.Name = "ucTopBar";
-            ucTopBar.Size = new Size(1072, 34);
-            ucTopBar.TabIndex = 2;
-            // 
             // pnlSidebar
             // 
             pnlSidebar.BackColor = Color.FromArgb(226, 139, 0);
@@ -348,10 +339,10 @@
             pnlSidebar.Controls.Add(btnUsers);
             pnlSidebar.CustomizableEdges = customizableEdges21;
             pnlSidebar.Dock = DockStyle.Left;
-            pnlSidebar.Location = new Point(0, 34);
+            pnlSidebar.Location = new Point(0, 32);
             pnlSidebar.Name = "pnlSidebar";
             pnlSidebar.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            pnlSidebar.Size = new Size(260, 674);
+            pnlSidebar.Size = new Size(260, 676);
             pnlSidebar.TabIndex = 3;
             // 
             // btnLogOut
@@ -396,12 +387,12 @@
             pnlContentWrapper.Controls.Add(pnlDeepContent);
             pnlContentWrapper.CustomizableEdges = customizableEdges5;
             pnlContentWrapper.Dock = DockStyle.Fill;
-            pnlContentWrapper.Location = new Point(260, 34);
+            pnlContentWrapper.Location = new Point(260, 32);
             pnlContentWrapper.Margin = new Padding(0);
             pnlContentWrapper.Name = "pnlContentWrapper";
             pnlContentWrapper.Padding = new Padding(0, 12, 12, 12);
             pnlContentWrapper.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            pnlContentWrapper.Size = new Size(812, 674);
+            pnlContentWrapper.Size = new Size(812, 676);
             pnlContentWrapper.TabIndex = 4;
             // 
             // pnlDeepContent
@@ -413,7 +404,7 @@
             pnlDeepContent.Location = new Point(0, 12);
             pnlDeepContent.Name = "pnlDeepContent";
             pnlDeepContent.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            pnlDeepContent.Size = new Size(800, 650);
+            pnlDeepContent.Size = new Size(800, 652);
             pnlDeepContent.TabIndex = 0;
             // 
             // pnlContent
@@ -425,7 +416,7 @@
             pnlContent.Name = "pnlContent";
             pnlContent.Padding = new Padding(20, 0, 20, 20);
             pnlContent.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            pnlContent.Size = new Size(800, 597);
+            pnlContent.Size = new Size(800, 599);
             pnlContent.TabIndex = 1;
             // 
             // ucHeader
@@ -443,6 +434,15 @@
             // 
             guna2Elipse2.BorderRadius = 14;
             guna2Elipse2.TargetControl = pnlDeepContent;
+            // 
+            // ucTopBar
+            // 
+            ucTopBar.Dock = DockStyle.Top;
+            ucTopBar.Location = new Point(0, 0);
+            ucTopBar.Margin = new Padding(3, 2, 3, 2);
+            ucTopBar.Name = "ucTopBar";
+            ucTopBar.Size = new Size(1072, 32);
+            ucTopBar.TabIndex = 1;
             // 
             // frmDashboard
             // 
@@ -482,12 +482,12 @@
         private Guna.UI2.WinForms.Guna2Button btnUsers;
         private PictureBox imgSlide;
         private Guna.UI2.WinForms.Guna2Panel pnlSidebar;
-        private UserControls.UC_TopBar ucTopBar;
         private Guna.UI2.WinForms.Guna2Panel pnlContentWrapper;
         private UserControls.UC_Header ucHeader;
         private Guna.UI2.WinForms.Guna2Panel pnlContent;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Panel pnlDeepContent;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
+        private UserControls.UC_TopBar ucTopBar;
     }
 }
