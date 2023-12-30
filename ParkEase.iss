@@ -1,4 +1,4 @@
-#define HasilCompile "C:\22.11.5209\park-ease\bin\Debug\net7.0-windows"
+#define HasilCompile "D:\kuliah\semester_3\pemrograman_lanjut\ParkEase\bin\Debug\net7.0-windows"
 
 [Setup]
 AppName=Park Ease
