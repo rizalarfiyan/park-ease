@@ -180,6 +180,9 @@ namespace ParkEase.View
                 return;
             };
 
+            DialogResult dialog = MessageBox.Show("Are you sure to delete this item?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            if (dialog == DialogResult.Cancel) return;
+
             if (_content?.Length <= 0) return;
             var selectedItem = _content![lvwTable.SelectedRows[0].Index];
             try

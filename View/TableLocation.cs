@@ -3,7 +3,6 @@ using ParkEase.Controller;
 using ParkEase.Model.Entity;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ParkEase.View
 {
@@ -180,6 +179,9 @@ namespace ParkEase.View
                 MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             };
+
+            DialogResult dialog = MessageBox.Show("Are you sure to delete this item?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            if (dialog == DialogResult.Cancel) return;
 
             if (_content?.Length <= 0) return;
             var selectedItem = _content![lvwTable.SelectedRows[0].Index];
