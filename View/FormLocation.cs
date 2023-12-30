@@ -21,7 +21,7 @@ namespace ParkEase.View
         {
             string code = txtCode.Text.Trim();
             string name = txtName.Text.Trim();
-            bool isActive = chbExit.Checked;
+            bool isExit = chbExit.Checked;
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
 
@@ -29,11 +29,11 @@ namespace ParkEase.View
             {
                 if (isCreate)
                 {
-                    _controller.CreateLocation(code, name, isActive);
+                    _controller.CreateLocation(code, name, isExit);
                 }
                 else
                 {
-                    _controller.UpdateLocation(code, name, isActive);
+                    _controller.UpdateLocation(code, name, isExit);
                 }
 
                 string message = "Success add Location";
