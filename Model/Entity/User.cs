@@ -23,7 +23,7 @@ namespace ParkEase.Model.Entity
     public class UserRequest: User
     {
         [JsonPropertyName("password")]
-        public required string Password { get; set; }
+        public string? Password { get; set; }
     }
 
     public class AuthLogin

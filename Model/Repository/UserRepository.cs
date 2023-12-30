@@ -16,67 +16,40 @@ namespace ParkEase.Model.Repository
         public BaseResponse<string?>? ChangePassword(ChangePasswordRequest payload)
         {
             var req = new RestRequest("/user/change-password", Method.Post);
-            req.AddJsonBody(new
-            {
-                old_password = payload.OldPassword,
-                password = payload.Password,
-                password_confirmation = payload.PasswordConfirmation,
-            });
+            req.AddJsonBody<ChangePasswordRequest>(payload);
             var res = _api.Execute<BaseResponse<string?>>(req);
             return res.Data;
         }
-        
-        
-        public BaseResponse<BaseResponsePagination<User?>>? GetAllUser(BaseRequestPagination param)
+
+        public BaseResponse<BaseResponsePagination<User>>? GetAllUser(BaseRequestPagination param)
         {
             var req = new RestRequest("/user", Method.Get);
             param.Build(req);
-            var res = _api.Execute<BaseResponse<BaseResponsePagination<User?>>?>(req);
+            var res = _api.Execute<BaseResponse<BaseResponsePagination<User>>?>(req);
             return res.Data;
         }
-        
-        public BaseResponse<User?>? GetUserById(int id)
+
+        public BaseResponse<User>? GetUserById(int id)
         {
             var req = new RestRequest("/user/{id}", Method.Get);
             req.AddUrlSegment("id", id);
-            var res = _api.Execute<BaseResponse<User?>?>(req);
+            var res = _api.Execute<BaseResponse<User>?>(req);
             return res.Data;
         }
-        
+
         public BaseResponse<string?>? CreateUser(UserRequest payload)
         {
             var req = new RestRequest("/user", Method.Post);
-            req.AddJsonBody(new
-            {
-                username = payload.Username,
-                password = payload.Password,
-                name = payload.Name,
-                role = payload.Role,
-                status = payload.Status,
-            });
+            req.AddJsonBody<UserRequest>(payload);
             var res = _api.Execute<BaseResponse<string?>?>(req);
             return res.Data;
         }
-        
+
         public BaseResponse<string?>? UpdateUser(UserRequest payload)
         {
             var req = new RestRequest("/user/{id}", Method.Put);
             req.AddUrlSegment("id", payload.Id);
-            req.AddJsonBody(new
-            {
-                username = payload.Username,
-                name = payload.Name,
-                role = payload.Role,
-                status = payload.Status,
-            });
-            var res = _api.Execute<BaseResponse<string?>?>(req);
-            return res.Data;
-        }
-        
-        public BaseResponse<string?>? DeleteUser(int id)
-        {
-            var req = new RestRequest("/user/{id}", Method.Delete);
-            req.AddUrlSegment("id", id);
+            req.AddJsonBody<UserRequest>(payload);
             var res = _api.Execute<BaseResponse<string?>?>(req);
             return res.Data;
         }

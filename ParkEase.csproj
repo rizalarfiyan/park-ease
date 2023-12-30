@@ -23,7 +23,13 @@
     <Compile Update="View\FormLocation.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\TableLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\TableUser.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

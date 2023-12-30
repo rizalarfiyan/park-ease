@@ -68,7 +68,7 @@ namespace ParkEase.View
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            openChildForm(new TableUsers());
+            openChildForm(new TableUser());
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
