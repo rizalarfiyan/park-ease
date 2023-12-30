@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tblWrapper = new TableLayoutPanel();
             tblAction = new TableLayoutPanel();
             btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -52,15 +52,15 @@
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
             lvwTable = new Guna.UI2.WinForms.Guna2DataGridView();
-            columnNo = new DataGridViewTextBoxColumn();
-            columnCode = new DataGridViewTextBoxColumn();
-            columnName = new DataGridViewTextBoxColumn();
-            columnPrice = new DataGridViewTextBoxColumn();
             lblTitle = new Label();
             lblDescription = new Label();
             tblPrevNext = new TableLayoutPanel();
             btnPrev = new Guna.UI2.WinForms.Guna2Button();
             btnNext = new Guna.UI2.WinForms.Guna2Button();
+            columnNo = new DataGridViewTextBoxColumn();
+            columnCode = new DataGridViewTextBoxColumn();
+            columnName = new DataGridViewTextBoxColumn();
+            columnPrice = new DataGridViewTextBoxColumn();
             tblWrapper.SuspendLayout();
             tblAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lvwTable).BeginInit();
@@ -117,7 +117,7 @@
             btnDelete.Anchor = AnchorStyles.Right;
             btnDelete.BorderRadius = 8;
             btnDelete.Cursor = Cursors.Hand;
-            btnDelete.CustomizableEdges = customizableEdges13;
+            btnDelete.CustomizableEdges = customizableEdges1;
             btnDelete.DisabledState.BorderColor = Color.DarkGray;
             btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -129,7 +129,7 @@
             btnDelete.Location = new Point(558, 2);
             btnDelete.Margin = new Padding(0);
             btnDelete.Name = "btnDelete";
-            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnDelete.Size = new Size(50, 46);
             btnDelete.TabIndex = 19;
             btnDelete.TextOffset = new Point(0, -2);
@@ -144,7 +144,7 @@
             txtSearch.BorderRadius = 8;
             txtSearch.BorderThickness = 2;
             txtSearch.Cursor = Cursors.Hand;
-            txtSearch.CustomizableEdges = customizableEdges15;
+            txtSearch.CustomizableEdges = customizableEdges3;
             txtSearch.DefaultText = "";
             txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -166,7 +166,7 @@
             txtSearch.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
             txtSearch.PlaceholderText = "Search";
             txtSearch.SelectedText = "";
-            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtSearch.Size = new Size(228, 46);
             txtSearch.TabIndex = 1;
             txtSearch.TextOffset = new Point(10, -2);
@@ -176,7 +176,7 @@
             btnAdd.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             btnAdd.BorderRadius = 8;
             btnAdd.Cursor = Cursors.Hand;
-            btnAdd.CustomizableEdges = customizableEdges17;
+            btnAdd.CustomizableEdges = customizableEdges5;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
             btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -188,7 +188,7 @@
             btnAdd.Location = new Point(674, 2);
             btnAdd.Margin = new Padding(0);
             btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnAdd.Size = new Size(120, 46);
             btnAdd.TabIndex = 18;
             btnAdd.Text = "Add";
@@ -200,7 +200,7 @@
             btnEdit.Anchor = AnchorStyles.Right;
             btnEdit.BorderRadius = 8;
             btnEdit.Cursor = Cursors.Hand;
-            btnEdit.CustomizableEdges = customizableEdges19;
+            btnEdit.CustomizableEdges = customizableEdges7;
             btnEdit.DisabledState.BorderColor = Color.DarkGray;
             btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -212,7 +212,7 @@
             btnEdit.Location = new Point(616, 2);
             btnEdit.Margin = new Padding(0);
             btnEdit.Name = "btnEdit";
-            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnEdit.Size = new Size(50, 46);
             btnEdit.TabIndex = 20;
             btnEdit.TextOffset = new Point(0, -2);
@@ -224,47 +224,47 @@
             lvwTable.AllowUserToDeleteRows = false;
             lvwTable.AllowUserToResizeColumns = false;
             lvwTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
-            lvwTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
+            lvwTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             lvwTable.BackgroundColor = Color.FromArgb(255, 254, 234);
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(226, 139, 0);
-            dataGridViewCellStyle7.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(226, 139, 0);
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            lvwTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(226, 139, 0);
+            dataGridViewCellStyle2.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(226, 139, 0);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            lvwTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             lvwTable.ColumnHeadersHeight = 40;
             lvwTable.Columns.AddRange(new DataGridViewColumn[] { columnNo, columnCode, columnName, columnPrice });
             lvwTable.Cursor = Cursors.Hand;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(255, 254, 234);
-            dataGridViewCellStyle8.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = Color.FromArgb(124, 62, 11);
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(249, 232, 204);
-            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(124, 62, 11);
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            lvwTable.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 254, 234);
+            dataGridViewCellStyle3.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(124, 62, 11);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(249, 232, 204);
+            dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(124, 62, 11);
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            lvwTable.DefaultCellStyle = dataGridViewCellStyle3;
             lvwTable.Dock = DockStyle.Fill;
             lvwTable.GridColor = Color.FromArgb(255, 249, 197);
             lvwTable.Location = new Point(3, 198);
             lvwTable.Margin = new Padding(3, 2, 3, 2);
             lvwTable.Name = "lvwTable";
             lvwTable.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            lvwTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            lvwTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             lvwTable.RowHeadersVisible = false;
             lvwTable.RowHeadersWidth = 51;
-            dataGridViewCellStyle10.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
-            lvwTable.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
+            lvwTable.RowsDefaultCellStyle = dataGridViewCellStyle5;
             lvwTable.RowTemplate.Height = 40;
             lvwTable.Size = new Size(794, 69);
             lvwTable.TabIndex = 15;
@@ -290,42 +290,6 @@
             lvwTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             lvwTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             lvwTable.ColumnHeaderMouseClick += onSort;
-            // 
-            // columnNo
-            // 
-            columnNo.HeaderText = "No.";
-            columnNo.MinimumWidth = 6;
-            columnNo.Name = "columnNo";
-            columnNo.ReadOnly = true;
-            columnNo.Resizable = DataGridViewTriState.False;
-            columnNo.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnCode
-            // 
-            columnCode.HeaderText = "Code";
-            columnCode.MinimumWidth = 6;
-            columnCode.Name = "columnCode";
-            columnCode.ReadOnly = true;
-            columnCode.Resizable = DataGridViewTriState.False;
-            columnCode.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnName
-            // 
-            columnName.HeaderText = "Name";
-            columnName.MinimumWidth = 6;
-            columnName.Name = "columnName";
-            columnName.ReadOnly = true;
-            columnName.Resizable = DataGridViewTriState.False;
-            columnName.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnPrice
-            // 
-            columnPrice.HeaderText = "Price";
-            columnPrice.MinimumWidth = 6;
-            columnPrice.Name = "columnPrice";
-            columnPrice.ReadOnly = true;
-            columnPrice.Resizable = DataGridViewTriState.False;
-            columnPrice.SortMode = DataGridViewColumnSortMode.Programmatic;
             // 
             // lblTitle
             // 
@@ -380,7 +344,7 @@
             btnPrev.Anchor = AnchorStyles.Right;
             btnPrev.BorderRadius = 8;
             btnPrev.Cursor = Cursors.Hand;
-            btnPrev.CustomizableEdges = customizableEdges21;
+            btnPrev.CustomizableEdges = customizableEdges9;
             btnPrev.DisabledState.BorderColor = Color.DarkGray;
             btnPrev.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPrev.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -391,7 +355,7 @@
             btnPrev.Location = new Point(287, 2);
             btnPrev.Margin = new Padding(0);
             btnPrev.Name = "btnPrev";
-            btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnPrev.Size = new Size(100, 46);
             btnPrev.TabIndex = 19;
             btnPrev.Text = "Prev";
@@ -403,7 +367,7 @@
             btnNext.Anchor = AnchorStyles.Left;
             btnNext.BorderRadius = 8;
             btnNext.Cursor = Cursors.Hand;
-            btnNext.CustomizableEdges = customizableEdges23;
+            btnNext.CustomizableEdges = customizableEdges11;
             btnNext.DisabledState.BorderColor = Color.DarkGray;
             btnNext.DisabledState.CustomBorderColor = Color.DarkGray;
             btnNext.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -414,12 +378,52 @@
             btnNext.Location = new Point(407, 2);
             btnNext.Margin = new Padding(0);
             btnNext.Name = "btnNext";
-            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnNext.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnNext.Size = new Size(100, 46);
             btnNext.TabIndex = 18;
             btnNext.Text = "Next";
             btnNext.TextOffset = new Point(0, -2);
             btnNext.Click += btnNext_Click;
+            // 
+            // columnNo
+            // 
+            columnNo.FillWeight = 24F;
+            columnNo.HeaderText = "No.";
+            columnNo.MinimumWidth = 6;
+            columnNo.Name = "columnNo";
+            columnNo.ReadOnly = true;
+            columnNo.Resizable = DataGridViewTriState.False;
+            columnNo.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnCode
+            // 
+            columnCode.FillWeight = 50F;
+            columnCode.HeaderText = "Code";
+            columnCode.MinimumWidth = 6;
+            columnCode.Name = "columnCode";
+            columnCode.ReadOnly = true;
+            columnCode.Resizable = DataGridViewTriState.False;
+            columnCode.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnName
+            // 
+            columnName.FillWeight = 120F;
+            columnName.HeaderText = "Name";
+            columnName.MinimumWidth = 6;
+            columnName.Name = "columnName";
+            columnName.ReadOnly = true;
+            columnName.Resizable = DataGridViewTriState.False;
+            columnName.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnPrice
+            // 
+            columnPrice.FillWeight = 60F;
+            columnPrice.HeaderText = "Price";
+            columnPrice.MinimumWidth = 6;
+            columnPrice.Name = "columnPrice";
+            columnPrice.ReadOnly = true;
+            columnPrice.Resizable = DataGridViewTriState.False;
+            columnPrice.SortMode = DataGridViewColumnSortMode.Programmatic;
             // 
             // TableVehicleType
             // 

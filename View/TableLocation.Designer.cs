@@ -52,15 +52,15 @@
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
             lvwTable = new Guna.UI2.WinForms.Guna2DataGridView();
-            columnNo = new DataGridViewTextBoxColumn();
-            columnCode = new DataGridViewTextBoxColumn();
-            columnName = new DataGridViewTextBoxColumn();
-            columnIsExit = new DataGridViewTextBoxColumn();
             lblTitle = new Label();
             lblDescription = new Label();
             tblPrevNext = new TableLayoutPanel();
             btnPrev = new Guna.UI2.WinForms.Guna2Button();
             btnNext = new Guna.UI2.WinForms.Guna2Button();
+            columnNo = new DataGridViewTextBoxColumn();
+            columnCode = new DataGridViewTextBoxColumn();
+            columnName = new DataGridViewTextBoxColumn();
+            columnIsExit = new DataGridViewTextBoxColumn();
             tblWrapper.SuspendLayout();
             tblAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lvwTable).BeginInit();
@@ -291,42 +291,6 @@
             lvwTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             lvwTable.ColumnHeaderMouseClick += onSort;
             // 
-            // columnNo
-            // 
-            columnNo.HeaderText = "No.";
-            columnNo.MinimumWidth = 6;
-            columnNo.Name = "columnNo";
-            columnNo.ReadOnly = true;
-            columnNo.Resizable = DataGridViewTriState.False;
-            columnNo.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnCode
-            // 
-            columnCode.HeaderText = "Code";
-            columnCode.MinimumWidth = 6;
-            columnCode.Name = "columnCode";
-            columnCode.ReadOnly = true;
-            columnCode.Resizable = DataGridViewTriState.False;
-            columnCode.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnName
-            // 
-            columnName.HeaderText = "Name";
-            columnName.MinimumWidth = 6;
-            columnName.Name = "columnName";
-            columnName.ReadOnly = true;
-            columnName.Resizable = DataGridViewTriState.False;
-            columnName.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnIsExit
-            // 
-            columnIsExit.HeaderText = "Is Exit";
-            columnIsExit.MinimumWidth = 6;
-            columnIsExit.Name = "columnIsExit";
-            columnIsExit.ReadOnly = true;
-            columnIsExit.Resizable = DataGridViewTriState.False;
-            columnIsExit.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
             // lblTitle
             // 
             lblTitle.Anchor = AnchorStyles.Left;
@@ -420,6 +384,46 @@
             btnNext.Text = "Next";
             btnNext.TextOffset = new Point(0, -2);
             btnNext.Click += btnNext_Click;
+            // 
+            // columnNo
+            // 
+            columnNo.FillWeight = 22F;
+            columnNo.HeaderText = "No.";
+            columnNo.MinimumWidth = 6;
+            columnNo.Name = "columnNo";
+            columnNo.ReadOnly = true;
+            columnNo.Resizable = DataGridViewTriState.False;
+            columnNo.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnCode
+            // 
+            columnCode.FillWeight = 50F;
+            columnCode.HeaderText = "Code";
+            columnCode.MinimumWidth = 6;
+            columnCode.Name = "columnCode";
+            columnCode.ReadOnly = true;
+            columnCode.Resizable = DataGridViewTriState.False;
+            columnCode.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnName
+            // 
+            columnName.FillWeight = 120F;
+            columnName.HeaderText = "Name";
+            columnName.MinimumWidth = 6;
+            columnName.Name = "columnName";
+            columnName.ReadOnly = true;
+            columnName.Resizable = DataGridViewTriState.False;
+            columnName.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnIsExit
+            // 
+            columnIsExit.FillWeight = 30F;
+            columnIsExit.HeaderText = "Is Exit";
+            columnIsExit.MinimumWidth = 6;
+            columnIsExit.Name = "columnIsExit";
+            columnIsExit.ReadOnly = true;
+            columnIsExit.Resizable = DataGridViewTriState.False;
+            columnIsExit.SortMode = DataGridViewColumnSortMode.Programmatic;
             // 
             // TableLocation
             // 

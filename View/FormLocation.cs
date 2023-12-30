@@ -84,7 +84,7 @@ namespace ParkEase.View
         {
             txtCode.Text = data.Code;
             txtName.Text = data.Name;
-            chbExit.Checked = false;
+            chbExit.Checked = data.IsExit;
         }
     }
 }

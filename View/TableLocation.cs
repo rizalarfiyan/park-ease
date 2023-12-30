@@ -3,6 +3,7 @@ using ParkEase.Controller;
 using ParkEase.Model.Entity;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ParkEase.View
 {
@@ -164,7 +165,7 @@ namespace ParkEase.View
             };
 
             if (_content?.Length <= 0) return;
-            var selectedItem = _content![lvwTable.Rows[0].Index];
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
             var frmInput = new FormLocation();
             frmInput.IsCreate(false);
             frmInput.OnLoadData += LoadData;
@@ -181,7 +182,7 @@ namespace ParkEase.View
             };
 
             if (_content?.Length <= 0) return;
-            var selectedItem = _content![lvwTable.Rows[0].Index];
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
             try
             {
                 _controller.DeleteLocation(selectedItem.Code);

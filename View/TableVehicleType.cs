@@ -164,7 +164,7 @@ namespace ParkEase.View
             };
 
             if (_content?.Length <= 0) return;
-            var selectedItem = _content![lvwTable.Rows[0].Index];
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
             var frmInput = new FormVehicleType();
             frmInput.IsCreate(false);
             frmInput.OnLoadData += LoadData;
@@ -181,7 +181,7 @@ namespace ParkEase.View
             };
 
             if (_content?.Length <= 0) return;
-            var selectedItem = _content![lvwTable.Rows[0].Index];
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
             try
             {
                 _controller.DeleteVehicleType(selectedItem.Code);

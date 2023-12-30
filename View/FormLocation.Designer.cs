@@ -252,6 +252,7 @@
             chbExit.CheckedState.BorderRadius = 6;
             chbExit.CheckedState.BorderThickness = 0;
             chbExit.CheckedState.FillColor = Color.FromArgb(226, 139, 0);
+            chbExit.Cursor = Cursors.Hand;
             chbExit.CustomizableEdges = customizableEdges5;
             chbExit.Location = new Point(102, 127);
             chbExit.Margin = new Padding(3, 2, 3, 2);
