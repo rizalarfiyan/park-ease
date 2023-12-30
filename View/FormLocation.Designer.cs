@@ -378,7 +378,7 @@
             picIllustrator.BackColor = Color.FromArgb(255, 254, 234);
             picIllustrator.CustomizableEdges = customizableEdges11;
             picIllustrator.Dock = DockStyle.Fill;
-            picIllustrator.Image = Properties.Resources.Parking_bro;
+            picIllustrator.Image = Properties.Resources.picture_locations;
             picIllustrator.ImageRotate = 0F;
             picIllustrator.Location = new Point(3, 2);
             picIllustrator.Margin = new Padding(3, 2, 3, 2);
