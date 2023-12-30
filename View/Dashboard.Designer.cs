@@ -300,6 +300,7 @@
             btnDashboard.TextOffset = new Point(10, 0);
             btnDashboard.UseTransparentBackground = true;
             btnDashboard.CheckedChanged += btnDashboard_CheckedChanged;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // imgSlide
             // 

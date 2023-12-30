@@ -16,7 +16,7 @@ UninstallFilesDir={app}\uninst
 UninstallDisplayIcon={app}\ParkEase.exe,0
 UninstallDisplayName=Park Ease
 VersionInfoVersion=1.0.0.0
-SetupIconFile=parking.ico
+SetupIconFile=ParkEase.ico
 
 [Languages]
 Name: English; MessagesFile: Default.isl

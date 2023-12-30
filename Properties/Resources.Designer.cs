@@ -63,6 +63,26 @@ namespace ParkEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icon_card {
+            get {
+                object obj = ResourceManager.GetObject("icon_card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icon_chart {
+            get {
+                object obj = ResourceManager.GetObject("icon_chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icon_close {
             get {
                 object obj = ResourceManager.GetObject("icon_close", resourceCulture);
@@ -183,6 +203,16 @@ namespace ParkEase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icon_money {
+            get {
+                object obj = ResourceManager.GetObject("icon_money", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icon_parking_active {
             get {
                 object obj = ResourceManager.GetObject("icon_parking_active", resourceCulture);
@@ -256,6 +286,16 @@ namespace ParkEase.Properties {
         public static System.Drawing.Bitmap icon_trash {
             get {
                 object obj = ResourceManager.GetObject("icon_trash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icon_users {
+            get {
+                object obj = ResourceManager.GetObject("icon_users", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
