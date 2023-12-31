@@ -14,6 +14,7 @@ namespace ParkEase.View
             InitializeComponent();
             _controller = new VehicleTypeController();
             ucTopBar.SetForm(this);
+            ucTopBar.HideMaximize();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -75,6 +76,7 @@ namespace ParkEase.View
             Text = "Update Vehicle Type";
             lblTitle.Text = "UPDATE VEHICLE TYPE";
             btnSave.Text = "Save";
+            txtCode.Enabled = false;
             return;
         }
 

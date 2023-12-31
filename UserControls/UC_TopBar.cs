@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+﻿using System.Runtime.InteropServices;
 
 namespace ParkEase.UserControls
 {
@@ -52,8 +52,26 @@ namespace ParkEase.UserControls
 
         public void HideMaximize()
         {
-            this.Minimize.Location = new Point(856, 8);
+            this.Minimize.Location = new Point(844, 8);
             this.Maximize.Hide();
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HTCAPTION = 0x2;
+        [DllImport("User32.dll")]
+        public static extern bool ReleaseCapture();
+        [DllImport("User32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        private void onMouseDown(object sender, MouseEventArgs e)
+        {
+            System.Diagnostics.Debug.Print("OK");
+
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
         }
     }
 }

@@ -23,7 +23,7 @@ namespace ParkEase.Model.Entity
     public class UserRequest: User
     {
         [JsonPropertyName("password")]
-        public required string Password { get; set; }
+        public string? Password { get; set; }
     }
 
     public class AuthLogin
@@ -60,5 +60,12 @@ namespace ParkEase.Model.Entity
 
         [JsonPropertyName("password_confirmation")]
         public required string PasswordConfirmation { get; set; }
+    }
+
+    public class UserFilterRequest
+    {
+        public string? Role { get; set; }
+
+        public string? Status { get; set; }
     }
 }
