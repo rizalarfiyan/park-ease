@@ -88,7 +88,7 @@ namespace ParkEase.View
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            openChildForm(new Settings());
+            openChildForm(new FormSetting());
         }
     }
 }
