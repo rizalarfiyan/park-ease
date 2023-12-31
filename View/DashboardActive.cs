@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System;
+using System.Drawing;
+using Guna.Charts.WinForms;
+using Guna.Charts.Interfaces;
 
 namespace ParkEase.View
 {
@@ -15,6 +19,11 @@ namespace ParkEase.View
         public DashboardActive()
         {
             InitializeComponent();
+        }
+
+        private void chartDashboard_Load(object sender, EventArgs e)
+        {
+            LineChart.LineChart.LineCart(chartDashboard);
         }
     }
 }

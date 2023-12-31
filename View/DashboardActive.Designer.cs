@@ -442,10 +442,11 @@
             // 
             // chartDashboard
             // 
-            chartDashboard.Dock = DockStyle.Fill;
+            chartDashboard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             chartFont1.FontName = "Arial";
             chartDashboard.Legend.LabelFont = chartFont1;
             chartDashboard.Location = new Point(0, 0);
+            chartDashboard.Margin = new Padding(4);
             chartDashboard.Name = "chartDashboard";
             chartDashboard.Size = new Size(776, 340);
             chartDashboard.TabIndex = 22;
@@ -485,6 +486,7 @@
             chartFont8.FontName = "Arial";
             tick3.Font = chartFont8;
             chartDashboard.ZAxes.Ticks = tick3;
+            chartDashboard.Load += chartDashboard_Load;
             // 
             // DashboardActive
             // 
