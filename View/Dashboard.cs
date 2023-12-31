@@ -1,5 +1,4 @@
 ﻿using Guna.UI2.WinForms;
-using System.Runtime.InteropServices;
 using ParkEase.Constants;
 using ParkEase.Controller;
 
@@ -28,13 +27,13 @@ namespace ParkEase.View
 
         private void InitializeRole()
         {
-            //if (Program.UserData?.Role != "admin")
-            //{
-            //    btnUsers.Hide();
-            //    btnLocation.Hide();
-            //    btnVehicleType.Hide();
-            //    btnSettings.Hide();
-            //}
+            if (Program.UserData?.Role != "admin")
+            {
+                btnUsers.Hide();
+                btnLocation.Hide();
+                btnVehicleType.Hide();
+                btnSettings.Hide();
+            }
         }
 
         private void MoveImageBox(object sender)
@@ -69,7 +68,7 @@ namespace ParkEase.View
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            openChildForm(new TableUsers());
+            openChildForm(new TableUser());
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -84,7 +83,12 @@ namespace ParkEase.View
 
         private void btnLocation_Click(object sender, EventArgs e)
         {
-            openChildForm(new TableLocations());
+            openChildForm(new TableLocation());
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormSetting());
         }
     }
 }

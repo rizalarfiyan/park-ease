@@ -152,6 +152,7 @@ namespace ParkEase.View
             var frmInput = new FormVehicleType();
             frmInput.IsCreate(true);
             frmInput.OnLoadData += LoadData;
+            frmInput.StartPosition = FormStartPosition.CenterScreen;
             frmInput.Show();
         }
 
@@ -164,11 +165,12 @@ namespace ParkEase.View
             };
 
             if (_content?.Length <= 0) return;
-            var selectedItem = _content![lvwTable.Rows[0].Index];
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
             var frmInput = new FormVehicleType();
             frmInput.IsCreate(false);
             frmInput.OnLoadData += LoadData;
             frmInput.SetData(selectedItem);
+            frmInput.StartPosition = FormStartPosition.CenterScreen;
             frmInput.Show();
         }
 
@@ -180,8 +182,11 @@ namespace ParkEase.View
                 return;
             };
 
+            DialogResult dialog = MessageBox.Show("Are you sure to delete this item?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            if (dialog == DialogResult.Cancel) return;
+
             if (_content?.Length <= 0) return;
-            var selectedItem = _content![lvwTable.Rows[0].Index];
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
             try
             {
                 _controller.DeleteVehicleType(selectedItem.Code);
