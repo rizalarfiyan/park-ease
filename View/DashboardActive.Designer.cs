@@ -477,6 +477,7 @@
             tick1.Font = chartFont5;
             tick1.ForeColor = Color.FromArgb(226, 139, 0);
             chartDashboard.XAxes.Ticks = tick1;
+            chartDashboard.YAxes.Display = false;
             grid2.Color = Color.FromArgb(226, 139, 0);
             grid2.ZeroLineColor = Color.FromArgb(226, 139, 0);
             chartDashboard.YAxes.GridLines = grid2;
