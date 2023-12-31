@@ -127,6 +127,12 @@
   <data name="icons_log_out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons-log-out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_chart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,6 +163,9 @@
   <data name="icon_minimize_oranye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-minimize-oranye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_parking_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-parking-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -180,6 +189,9 @@
   </data>
   <data name="icon_trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_users" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_users_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-users-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

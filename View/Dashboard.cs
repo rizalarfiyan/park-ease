@@ -16,6 +16,7 @@ namespace ParkEase.View
             _controller = new AuthController();
             InitializeHeader();
             InitializeRole();
+            InitializeChart();
         }
 
         private void InitializeHeader()
@@ -34,6 +35,11 @@ namespace ParkEase.View
                 btnVehicleType.Hide();
                 btnSettings.Hide();
             }
+        }
+
+        private void InitializeChart()
+        {
+            openChildForm(new DashboardActive());
         }
 
         private void MoveImageBox(object sender)
@@ -89,6 +95,11 @@ namespace ParkEase.View
         private void btnSettings_Click(object sender, EventArgs e)
         {
             openChildForm(new FormSetting());
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            openChildForm(new DashboardActive());
         }
     }
 }
