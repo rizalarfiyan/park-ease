@@ -85,6 +85,8 @@
             label2 = new Label();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             chartDashboard = new Guna.Charts.WinForms.GunaChart();
+            lineDataset_1 = new Guna.Charts.WinForms.GunaLineDataset();
+            lineDataset_2 = new Guna.Charts.WinForms.GunaLineDataset();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             guna2Panel1.SuspendLayout();
@@ -442,14 +444,17 @@
             // 
             // chartDashboard
             // 
-            chartDashboard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            chartFont1.FontName = "Arial";
+            chartDashboard.Cursor = Cursors.Hand;
+            chartDashboard.Datasets.AddRange(new Guna.Charts.Interfaces.IGunaDataset[] { lineDataset_1, lineDataset_2 });
+            chartDashboard.Dock = DockStyle.Fill;
+            chartFont1.FontName = "Ubuntu";
             chartDashboard.Legend.LabelFont = chartFont1;
             chartDashboard.Location = new Point(0, 0);
             chartDashboard.Margin = new Padding(4);
             chartDashboard.Name = "chartDashboard";
             chartDashboard.Size = new Size(776, 340);
             chartDashboard.TabIndex = 22;
+            chartDashboard.Title.Display = false;
             chartFont2.FontName = "Ubuntu";
             chartFont2.Size = 9;
             chartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
@@ -487,6 +492,28 @@
             tick3.Font = chartFont8;
             chartDashboard.ZAxes.Ticks = tick3;
             chartDashboard.Load += chartDashboard_Load;
+            // 
+            // lineDataset_1
+            // 
+            lineDataset_1.BorderColor = Color.FromArgb(226, 139, 0);
+            lineDataset_1.FillColor = Color.FromArgb(226, 139, 0);
+            lineDataset_1.IndexLabelForeColor = Color.FromArgb(226, 139, 0);
+            lineDataset_1.Label = "Data Set 1";
+            lineDataset_1.LegendBoxBorderColor = Color.FromArgb(226, 139, 0);
+            lineDataset_1.LegendBoxFillColor = Color.FromArgb(226, 139, 0);
+            lineDataset_1.PointRadius = 5;
+            lineDataset_1.TargetChart = chartDashboard;
+            // 
+            // lineDataset_2
+            // 
+            lineDataset_2.BorderColor = SystemColors.ControlDarkDark;
+            lineDataset_2.FillColor = SystemColors.ControlDarkDark;
+            lineDataset_2.IndexLabelForeColor = SystemColors.ControlDarkDark;
+            lineDataset_2.Label = "Data Set 2";
+            lineDataset_2.LegendBoxBorderColor = SystemColors.ControlDarkDark;
+            lineDataset_2.LegendBoxFillColor = SystemColors.ControlDarkDark;
+            lineDataset_2.PointRadius = 5;
+            lineDataset_2.TargetChart = chartDashboard;
             // 
             // DashboardActive
             // 
@@ -545,5 +572,7 @@
         private Label lblDescriptionSales;
         private Label lblDescriptionSubs;
         private Guna.Charts.WinForms.GunaChart chartDashboard;
+        private Guna.Charts.WinForms.GunaLineDataset lineDataset_1;
+        private Guna.Charts.WinForms.GunaLineDataset lineDataset_2;
     }
 }
