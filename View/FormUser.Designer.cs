@@ -66,7 +66,7 @@
             cmbRole = new Guna.UI2.WinForms.Guna2ComboBox();
             cmbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             picIllustrator = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
+            dragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
             tblParent.SuspendLayout();
             tblContent.SuspendLayout();
             tblButtonAction.SuspendLayout();
@@ -498,12 +498,11 @@
             picIllustrator.TabIndex = 3;
             picIllustrator.TabStop = false;
             // 
-            // guna2DragControl1
+            // dragControl
             // 
-            guna2DragControl1.DockForm = true;
-            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            guna2DragControl1.TargetControl = tblContent;
-            guna2DragControl1.UseTransparentDrag = true;
+            dragControl.DockForm = true;
+            dragControl.DockIndicatorTransparencyValue = 0.6D;
+            dragControl.UseTransparentDrag = true;
             // 
             // FormUser
             // 
@@ -548,6 +547,6 @@
         private Label lblStatus;
         private Guna.UI2.WinForms.Guna2ComboBox cmbRole;
         private Guna.UI2.WinForms.Guna2ComboBox cmbStatus;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2DragControl dragControl;
     }
 }

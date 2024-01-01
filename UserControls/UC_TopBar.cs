@@ -73,5 +73,10 @@ namespace ParkEase.UserControls
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
         }
+
+        public Panel GetPanel()
+        {
+            return pnlTopBar;
+        }
     }
 }

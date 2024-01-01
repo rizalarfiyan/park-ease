@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             ucTopBar = new UserControls.UC_TopBar();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -52,7 +52,7 @@
             txtPasswordConfirmation = new Guna.UI2.WinForms.Guna2TextBox();
             txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
+            dragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -70,12 +70,12 @@
             // guna2PictureBox1
             // 
             guna2PictureBox1.BackColor = Color.FromArgb(255, 254, 234);
-            guna2PictureBox1.CustomizableEdges = customizableEdges1;
+            guna2PictureBox1.CustomizableEdges = customizableEdges11;
             guna2PictureBox1.Image = Properties.Resources.picture_changepassword;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(546, 3);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna2PictureBox1.Size = new Size(536, 672);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 4;
@@ -94,7 +94,7 @@
             // btnChangePassword
             // 
             btnChangePassword.Anchor = AnchorStyles.None;
-            btnChangePassword.CustomizableEdges = customizableEdges3;
+            btnChangePassword.CustomizableEdges = customizableEdges13;
             btnChangePassword.DisabledState.BorderColor = Color.DarkGray;
             btnChangePassword.DisabledState.CustomBorderColor = Color.DarkGray;
             btnChangePassword.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -105,7 +105,7 @@
             btnChangePassword.Location = new Point(63, 610);
             btnChangePassword.Margin = new Padding(0);
             btnChangePassword.Name = "btnChangePassword";
-            btnChangePassword.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnChangePassword.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnChangePassword.Size = new Size(411, 61);
             btnChangePassword.TabIndex = 4;
             btnChangePassword.Text = "Change Password";
@@ -207,7 +207,7 @@
             txtPasswordConfirmation.BorderColor = Color.FromArgb(255, 244, 133);
             txtPasswordConfirmation.BorderRadius = 8;
             txtPasswordConfirmation.BorderThickness = 2;
-            txtPasswordConfirmation.CustomizableEdges = customizableEdges5;
+            txtPasswordConfirmation.CustomizableEdges = customizableEdges15;
             txtPasswordConfirmation.DefaultText = "";
             txtPasswordConfirmation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPasswordConfirmation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -229,7 +229,7 @@
             txtPasswordConfirmation.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
             txtPasswordConfirmation.PlaceholderText = "New Password Confirmation";
             txtPasswordConfirmation.SelectedText = "";
-            txtPasswordConfirmation.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtPasswordConfirmation.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtPasswordConfirmation.Size = new Size(411, 61);
             txtPasswordConfirmation.TabIndex = 3;
             txtPasswordConfirmation.TextOffset = new Point(10, -2);
@@ -242,7 +242,7 @@
             txtPassword.BorderColor = Color.FromArgb(255, 244, 133);
             txtPassword.BorderRadius = 8;
             txtPassword.BorderThickness = 2;
-            txtPassword.CustomizableEdges = customizableEdges7;
+            txtPassword.CustomizableEdges = customizableEdges17;
             txtPassword.DefaultText = "";
             txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -264,7 +264,7 @@
             txtPassword.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
             txtPassword.PlaceholderText = "New Password";
             txtPassword.SelectedText = "";
-            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtPassword.Size = new Size(411, 61);
             txtPassword.TabIndex = 2;
             txtPassword.TextOffset = new Point(10, -2);
@@ -277,7 +277,7 @@
             txtOldPassword.BorderColor = Color.FromArgb(255, 244, 133);
             txtOldPassword.BorderRadius = 8;
             txtOldPassword.BorderThickness = 2;
-            txtOldPassword.CustomizableEdges = customizableEdges9;
+            txtOldPassword.CustomizableEdges = customizableEdges19;
             txtOldPassword.DefaultText = "";
             txtOldPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtOldPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -299,17 +299,16 @@
             txtOldPassword.PlaceholderForeColor = Color.FromArgb(226, 139, 0);
             txtOldPassword.PlaceholderText = "Old Password";
             txtOldPassword.SelectedText = "";
-            txtOldPassword.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtOldPassword.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtOldPassword.Size = new Size(411, 61);
             txtOldPassword.TabIndex = 1;
             txtOldPassword.TextOffset = new Point(10, -2);
             // 
-            // guna2DragControl1
+            // dragControl
             // 
-            guna2DragControl1.DockForm = true;
-            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            guna2DragControl1.TargetControl = tableLayoutPanel2;
-            guna2DragControl1.UseTransparentDrag = true;
+            dragControl.DockForm = true;
+            dragControl.DockIndicatorTransparencyValue = 0.6D;
+            dragControl.UseTransparentDrag = true;
             // 
             // frmChangePassword
             // 
@@ -345,6 +344,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtOldPassword;
         private Guna.UI2.WinForms.Guna2Button btnChangePassword;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2DragControl dragControl;
     }
 }
