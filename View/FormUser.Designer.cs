@@ -514,6 +514,7 @@
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormUser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "User";
             tblParent.ResumeLayout(false);
             tblContent.ResumeLayout(false);

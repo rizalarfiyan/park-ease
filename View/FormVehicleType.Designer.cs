@@ -422,6 +422,7 @@
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormVehicleType";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "VehicleType";
             tblParent.ResumeLayout(false);
             tblContent.ResumeLayout(false);

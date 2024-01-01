@@ -795,6 +795,7 @@
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ExitTicket";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ExitTicket";
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();

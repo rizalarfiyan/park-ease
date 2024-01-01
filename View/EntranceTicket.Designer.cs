@@ -548,6 +548,7 @@
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EntranceTicket";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EntranceTicket";
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
