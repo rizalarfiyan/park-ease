@@ -47,16 +47,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tblWrapper = new TableLayoutPanel();
             tblAction = new TableLayoutPanel();
-            btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            btnExit = new Guna.UI2.WinForms.Guna2Button();
             txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            btnFine = new Guna.UI2.WinForms.Guna2Button();
             lvwTable = new Guna.UI2.WinForms.Guna2DataGridView();
-            lblTitle = new Label();
-            lblDescription = new Label();
-            tblPrevNext = new TableLayoutPanel();
-            btnPrev = new Guna.UI2.WinForms.Guna2Button();
-            btnNext = new Guna.UI2.WinForms.Guna2Button();
             columnNo = new DataGridViewTextBoxColumn();
             columnId = new DataGridViewTextBoxColumn();
             columnLocation = new DataGridViewTextBoxColumn();
@@ -64,6 +59,11 @@
             columnVehicleNumber = new DataGridViewTextBoxColumn();
             columnDate = new DataGridViewTextBoxColumn();
             columnType = new DataGridViewTextBoxColumn();
+            lblTitle = new Label();
+            lblDescription = new Label();
+            tblPrevNext = new TableLayoutPanel();
+            btnPrev = new Guna.UI2.WinForms.Guna2Button();
+            btnNext = new Guna.UI2.WinForms.Guna2Button();
             tblWrapper.SuspendLayout();
             tblAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)lvwTable).BeginInit();
@@ -103,10 +103,10 @@
             tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
             tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
             tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
-            tblAction.Controls.Add(btnDelete, 0, 0);
+            tblAction.Controls.Add(btnExit, 0, 0);
             tblAction.Controls.Add(txtSearch, 0, 0);
             tblAction.Controls.Add(btnAdd, 5, 0);
-            tblAction.Controls.Add(btnEdit, 3, 0);
+            tblAction.Controls.Add(btnFine, 3, 0);
             tblAction.Dock = DockStyle.Fill;
             tblAction.Location = new Point(3, 113);
             tblAction.Name = "tblAction";
@@ -115,28 +115,28 @@
             tblAction.Size = new Size(794, 50);
             tblAction.TabIndex = 17;
             // 
-            // btnDelete
+            // btnExit
             // 
-            btnDelete.Anchor = AnchorStyles.Right;
-            btnDelete.BorderRadius = 8;
-            btnDelete.Cursor = Cursors.Hand;
-            btnDelete.CustomizableEdges = customizableEdges1;
-            btnDelete.DisabledState.BorderColor = Color.DarkGray;
-            btnDelete.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDelete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDelete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDelete.FillColor = Color.FromArgb(226, 139, 0);
-            btnDelete.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDelete.ForeColor = Color.White;
-            btnDelete.Image = Properties.Resources.icon_trash;
-            btnDelete.Location = new Point(558, 2);
-            btnDelete.Margin = new Padding(0);
-            btnDelete.Name = "btnDelete";
-            btnDelete.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnDelete.Size = new Size(50, 46);
-            btnDelete.TabIndex = 19;
-            btnDelete.TextOffset = new Point(0, -2);
-            btnDelete.Click += btnDelete_Click;
+            btnExit.Anchor = AnchorStyles.Right;
+            btnExit.BorderRadius = 8;
+            btnExit.Cursor = Cursors.Hand;
+            btnExit.CustomizableEdges = customizableEdges1;
+            btnExit.DisabledState.BorderColor = Color.DarkGray;
+            btnExit.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnExit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnExit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnExit.FillColor = Color.FromArgb(226, 139, 0);
+            btnExit.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.ForeColor = Color.White;
+            btnExit.Image = Properties.Resources.icon_trash;
+            btnExit.Location = new Point(558, 2);
+            btnExit.Margin = new Padding(0);
+            btnExit.Name = "btnExit";
+            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnExit.Size = new Size(50, 46);
+            btnExit.TabIndex = 19;
+            btnExit.TextOffset = new Point(0, -2);
+            btnExit.Click += btnExit_Click;
             // 
             // txtSearch
             // 
@@ -198,28 +198,28 @@
             btnAdd.TextOffset = new Point(0, -2);
             btnAdd.Click += btnAdd_Click;
             // 
-            // btnEdit
+            // btnFine
             // 
-            btnEdit.Anchor = AnchorStyles.Right;
-            btnEdit.BorderRadius = 8;
-            btnEdit.Cursor = Cursors.Hand;
-            btnEdit.CustomizableEdges = customizableEdges7;
-            btnEdit.DisabledState.BorderColor = Color.DarkGray;
-            btnEdit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEdit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEdit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEdit.FillColor = Color.FromArgb(226, 139, 0);
-            btnEdit.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEdit.ForeColor = Color.White;
-            btnEdit.Image = Properties.Resources.icon_pencil;
-            btnEdit.Location = new Point(616, 2);
-            btnEdit.Margin = new Padding(0);
-            btnEdit.Name = "btnEdit";
-            btnEdit.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnEdit.Size = new Size(50, 46);
-            btnEdit.TabIndex = 20;
-            btnEdit.TextOffset = new Point(0, -2);
-            btnEdit.Click += btnEdit_Click;
+            btnFine.Anchor = AnchorStyles.Right;
+            btnFine.BorderRadius = 8;
+            btnFine.Cursor = Cursors.Hand;
+            btnFine.CustomizableEdges = customizableEdges7;
+            btnFine.DisabledState.BorderColor = Color.DarkGray;
+            btnFine.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnFine.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnFine.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnFine.FillColor = Color.FromArgb(226, 139, 0);
+            btnFine.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnFine.ForeColor = Color.White;
+            btnFine.Image = Properties.Resources.icon_pencil;
+            btnFine.Location = new Point(616, 2);
+            btnFine.Margin = new Padding(0);
+            btnFine.Name = "btnFine";
+            btnFine.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnFine.Size = new Size(50, 46);
+            btnFine.TabIndex = 20;
+            btnFine.TextOffset = new Point(0, -2);
+            btnFine.Click += btnFine_Click;
             // 
             // lvwTable
             // 
@@ -293,6 +293,73 @@
             lvwTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             lvwTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
             lvwTable.ColumnHeaderMouseClick += onSort;
+            lvwTable.SelectionChanged += onSelectionChange;
+            // 
+            // columnNo
+            // 
+            columnNo.FillWeight = 24F;
+            columnNo.HeaderText = "No.";
+            columnNo.MinimumWidth = 6;
+            columnNo.Name = "columnNo";
+            columnNo.ReadOnly = true;
+            columnNo.Resizable = DataGridViewTriState.False;
+            columnNo.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnId
+            // 
+            columnId.FillWeight = 60F;
+            columnId.HeaderText = "ID";
+            columnId.Name = "columnId";
+            columnId.ReadOnly = true;
+            columnId.Resizable = DataGridViewTriState.False;
+            columnId.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnLocation
+            // 
+            columnLocation.FillWeight = 50F;
+            columnLocation.HeaderText = "Location";
+            columnLocation.MinimumWidth = 6;
+            columnLocation.Name = "columnLocation";
+            columnLocation.ReadOnly = true;
+            columnLocation.Resizable = DataGridViewTriState.False;
+            columnLocation.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnVehicleType
+            // 
+            columnVehicleType.FillWeight = 60F;
+            columnVehicleType.HeaderText = "Vehicle Type";
+            columnVehicleType.MinimumWidth = 6;
+            columnVehicleType.Name = "columnVehicleType";
+            columnVehicleType.ReadOnly = true;
+            columnVehicleType.Resizable = DataGridViewTriState.False;
+            columnVehicleType.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnVehicleNumber
+            // 
+            columnVehicleNumber.FillWeight = 80F;
+            columnVehicleNumber.HeaderText = "Vehicle Number";
+            columnVehicleNumber.MinimumWidth = 6;
+            columnVehicleNumber.Name = "columnVehicleNumber";
+            columnVehicleNumber.ReadOnly = true;
+            columnVehicleNumber.Resizable = DataGridViewTriState.False;
+            columnVehicleNumber.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnDate
+            // 
+            columnDate.HeaderText = "Date";
+            columnDate.Name = "columnDate";
+            columnDate.ReadOnly = true;
+            columnDate.Resizable = DataGridViewTriState.False;
+            columnDate.SortMode = DataGridViewColumnSortMode.Programmatic;
+            // 
+            // columnType
+            // 
+            columnType.FillWeight = 60F;
+            columnType.HeaderText = "Type";
+            columnType.Name = "columnType";
+            columnType.ReadOnly = true;
+            columnType.Resizable = DataGridViewTriState.False;
+            columnType.SortMode = DataGridViewColumnSortMode.Programmatic;
             // 
             // lblTitle
             // 
@@ -388,72 +455,6 @@
             btnNext.TextOffset = new Point(0, -2);
             btnNext.Click += btnNext_Click;
             // 
-            // columnNo
-            // 
-            columnNo.FillWeight = 24F;
-            columnNo.HeaderText = "No.";
-            columnNo.MinimumWidth = 6;
-            columnNo.Name = "columnNo";
-            columnNo.ReadOnly = true;
-            columnNo.Resizable = DataGridViewTriState.False;
-            columnNo.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnId
-            // 
-            columnId.FillWeight = 60F;
-            columnId.HeaderText = "ID";
-            columnId.Name = "columnId";
-            columnId.ReadOnly = true;
-            columnId.Resizable = DataGridViewTriState.False;
-            columnId.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnLocation
-            // 
-            columnLocation.FillWeight = 50F;
-            columnLocation.HeaderText = "Location";
-            columnLocation.MinimumWidth = 6;
-            columnLocation.Name = "columnLocation";
-            columnLocation.ReadOnly = true;
-            columnLocation.Resizable = DataGridViewTriState.False;
-            columnLocation.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnVehicleType
-            // 
-            columnVehicleType.FillWeight = 60F;
-            columnVehicleType.HeaderText = "Vehicle Type";
-            columnVehicleType.MinimumWidth = 6;
-            columnVehicleType.Name = "columnVehicleType";
-            columnVehicleType.ReadOnly = true;
-            columnVehicleType.Resizable = DataGridViewTriState.False;
-            columnVehicleType.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnVehicleNumber
-            // 
-            columnVehicleNumber.FillWeight = 80F;
-            columnVehicleNumber.HeaderText = "Vehicle Number";
-            columnVehicleNumber.MinimumWidth = 6;
-            columnVehicleNumber.Name = "columnVehicleNumber";
-            columnVehicleNumber.ReadOnly = true;
-            columnVehicleNumber.Resizable = DataGridViewTriState.False;
-            columnVehicleNumber.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnDate
-            // 
-            columnDate.HeaderText = "Date";
-            columnDate.Name = "columnDate";
-            columnDate.ReadOnly = true;
-            columnDate.Resizable = DataGridViewTriState.False;
-            columnDate.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
-            // columnType
-            // 
-            columnType.FillWeight = 60F;
-            columnType.HeaderText = "Type";
-            columnType.Name = "columnType";
-            columnType.ReadOnly = true;
-            columnType.Resizable = DataGridViewTriState.False;
-            columnType.SortMode = DataGridViewColumnSortMode.Programmatic;
-            // 
             // TableHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -483,8 +484,8 @@
         private TableLayoutPanel tblPrevNext;
         private Guna.UI2.WinForms.Guna2Button btnPrev;
         private Guna.UI2.WinForms.Guna2Button btnNext;
-        private Guna.UI2.WinForms.Guna2Button btnDelete;
-        private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnExit;
+        private Guna.UI2.WinForms.Guna2Button btnFine;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private DataGridViewTextBoxColumn columnNo;
         private DataGridViewTextBoxColumn columnId;

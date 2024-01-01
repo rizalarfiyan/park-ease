@@ -64,5 +64,68 @@ namespace ParkEase.Controller
                 throw new Exception(res.Message);
             }
         }
+
+        public void CreateExitHistory(string entryHistoryId, string locationCode, int price)
+        {
+            if (string.IsNullOrEmpty(entryHistoryId))
+            {
+                throw new Exception("Entry History Id cannot be blank.");
+            }
+
+            if (string.IsNullOrEmpty(locationCode))
+            {
+                throw new Exception("Location cannot be blank.");
+            }
+
+            if (price <= 0)
+            {
+                throw new Exception("Price cannot be blank.");
+            }
+
+            var payload = new ExitHistoryRequest()
+            {
+                EntryHistoryId = entryHistoryId,
+                LocationCode = locationCode,
+                Price = price
+            };
+
+            BaseResponse<string?>? res = _repo.CreateExitHistory(payload);
+            if (res == null)
+            {
+                throw new Exception("Something wrong for your request");
+            }
+
+            if (res.IsErrorConfirmation())
+            {
+                throw new Exception(res.Message);
+            }
+        }
+
+        public BaseResponse<int?>? CalculateHistory(string entryHistoryId, bool isFine)
+        {
+            if (string.IsNullOrEmpty(entryHistoryId))
+            {
+                throw new Exception("Entry History Id cannot be blank.");
+            }
+
+            var payload = new CalculateHistoryRequest
+            {
+                EntryHistoryId = entryHistoryId,
+                IsFine = isFine
+            };
+
+            BaseResponse<int?>? res = _repo.CalculateHistory(payload);
+            if (res == null)
+            {
+                throw new Exception("Something wrong for your request");
+            }
+
+            if (res.IsErrorConfirmation())
+            {
+                throw new Exception(res.Message);
+            }
+
+            return res;
+        }
     }
 }

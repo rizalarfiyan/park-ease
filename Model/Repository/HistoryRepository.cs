@@ -45,11 +45,11 @@ namespace ParkEase.Model.Repository
             return res.Data;
         }
 
-        public BaseResponse<string?>? CalculateHistory(CalculateHistoryRequest payload)
+        public BaseResponse<int?>? CalculateHistory(CalculateHistoryRequest payload)
         {
             var req = new RestRequest("/history/calculate", Method.Post);
             req.AddJsonBody<CalculateHistoryRequest>(payload);
-            var res = _api.Execute<BaseResponse<string?>?>(req);
+            var res = _api.Execute<BaseResponse<int?>?>(req);
             return res.Data;
         }
     }

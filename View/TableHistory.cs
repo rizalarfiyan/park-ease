@@ -158,49 +158,6 @@ namespace ParkEase.View
             frmInput.Show();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            //if (lvwTable.SelectedRows.Count <= 0)
-            //{
-            //    MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //};
-
-            //if (_content?.Length <= 0) return;
-            //var selectedItem = _content![lvwTable.SelectedRows[0].Index];
-            //var frmInput = new FormHistory();
-            //frmInput.IsCreate(false);
-            //frmInput.OnLoadData += LoadData;
-            //frmInput.SetData(selectedItem);
-            //frmInput.StartPosition = FormStartPosition.CenterScreen;
-            //frmInput.Show();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            //if (lvwTable.SelectedRows.Count <= 0)
-            //{
-            //    MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //    return;
-            //};
-
-            //DialogResult dialog = MessageBox.Show("Are you sure to delete this item?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            //if (dialog == DialogResult.Cancel) return;
-
-            //if (_content?.Length <= 0) return;
-            //var selectedItem = _content![lvwTable.SelectedRows[0].Index];
-            //try
-            //{
-            //    _controller.DeleteHistory(selectedItem.Code);
-            //    LoadData();
-            //    MessageBox.Show("Success delete Vehicle Type", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //}
-        }
-
         private void btnNext_Click(object sender, EventArgs e)
         {
             _page += 1;
@@ -211,6 +168,45 @@ namespace ParkEase.View
         {
             _page -= 1;
             LoadData();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (lvwTable.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            };
+
+            if (_content?.Length <= 0) return;
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
+            var frmInput = new FormExitHistory();
+            frmInput.OnLoadData += LoadData;
+            frmInput.SetData(selectedItem);
+            frmInput.StartPosition = FormStartPosition.CenterScreen;
+            frmInput.GetPrice();
+            frmInput.Show();
+        }
+
+        private void btnFine_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void onSelectionChange(object sender, EventArgs e)
+        {
+            btnExit.Enabled = false;
+            btnFine.Enabled = false;
+
+            if (lvwTable.SelectedRows.Count <= 0) return;
+            if (_content?.Length <= 0) return;
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
+            if (selectedItem.Type == "entry")
+            {
+                btnExit.Enabled = true;
+                btnFine.Enabled = true;
+                return;
+            }
         }
     }
 }
