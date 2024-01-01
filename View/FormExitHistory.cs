@@ -20,6 +20,7 @@ namespace ParkEase.View
             _locationController = new LocationController();
             ucTopBar.SetForm(this);
             ucTopBar.HideMaximize();
+            dragControl.TargetControl = ucTopBar.GetPanel();
             InitializeLocation();
         }
 

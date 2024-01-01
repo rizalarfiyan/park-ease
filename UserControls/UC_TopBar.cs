@@ -52,7 +52,7 @@ namespace ParkEase.UserControls
 
         public void HideMaximize()
         {
-            this.Minimize.Location = new Point(844, 8);
+            this.Minimize.Location = new Point(this.Width - 66, 8);
             this.Maximize.Hide();
         }
 

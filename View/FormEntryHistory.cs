@@ -21,6 +21,7 @@ namespace ParkEase.View
             _locationController = new LocationController();
             ucTopBar.SetForm(this);
             ucTopBar.HideMaximize();
+            dragControl.TargetControl = ucTopBar.GetPanel();
             InitializeVehicleType();
             InitializeLocation();
         }
@@ -82,7 +83,8 @@ namespace ParkEase.View
             string vehicleNumber = txtVehicleNumber.Text.Trim();
             string vehicleType = "";
             int vehicleTypeIdx = cmbVehicleType.SelectedIndex;
-            if (vehicleTypeIdx >= 0 && vehicleTypeIdx < _vehicleType.Length) {
+            if (vehicleTypeIdx >= 0 && vehicleTypeIdx < _vehicleType.Length)
+            {
                 vehicleType = _vehicleType[vehicleTypeIdx].Code;
             }
             string location = "";
