@@ -13,7 +13,7 @@ namespace ParkEase.Controller
             _repo = new LocationRepository();
         }
 
-        public BaseResponse<BaseResponsePagination<Location>>? GetAllLocation(BaseRequestPagination param)
+        public BaseResponse<BaseResponsePagination<Location>>? GetAllLocation(BaseRequestPagination<LocationFilterRequest> param)
         {
             var res = _repo.GetAllLocation(param);
             if (res == null)

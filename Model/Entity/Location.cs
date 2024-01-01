@@ -13,4 +13,10 @@ namespace ParkEase.Model.Entity
         [JsonPropertyName("is_exit")]
         public required bool IsExit { get; set; }
     }
+
+    public class LocationFilterRequest
+    {
+        [JsonPropertyName("is_active")]
+        public bool? IsExit{ get; set; }
+    }
 }

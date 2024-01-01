@@ -16,7 +16,7 @@ namespace ParkEase.View
             _controller = new AuthController();
             InitializeHeader();
             InitializeRole();
-            InitializeChart();
+            //InitializeChart();
         }
 
         private void InitializeHeader()
@@ -100,6 +100,11 @@ namespace ParkEase.View
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             openChildForm(new DashboardActive());
+        }
+
+        private void btnPark_Click(object sender, EventArgs e)
+        {
+            openChildForm(new TableHistory());
         }
     }
 }
