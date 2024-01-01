@@ -58,6 +58,7 @@
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
             txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             picIllustrator = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             tblParent.SuspendLayout();
             tblContent.SuspendLayout();
             tblButtonAction.SuspendLayout();
@@ -405,6 +406,13 @@
             picIllustrator.TabIndex = 3;
             picIllustrator.TabStop = false;
             // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockForm = true;
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = tblContent;
+            guna2DragControl1.UseTransparentDrag = true;
+            // 
             // FormVehicleType
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -445,5 +453,6 @@
         private Label lblCode;
         private Label lblName;
         private Label lblPrice;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

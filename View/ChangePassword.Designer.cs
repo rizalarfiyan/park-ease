@@ -52,6 +52,7 @@
             txtPasswordConfirmation = new Guna.UI2.WinForms.Guna2TextBox();
             txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -303,6 +304,13 @@
             txtOldPassword.TabIndex = 1;
             txtOldPassword.TextOffset = new Point(10, -2);
             // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockForm = true;
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = tableLayoutPanel2;
+            guna2DragControl1.UseTransparentDrag = true;
+            // 
             // frmChangePassword
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -337,5 +345,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtOldPassword;
         private Guna.UI2.WinForms.Guna2Button btnChangePassword;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

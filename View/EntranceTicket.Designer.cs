@@ -76,6 +76,7 @@
             label10 = new Label();
             pictureBox4 = new PictureBox();
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -527,6 +528,13 @@
             guna2Elipse5.BorderRadius = 8;
             guna2Elipse5.TargetControl = guna2Button2;
             // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockForm = true;
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = guna2Panel1;
+            guna2DragControl1.UseTransparentDrag = true;
+            // 
             // EntranceTicket
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -580,5 +588,6 @@
         private PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

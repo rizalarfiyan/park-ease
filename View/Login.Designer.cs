@@ -48,6 +48,7 @@
             txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             ucTopBar = new UserControls.UC_TopBar();
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             ((System.ComponentModel.ISupportInitialize)lblIllustrator).BeginInit();
             tblWrapper.SuspendLayout();
             tblContent.SuspendLayout();
@@ -61,11 +62,10 @@
             lblIllustrator.Dock = DockStyle.Fill;
             lblIllustrator.Image = Properties.Resources.parking_picture_login;
             lblIllustrator.ImageRotate = 0F;
-            lblIllustrator.Location = new Point(3, 2);
-            lblIllustrator.Margin = new Padding(3, 2, 3, 2);
+            lblIllustrator.Location = new Point(3, 3);
             lblIllustrator.Name = "lblIllustrator";
             lblIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            lblIllustrator.Size = new Size(463, 485);
+            lblIllustrator.Size = new Size(530, 646);
             lblIllustrator.SizeMode = PictureBoxSizeMode.StretchImage;
             lblIllustrator.TabIndex = 3;
             lblIllustrator.TabStop = false;
@@ -88,11 +88,11 @@
             btnLogin.FillColor = Color.FromArgb(226, 139, 0);
             btnLogin.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(51, 374);
+            btnLogin.Location = new Point(59, 500);
             btnLogin.Margin = new Padding(0);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLogin.Size = new Size(360, 46);
+            btnLogin.Size = new Size(411, 61);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
             btnLogin.TextOffset = new Point(0, -2);
@@ -106,11 +106,12 @@
             tblWrapper.Controls.Add(tblContent, 0, 0);
             tblWrapper.Controls.Add(lblIllustrator, 0, 0);
             tblWrapper.Dock = DockStyle.Fill;
-            tblWrapper.Location = new Point(0, 42);
+            tblWrapper.Location = new Point(0, 56);
+            tblWrapper.Margin = new Padding(3, 4, 3, 4);
             tblWrapper.Name = "tblWrapper";
             tblWrapper.RowCount = 1;
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblWrapper.Size = new Size(938, 489);
+            tblWrapper.Size = new Size(1072, 652);
             tblWrapper.TabIndex = 5;
             // 
             // tblContent
@@ -124,19 +125,20 @@
             tblContent.Controls.Add(txtUsername, 0, 5);
             tblContent.Controls.Add(txtPassword, 0, 6);
             tblContent.Dock = DockStyle.Fill;
-            tblContent.Location = new Point(472, 3);
+            tblContent.Location = new Point(539, 4);
+            tblContent.Margin = new Padding(3, 4, 3, 4);
             tblContent.Name = "tblContent";
             tblContent.RowCount = 9;
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 107F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 67F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 53F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 93F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.Size = new Size(463, 483);
+            tblContent.Size = new Size(530, 644);
             tblContent.TabIndex = 13;
             // 
             // lblLogo
@@ -145,11 +147,10 @@
             lblLogo.BackColor = Color.FromArgb(255, 254, 234);
             lblLogo.Cursor = Cursors.Hand;
             lblLogo.Image = Properties.Resources.logo_park_ease_oranye;
-            lblLogo.Location = new Point(152, 68);
-            lblLogo.Margin = new Padding(3, 2, 3, 2);
+            lblLogo.Location = new Point(174, 91);
             lblLogo.Name = "lblLogo";
-            lblLogo.Padding = new Padding(9, 8, 9, 8);
-            lblLogo.Size = new Size(158, 44);
+            lblLogo.Padding = new Padding(10, 11, 10, 11);
+            lblLogo.Size = new Size(181, 59);
             lblLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             lblLogo.TabIndex = 7;
             lblLogo.TabStop = false;
@@ -161,9 +162,9 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Ubuntu", 24F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
-            lblTitle.Location = new Point(173, 135);
+            lblTitle.Location = new Point(192, 181);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(116, 40);
+            lblTitle.Size = new Size(146, 52);
             lblTitle.TabIndex = 6;
             lblTitle.Text = "LOGIN";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -175,9 +176,9 @@
             lblDescription.BackColor = Color.FromArgb(255, 254, 234);
             lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblDescription.ForeColor = SystemColors.ControlDarkDark;
-            lblDescription.Location = new Point(28, 184);
+            lblDescription.Location = new Point(15, 248);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(407, 32);
+            lblDescription.Size = new Size(499, 38);
             lblDescription.TabIndex = 8;
             lblDescription.Text = "Easily simplify your parking operations – log in and optimize your parking solutions.";
             lblDescription.TextAlign = ContentAlignment.MiddleCenter;
@@ -204,7 +205,7 @@
             txtUsername.IconLeft = Properties.Resources.icon_users_active;
             txtUsername.IconLeftOffset = new Point(10, 0);
             txtUsername.IconRightOffset = new Point(10, 0);
-            txtUsername.Location = new Point(51, 255);
+            txtUsername.Location = new Point(59, 341);
             txtUsername.Margin = new Padding(0);
             txtUsername.Name = "txtUsername";
             txtUsername.PasswordChar = '\0';
@@ -212,7 +213,7 @@
             txtUsername.PlaceholderText = "Username";
             txtUsername.SelectedText = "";
             txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtUsername.Size = new Size(360, 46);
+            txtUsername.Size = new Size(411, 61);
             txtUsername.TabIndex = 9;
             txtUsername.TextOffset = new Point(10, -2);
             // 
@@ -238,7 +239,7 @@
             txtPassword.IconLeft = Properties.Resources.icon_key;
             txtPassword.IconLeftOffset = new Point(10, 0);
             txtPassword.IconRightOffset = new Point(10, 0);
-            txtPassword.Location = new Point(51, 311);
+            txtPassword.Location = new Point(59, 416);
             txtPassword.Margin = new Padding(0);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
@@ -246,7 +247,7 @@
             txtPassword.PlaceholderText = "Password";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtPassword.Size = new Size(360, 46);
+            txtPassword.Size = new Size(411, 61);
             txtPassword.TabIndex = 9;
             txtPassword.TextOffset = new Point(10, -2);
             // 
@@ -254,21 +255,26 @@
             // 
             ucTopBar.Dock = DockStyle.Top;
             ucTopBar.Location = new Point(0, 0);
-            ucTopBar.Margin = new Padding(3, 2, 3, 2);
             ucTopBar.Name = "ucTopBar";
-            ucTopBar.Size = new Size(938, 42);
+            ucTopBar.Size = new Size(1072, 56);
             ucTopBar.TabIndex = 4;
+            // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockForm = true;
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = tblContent;
+            guna2DragControl1.UseTransparentDrag = true;
             // 
             // frmLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 254, 234);
-            ClientSize = new Size(938, 531);
+            ClientSize = new Size(1072, 708);
             Controls.Add(tblWrapper);
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "frmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -292,5 +298,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
