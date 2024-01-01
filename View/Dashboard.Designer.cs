@@ -68,6 +68,7 @@
             ucHeader = new UserControls.UC_Header();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             ucTopBar = new UserControls.UC_TopBar();
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             ((System.ComponentModel.ISupportInitialize)imgSlide).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
             pnlSidebar.SuspendLayout();
@@ -445,6 +446,13 @@
             ucTopBar.Size = new Size(1072, 32);
             ucTopBar.TabIndex = 1;
             // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockForm = true;
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = pnlSidebar;
+            guna2DragControl1.UseTransparentDrag = true;
+            // 
             // frmDashboard
             // 
             AccessibleRole = AccessibleRole.RadioButton;
@@ -490,5 +498,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnlDeepContent;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private UserControls.UC_TopBar ucTopBar;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

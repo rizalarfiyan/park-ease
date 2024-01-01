@@ -76,6 +76,7 @@
             label10 = new Label();
             pictureBox4 = new PictureBox();
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(components);
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -354,7 +355,7 @@
             guna2TextBox4.PlaceholderText = " ";
             guna2TextBox4.SelectedText = "";
             guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox4.Size = new Size(308, 42);
+            guna2TextBox4.Size = new Size(308, 45);
             guna2TextBox4.TabIndex = 7;
             guna2TextBox4.TextOffset = new Point(20, 0);
             // 
@@ -527,6 +528,13 @@
             guna2Elipse5.BorderRadius = 8;
             guna2Elipse5.TargetControl = guna2Button2;
             // 
+            // guna2DragControl1
+            // 
+            guna2DragControl1.DockForm = true;
+            guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            guna2DragControl1.TargetControl = guna2Panel1;
+            guna2DragControl1.UseTransparentDrag = true;
+            // 
             // EntranceTicket
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -579,5 +587,6 @@
         private PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
