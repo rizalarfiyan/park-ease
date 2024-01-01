@@ -15,6 +15,7 @@ namespace ParkEase.View
             _controller = new VehicleTypeController();
             ucTopBar.SetForm(this);
             ucTopBar.HideMaximize();
+            dragControl.TargetControl = ucTopBar.GetPanel();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

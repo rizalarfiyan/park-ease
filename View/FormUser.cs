@@ -18,6 +18,7 @@ namespace ParkEase.View
             ucTopBar.SetForm(this);
             ucTopBar.HideMaximize();
             FillCombobox();
+            dragControl.TargetControl = ucTopBar.GetPanel();
         }
 
         private void FillCombobox()

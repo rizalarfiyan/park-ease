@@ -16,6 +16,7 @@ namespace ParkEase.View
             _controller = new AuthController();
             InitializeHeader();
             InitializeRole();
+            dragControl.TargetControl = ucTopBar.GetPanel();
             //InitializeChart();
         }
 
@@ -52,6 +53,34 @@ namespace ParkEase.View
         private void btnDashboard_CheckedChanged(object sender, EventArgs e)
         {
             MoveImageBox(sender);
+        }
+
+        private void frmDashboard_SizeChanged(object sender, EventArgs e)
+        {
+            if (btnDashboard.Checked)
+            {
+                MoveImageBox(btnDashboard);
+            }
+            else if (btnPark.Checked)
+            {
+                MoveImageBox(btnPark);
+            }
+            else if (btnUsers.Checked)
+            {
+                MoveImageBox(btnUsers);
+            }
+            else if (btnLocation.Checked)
+            {
+                MoveImageBox(btnLocation);
+            }
+            else if (btnVehicleType.Checked)
+            {
+                MoveImageBox(btnVehicleType);
+            }
+            else if (btnSettings.Checked)
+            {
+                MoveImageBox(btnSettings);
+            }
         }
 
         private void openChildForm(Form childForm)
