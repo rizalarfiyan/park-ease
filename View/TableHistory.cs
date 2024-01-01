@@ -132,14 +132,23 @@ namespace ParkEase.View
                 case "columnNo":
                     _orderBy = "date";
                     break;
-                case "columnName":
-                    _orderBy = "name";
+                case "columnId":
+                    _orderBy = "id";
                     break;
-                case "columnCode":
-                    _orderBy = "code";
+                case "columnLocation":
+                    _orderBy = "location_code";
                     break;
-                case "columnPrice":
-                    _orderBy = "price";
+                case "columnVehicleType":
+                    _orderBy = "vehicle_type_code";
+                    break;
+                case "columnVehicleNumber":
+                    _orderBy = "vehicle_number";
+                    break;
+                case "columnDate":
+                    _orderBy = "date";
+                    break;
+                case "columnType":
+                    _orderBy = "type";
                     break;
                 default:
                     _orderBy = null;
@@ -190,7 +199,20 @@ namespace ParkEase.View
 
         private void btnFine_Click(object sender, EventArgs e)
         {
+            if (lvwTable.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            };
 
+            if (_content?.Length <= 0) return;
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
+            var frmInput = new FormFineHistory();
+            frmInput.OnLoadData += LoadData;
+            frmInput.SetData(selectedItem);
+            frmInput.StartPosition = FormStartPosition.CenterScreen;
+            frmInput.GetPrice();
+            frmInput.Show();
         }
 
         private void onSelectionChange(object sender, EventArgs e)

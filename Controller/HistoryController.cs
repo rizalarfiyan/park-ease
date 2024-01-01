@@ -101,6 +101,73 @@ namespace ParkEase.Controller
             }
         }
 
+
+        public void CreateFineHistory(string entryHistoryId, string locationCode, int price, string name, string identity, string vehicleIdentity, string address, string description)
+        {
+            if (string.IsNullOrEmpty(entryHistoryId))
+            {
+                throw new Exception("Entry History Id cannot be blank.");
+            }
+
+            if (string.IsNullOrEmpty(locationCode))
+            {
+                throw new Exception("Location cannot be blank.");
+            }
+
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new Exception("Name cannot be blank.");
+            }
+
+            if (string.IsNullOrEmpty(identity))
+            {
+                throw new Exception("Identity (KTP) cannot be blank.");
+            }
+
+            if (string.IsNullOrEmpty(vehicleIdentity))
+            {
+                throw new Exception("Identity (SIM) cannot be blank.");
+            }
+
+            if (string.IsNullOrEmpty(address))
+            {
+                throw new Exception("Address cannot be blank.");
+            }
+
+            if (string.IsNullOrEmpty(description))
+            {
+                throw new Exception("Description cannot be blank.");
+            }
+
+            if (price <= 0)
+            {
+                throw new Exception("Price cannot be blank.");
+            }
+
+            var payload = new FineHistoryRequest()
+            {
+                EntryHistoryId = entryHistoryId,
+                LocationCode = locationCode,
+                Price = price,
+                Address = address,
+                Description = description,
+                Identity = identity,
+                Name = name,
+                VehicleIdentity = vehicleIdentity,
+            };
+
+            BaseResponse<string?>? res = _repo.CreateFineHistory(payload);
+            if (res == null)
+            {
+                throw new Exception("Something wrong for your request");
+            }
+
+            if (res.IsErrorConfirmation())
+            {
+                throw new Exception(res.Message);
+            }
+        }
+
         public BaseResponse<int?>? CalculateHistory(string entryHistoryId, bool isFine)
         {
             if (string.IsNullOrEmpty(entryHistoryId))

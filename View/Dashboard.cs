@@ -17,7 +17,7 @@ namespace ParkEase.View
             InitializeHeader();
             InitializeRole();
             dragControl.TargetControl = ucTopBar.GetPanel();
-            //InitializeChart();
+            InitializeChart();
             changeLogoutLocation();
         }
 

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             elipseForm = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
@@ -77,7 +77,7 @@
             btnCancel.BackColor = Color.FromArgb(255, 254, 234);
             btnCancel.BorderRadius = 8;
             btnCancel.Cursor = Cursors.Hand;
-            btnCancel.CustomizableEdges = customizableEdges13;
+            btnCancel.CustomizableEdges = customizableEdges1;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -89,7 +89,7 @@
             btnCancel.Location = new Point(74, 9);
             btnCancel.Margin = new Padding(0);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnCancel.Size = new Size(120, 46);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
@@ -104,7 +104,7 @@
             btnSave.BorderThickness = 2;
             btnSave.CheckedState.FillColor = Color.FromArgb(187, 98, 2);
             btnSave.Cursor = Cursors.Hand;
-            btnSave.CustomizableEdges = customizableEdges15;
+            btnSave.CustomizableEdges = customizableEdges3;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -119,7 +119,7 @@
             btnSave.Margin = new Padding(0);
             btnSave.Name = "btnSave";
             btnSave.PressedColor = Color.FromArgb(187, 98, 2);
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnSave.Size = new Size(120, 46);
             btnSave.TabIndex = 4;
             btnSave.Text = "Save";
@@ -296,7 +296,7 @@
             txtVehicleNumber.BorderColor = Color.FromArgb(255, 231, 70);
             txtVehicleNumber.BorderRadius = 8;
             txtVehicleNumber.BorderThickness = 2;
-            txtVehicleNumber.CustomizableEdges = customizableEdges17;
+            txtVehicleNumber.CustomizableEdges = customizableEdges5;
             txtVehicleNumber.DefaultText = "";
             txtVehicleNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtVehicleNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -316,7 +316,7 @@
             txtVehicleNumber.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
             txtVehicleNumber.PlaceholderText = "AB1234NZ";
             txtVehicleNumber.SelectedText = "";
-            txtVehicleNumber.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtVehicleNumber.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtVehicleNumber.Size = new Size(261, 46);
             txtVehicleNumber.TabIndex = 1;
             txtVehicleNumber.TextOffset = new Point(10, -2);
@@ -329,7 +329,7 @@
             cmbVehicleType.BorderRadius = 8;
             cmbVehicleType.BorderThickness = 2;
             cmbVehicleType.Cursor = Cursors.Hand;
-            cmbVehicleType.CustomizableEdges = customizableEdges19;
+            cmbVehicleType.CustomizableEdges = customizableEdges7;
             cmbVehicleType.DrawMode = DrawMode.OwnerDrawFixed;
             cmbVehicleType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbVehicleType.FillColor = Color.FromArgb(255, 249, 197);
@@ -341,9 +341,9 @@
             cmbVehicleType.Location = new Point(146, 61);
             cmbVehicleType.Margin = new Padding(0);
             cmbVehicleType.Name = "cmbVehicleType";
-            cmbVehicleType.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            cmbVehicleType.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cmbVehicleType.Size = new Size(261, 46);
-            cmbVehicleType.TabIndex = 8;
+            cmbVehicleType.TabIndex = 2;
             cmbVehicleType.TextOffset = new Point(10, -2);
             // 
             // cmbLocation
@@ -354,7 +354,7 @@
             cmbLocation.BorderRadius = 8;
             cmbLocation.BorderThickness = 2;
             cmbLocation.Cursor = Cursors.Hand;
-            cmbLocation.CustomizableEdges = customizableEdges21;
+            cmbLocation.CustomizableEdges = customizableEdges9;
             cmbLocation.DrawMode = DrawMode.OwnerDrawFixed;
             cmbLocation.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbLocation.FillColor = Color.FromArgb(255, 249, 197);
@@ -366,15 +366,15 @@
             cmbLocation.Location = new Point(146, 117);
             cmbLocation.Margin = new Padding(0);
             cmbLocation.Name = "cmbLocation";
-            cmbLocation.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            cmbLocation.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cmbLocation.Size = new Size(261, 46);
-            cmbLocation.TabIndex = 8;
+            cmbLocation.TabIndex = 3;
             cmbLocation.TextOffset = new Point(10, -2);
             // 
             // picIllustrator
             // 
             picIllustrator.BackColor = Color.FromArgb(255, 254, 234);
-            picIllustrator.CustomizableEdges = customizableEdges23;
+            picIllustrator.CustomizableEdges = customizableEdges11;
             picIllustrator.Dock = DockStyle.Fill;
             picIllustrator.Image = Properties.Resources.picture_entry;
             picIllustrator.ImageRotate = 0F;
@@ -382,7 +382,7 @@
             picIllustrator.Margin = new Padding(3, 2, 3, 2);
             picIllustrator.Name = "picIllustrator";
             picIllustrator.Padding = new Padding(30);
-            picIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            picIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges12;
             picIllustrator.Size = new Size(494, 474);
             picIllustrator.SizeMode = PictureBoxSizeMode.StretchImage;
             picIllustrator.TabIndex = 3;

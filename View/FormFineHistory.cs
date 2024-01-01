@@ -4,7 +4,7 @@ using ParkEase.Constants;
 
 namespace ParkEase.View
 {
-    public partial class FormExitHistory : Form
+    public partial class FormFineHistory : Form
     {
         public event LoadDataEvenHandler? OnLoadData;
         private HistoryController _controller;
@@ -13,7 +13,7 @@ namespace ParkEase.View
         private string _entryHistoryId;
         private int _price;
 
-        public FormExitHistory()
+        public FormFineHistory()
         {
             InitializeComponent();
             _controller = new HistoryController();
@@ -54,6 +54,11 @@ namespace ParkEase.View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string name = txtName.Text.Trim();
+            string identity = txtlIdentityKTP.Text.Trim();
+            string vehicleIdentity = txtIdentitySIM.Text.Trim();
+            string address = txtAddress.Text.Trim();
+            string description = txtReason.Text.Trim();
             string location = "";
             int locationIdx = cmbLocation.SelectedIndex;
             if (locationIdx >= 0 && locationIdx < _location.Length)
@@ -65,9 +70,9 @@ namespace ParkEase.View
 
             try
             {
-                _controller.CreateExitHistory(_entryHistoryId, location, _price);
+                _controller.CreateFineHistory(_entryHistoryId, location, _price, name, identity, vehicleIdentity, address, description);
                 if (OnLoadData != null) OnLoadData();
-                DialogResult dialog = MessageBox.Show("Success change to Exit History", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult dialog = MessageBox.Show("Success change to Fine History", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialog == DialogResult.OK)
                 {
                     this.Close();
@@ -99,7 +104,7 @@ namespace ParkEase.View
         {
             try
             {
-                var data = _controller.CalculateHistory(_entryHistoryId, false);
+                var data = _controller.CalculateHistory(_entryHistoryId, true);
                 var content = data?.Data;
                 if (content != null) _price = (int)content;
                 txtPrice.Text = _price.ToString();

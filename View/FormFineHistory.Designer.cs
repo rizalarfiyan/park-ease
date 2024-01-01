@@ -1,6 +1,6 @@
 ﻿namespace ParkEase.View
 {
-    partial class FormExitHistory
+    partial class FormFineHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -45,15 +45,25 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             elipseForm = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
             ucTopBar = new UserControls.UC_TopBar();
-            tblParent = new TableLayoutPanel();
             tblContent = new TableLayoutPanel();
             lblTitle = new Label();
             lblDescription = new Label();
             tblButtonAction = new TableLayoutPanel();
+            tableLayoutPanel1 = new TableLayoutPanel();
             tbnFormContent = new TableLayoutPanel();
             lblVehicleNumber = new Label();
             txtVehicleNumber = new Guna.UI2.WinForms.Guna2TextBox();
@@ -65,13 +75,27 @@
             lblChange = new Label();
             txtPay = new Guna.UI2.WinForms.Guna2TextBox();
             txtChange = new Guna.UI2.WinForms.Guna2TextBox();
-            picIllustrator = new Guna.UI2.WinForms.Guna2PictureBox();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            lblName = new Label();
+            txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            lblIdentityKTP = new Label();
+            lblIdentitySIM = new Label();
+            txtIdentitySIM = new Guna.UI2.WinForms.Guna2TextBox();
+            lblAddress = new Label();
+            lblReason = new Label();
+            txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            txtReason = new Guna.UI2.WinForms.Guna2TextBox();
+            txtlIdentityKTP = new Guna.UI2.WinForms.Guna2TextBox();
             dragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
-            tblParent.SuspendLayout();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            label1 = new Label();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             tblContent.SuspendLayout();
             tblButtonAction.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             tbnFormContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picIllustrator).BeginInit();
+            tableLayoutPanel3.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // elipseForm
@@ -94,7 +118,7 @@
             btnCancel.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.FromArgb(124, 62, 11);
             btnCancel.HoverState.FillColor = Color.FromArgb(255, 249, 197);
-            btnCancel.Location = new Point(74, 9);
+            btnCancel.Location = new Point(327, 9);
             btnCancel.Margin = new Padding(0);
             btnCancel.Name = "btnCancel";
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -123,7 +147,7 @@
             btnSave.ForeColor = Color.White;
             btnSave.HoverState.BorderColor = Color.FromArgb(187, 98, 2);
             btnSave.HoverState.FillColor = Color.FromArgb(187, 98, 2);
-            btnSave.Location = new Point(214, 9);
+            btnSave.Location = new Point(467, 9);
             btnSave.Margin = new Padding(0);
             btnSave.Name = "btnSave";
             btnSave.PressedColor = Color.FromArgb(187, 98, 2);
@@ -143,21 +167,6 @@
             ucTopBar.Size = new Size(1000, 42);
             ucTopBar.TabIndex = 2;
             // 
-            // tblParent
-            // 
-            tblParent.ColumnCount = 2;
-            tblParent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tblParent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tblParent.Controls.Add(tblContent, 0, 0);
-            tblParent.Controls.Add(picIllustrator, 0, 0);
-            tblParent.Dock = DockStyle.Fill;
-            tblParent.Location = new Point(0, 42);
-            tblParent.Name = "tblParent";
-            tblParent.RowCount = 1;
-            tblParent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblParent.Size = new Size(1000, 558);
-            tblParent.TabIndex = 6;
-            // 
             // tblContent
             // 
             tblContent.ColumnCount = 1;
@@ -165,9 +174,9 @@
             tblContent.Controls.Add(lblTitle, 0, 1);
             tblContent.Controls.Add(lblDescription, 0, 2);
             tblContent.Controls.Add(tblButtonAction, 0, 6);
-            tblContent.Controls.Add(tbnFormContent, 0, 4);
+            tblContent.Controls.Add(tableLayoutPanel1, 0, 4);
             tblContent.Dock = DockStyle.Fill;
-            tblContent.Location = new Point(503, 3);
+            tblContent.Location = new Point(0, 42);
             tblContent.Name = "tblContent";
             tblContent.Padding = new Padding(40, 10, 40, 10);
             tblContent.RowCount = 8;
@@ -179,7 +188,7 @@
             tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.Size = new Size(494, 552);
+            tblContent.Size = new Size(1000, 558);
             tblContent.TabIndex = 13;
             // 
             // lblTitle
@@ -189,11 +198,11 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Ubuntu", 20F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
-            lblTitle.Location = new Point(148, 33);
+            lblTitle.Location = new Point(401, 36);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(198, 34);
+            lblTitle.Size = new Size(197, 34);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "EXIT HISTORY";
+            lblTitle.Text = "FINE HISTORY";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblDescription
@@ -203,7 +212,7 @@
             lblDescription.BackColor = Color.FromArgb(255, 254, 234);
             lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblDescription.ForeColor = SystemColors.ControlDarkDark;
-            lblDescription.Location = new Point(84, 77);
+            lblDescription.Location = new Point(337, 80);
             lblDescription.MaximumSize = new Size(340, 0);
             lblDescription.MinimumSize = new Size(0, 32);
             lblDescription.Name = "lblDescription";
@@ -223,12 +232,30 @@
             tblButtonAction.Controls.Add(btnCancel, 1, 0);
             tblButtonAction.Controls.Add(btnSave, 3, 0);
             tblButtonAction.Dock = DockStyle.Fill;
-            tblButtonAction.Location = new Point(43, 456);
+            tblButtonAction.Location = new Point(43, 459);
             tblButtonAction.Name = "tblButtonAction";
             tblButtonAction.RowCount = 1;
             tblButtonAction.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblButtonAction.Size = new Size(408, 64);
+            tblButtonAction.Size = new Size(914, 64);
             tblButtonAction.TabIndex = 9;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 5;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 414F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 80F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 414F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(tbnFormContent, 1, 0);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 3, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(43, 149);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(914, 274);
+            tableLayoutPanel1.TabIndex = 11;
             // 
             // tbnFormContent
             // 
@@ -247,8 +274,7 @@
             tbnFormContent.Controls.Add(lblChange, 1, 4);
             tbnFormContent.Controls.Add(txtPay, 2, 3);
             tbnFormContent.Controls.Add(txtChange, 2, 4);
-            tbnFormContent.Dock = DockStyle.Fill;
-            tbnFormContent.Location = new Point(40, 143);
+            tbnFormContent.Location = new Point(3, 0);
             tbnFormContent.Margin = new Padding(0);
             tbnFormContent.Name = "tbnFormContent";
             tbnFormContent.RowCount = 5;
@@ -259,7 +285,7 @@
             tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
             tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tbnFormContent.Size = new Size(414, 280);
+            tbnFormContent.Size = new Size(414, 274);
             tbnFormContent.TabIndex = 10;
             // 
             // lblVehicleNumber
@@ -493,22 +519,272 @@
             txtChange.TabIndex = 5;
             txtChange.TextOffset = new Point(10, -2);
             // 
-            // picIllustrator
+            // tableLayoutPanel3
             // 
-            picIllustrator.BackColor = Color.FromArgb(255, 254, 234);
-            picIllustrator.CustomizableEdges = customizableEdges15;
-            picIllustrator.Dock = DockStyle.Fill;
-            picIllustrator.Image = Properties.Resources.picture_entry;
-            picIllustrator.ImageRotate = 0F;
-            picIllustrator.Location = new Point(3, 2);
-            picIllustrator.Margin = new Padding(3, 2, 3, 2);
-            picIllustrator.Name = "picIllustrator";
-            picIllustrator.Padding = new Padding(30);
-            picIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            picIllustrator.Size = new Size(494, 554);
-            picIllustrator.SizeMode = PictureBoxSizeMode.StretchImage;
-            picIllustrator.TabIndex = 3;
-            picIllustrator.TabStop = false;
+            tableLayoutPanel3.ColumnCount = 4;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 140F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 270F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.Controls.Add(lblName, 1, 0);
+            tableLayoutPanel3.Controls.Add(txtName, 2, 0);
+            tableLayoutPanel3.Controls.Add(lblIdentityKTP, 1, 1);
+            tableLayoutPanel3.Controls.Add(lblIdentitySIM, 1, 2);
+            tableLayoutPanel3.Controls.Add(txtIdentitySIM, 2, 2);
+            tableLayoutPanel3.Controls.Add(lblAddress, 1, 3);
+            tableLayoutPanel3.Controls.Add(lblReason, 1, 4);
+            tableLayoutPanel3.Controls.Add(txtAddress, 2, 3);
+            tableLayoutPanel3.Controls.Add(txtReason, 2, 4);
+            tableLayoutPanel3.Controls.Add(txtlIdentityKTP, 2, 1);
+            tableLayoutPanel3.Location = new Point(497, 0);
+            tableLayoutPanel3.Margin = new Padding(0);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 5;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Size = new Size(414, 274);
+            tableLayoutPanel3.TabIndex = 10;
+            // 
+            // lblName
+            // 
+            lblName.Anchor = AnchorStyles.Left;
+            lblName.AutoSize = true;
+            lblName.BackColor = Color.Transparent;
+            lblName.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblName.ForeColor = Color.FromArgb(187, 98, 2);
+            lblName.Location = new Point(5, 17);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(54, 21);
+            lblName.TabIndex = 7;
+            lblName.Text = "Name";
+            lblName.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // txtName
+            // 
+            txtName.Anchor = AnchorStyles.None;
+            txtName.Animated = true;
+            txtName.BackColor = Color.Transparent;
+            txtName.BorderColor = Color.FromArgb(255, 231, 70);
+            txtName.BorderRadius = 8;
+            txtName.BorderThickness = 2;
+            txtName.CustomizableEdges = customizableEdges15;
+            txtName.DefaultText = "";
+            txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtName.FillColor = Color.FromArgb(255, 249, 197);
+            txtName.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            txtName.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtName.ForeColor = Color.FromArgb(187, 98, 2);
+            txtName.HoverState.BorderColor = Color.Transparent;
+            txtName.IconLeftOffset = new Point(10, 0);
+            txtName.IconRightOffset = new Point(10, 0);
+            txtName.Location = new Point(146, 5);
+            txtName.Margin = new Padding(0);
+            txtName.Name = "txtName";
+            txtName.PasswordChar = '\0';
+            txtName.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
+            txtName.PlaceholderText = "";
+            txtName.SelectedText = "";
+            txtName.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtName.Size = new Size(261, 46);
+            txtName.TabIndex = 6;
+            txtName.TextOffset = new Point(10, -2);
+            // 
+            // lblIdentityKTP
+            // 
+            lblIdentityKTP.Anchor = AnchorStyles.Left;
+            lblIdentityKTP.AutoSize = true;
+            lblIdentityKTP.BackColor = Color.Transparent;
+            lblIdentityKTP.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblIdentityKTP.ForeColor = Color.FromArgb(187, 98, 2);
+            lblIdentityKTP.Location = new Point(5, 73);
+            lblIdentityKTP.Name = "lblIdentityKTP";
+            lblIdentityKTP.Size = new Size(113, 21);
+            lblIdentityKTP.TabIndex = 7;
+            lblIdentityKTP.Text = "Identity (KTP)";
+            lblIdentityKTP.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblIdentitySIM
+            // 
+            lblIdentitySIM.Anchor = AnchorStyles.Left;
+            lblIdentitySIM.AutoSize = true;
+            lblIdentitySIM.BackColor = Color.Transparent;
+            lblIdentitySIM.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblIdentitySIM.ForeColor = Color.FromArgb(187, 98, 2);
+            lblIdentitySIM.Location = new Point(5, 129);
+            lblIdentitySIM.Name = "lblIdentitySIM";
+            lblIdentitySIM.Size = new Size(112, 21);
+            lblIdentitySIM.TabIndex = 7;
+            lblIdentitySIM.Text = "Identity (SIM)";
+            lblIdentitySIM.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // txtIdentitySIM
+            // 
+            txtIdentitySIM.Anchor = AnchorStyles.None;
+            txtIdentitySIM.Animated = true;
+            txtIdentitySIM.BackColor = Color.Transparent;
+            txtIdentitySIM.BorderColor = Color.FromArgb(255, 231, 70);
+            txtIdentitySIM.BorderRadius = 8;
+            txtIdentitySIM.BorderThickness = 2;
+            txtIdentitySIM.CustomizableEdges = customizableEdges17;
+            txtIdentitySIM.DefaultText = "";
+            txtIdentitySIM.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtIdentitySIM.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtIdentitySIM.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtIdentitySIM.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtIdentitySIM.FillColor = Color.FromArgb(255, 249, 197);
+            txtIdentitySIM.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            txtIdentitySIM.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtIdentitySIM.ForeColor = Color.FromArgb(187, 98, 2);
+            txtIdentitySIM.HoverState.BorderColor = Color.Transparent;
+            txtIdentitySIM.IconLeftOffset = new Point(10, 0);
+            txtIdentitySIM.IconRightOffset = new Point(10, 0);
+            txtIdentitySIM.Location = new Point(146, 117);
+            txtIdentitySIM.Margin = new Padding(0);
+            txtIdentitySIM.Name = "txtIdentitySIM";
+            txtIdentitySIM.PasswordChar = '\0';
+            txtIdentitySIM.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
+            txtIdentitySIM.PlaceholderText = "";
+            txtIdentitySIM.SelectedText = "";
+            txtIdentitySIM.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtIdentitySIM.Size = new Size(261, 46);
+            txtIdentitySIM.TabIndex = 8;
+            txtIdentitySIM.TextOffset = new Point(10, -2);
+            // 
+            // lblAddress
+            // 
+            lblAddress.Anchor = AnchorStyles.Left;
+            lblAddress.AutoSize = true;
+            lblAddress.BackColor = Color.Transparent;
+            lblAddress.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblAddress.ForeColor = Color.FromArgb(187, 98, 2);
+            lblAddress.Location = new Point(5, 185);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(70, 21);
+            lblAddress.TabIndex = 7;
+            lblAddress.Text = "Address";
+            lblAddress.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblReason
+            // 
+            lblReason.Anchor = AnchorStyles.Left;
+            lblReason.AutoSize = true;
+            lblReason.BackColor = Color.Transparent;
+            lblReason.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblReason.ForeColor = Color.FromArgb(187, 98, 2);
+            lblReason.Location = new Point(5, 241);
+            lblReason.Name = "lblReason";
+            lblReason.Size = new Size(65, 21);
+            lblReason.TabIndex = 7;
+            lblReason.Text = "Reason";
+            lblReason.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // txtAddress
+            // 
+            txtAddress.Anchor = AnchorStyles.None;
+            txtAddress.Animated = true;
+            txtAddress.BackColor = Color.Transparent;
+            txtAddress.BorderColor = Color.FromArgb(255, 231, 70);
+            txtAddress.BorderRadius = 8;
+            txtAddress.BorderThickness = 2;
+            txtAddress.CustomizableEdges = customizableEdges19;
+            txtAddress.DefaultText = "";
+            txtAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtAddress.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtAddress.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtAddress.FillColor = Color.FromArgb(255, 249, 197);
+            txtAddress.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            txtAddress.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAddress.ForeColor = Color.FromArgb(187, 98, 2);
+            txtAddress.HoverState.BorderColor = Color.Transparent;
+            txtAddress.IconLeftOffset = new Point(10, 0);
+            txtAddress.IconRightOffset = new Point(10, 0);
+            txtAddress.Location = new Point(146, 173);
+            txtAddress.Margin = new Padding(0);
+            txtAddress.Name = "txtAddress";
+            txtAddress.PasswordChar = '\0';
+            txtAddress.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
+            txtAddress.PlaceholderText = "";
+            txtAddress.SelectedText = "";
+            txtAddress.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtAddress.Size = new Size(261, 46);
+            txtAddress.TabIndex = 9;
+            txtAddress.TextOffset = new Point(10, -2);
+            txtAddress.TextChanged += onPayChange;
+            // 
+            // txtReason
+            // 
+            txtReason.Anchor = AnchorStyles.None;
+            txtReason.Animated = true;
+            txtReason.BackColor = Color.Transparent;
+            txtReason.BorderColor = Color.FromArgb(255, 231, 70);
+            txtReason.BorderRadius = 8;
+            txtReason.BorderThickness = 2;
+            txtReason.CustomizableEdges = customizableEdges21;
+            txtReason.DefaultText = "";
+            txtReason.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtReason.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtReason.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtReason.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtReason.FillColor = Color.FromArgb(255, 249, 197);
+            txtReason.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            txtReason.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtReason.ForeColor = Color.FromArgb(187, 98, 2);
+            txtReason.HoverState.BorderColor = Color.Transparent;
+            txtReason.IconLeftOffset = new Point(10, 0);
+            txtReason.IconRightOffset = new Point(10, 0);
+            txtReason.Location = new Point(146, 229);
+            txtReason.Margin = new Padding(0);
+            txtReason.Name = "txtReason";
+            txtReason.PasswordChar = '\0';
+            txtReason.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
+            txtReason.PlaceholderText = "";
+            txtReason.SelectedText = "";
+            txtReason.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtReason.Size = new Size(261, 46);
+            txtReason.TabIndex = 10;
+            txtReason.TextOffset = new Point(10, -2);
+            // 
+            // txtlIdentityKTP
+            // 
+            txtlIdentityKTP.Anchor = AnchorStyles.None;
+            txtlIdentityKTP.Animated = true;
+            txtlIdentityKTP.BackColor = Color.Transparent;
+            txtlIdentityKTP.BorderColor = Color.FromArgb(255, 231, 70);
+            txtlIdentityKTP.BorderRadius = 8;
+            txtlIdentityKTP.BorderThickness = 2;
+            txtlIdentityKTP.CustomizableEdges = customizableEdges23;
+            txtlIdentityKTP.DefaultText = "";
+            txtlIdentityKTP.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtlIdentityKTP.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtlIdentityKTP.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtlIdentityKTP.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtlIdentityKTP.FillColor = Color.FromArgb(255, 249, 197);
+            txtlIdentityKTP.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            txtlIdentityKTP.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtlIdentityKTP.ForeColor = Color.FromArgb(187, 98, 2);
+            txtlIdentityKTP.HoverState.BorderColor = Color.Transparent;
+            txtlIdentityKTP.IconLeftOffset = new Point(10, 0);
+            txtlIdentityKTP.IconRightOffset = new Point(10, 0);
+            txtlIdentityKTP.Location = new Point(146, 61);
+            txtlIdentityKTP.Margin = new Padding(0);
+            txtlIdentityKTP.Name = "txtlIdentityKTP";
+            txtlIdentityKTP.PasswordChar = '\0';
+            txtlIdentityKTP.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
+            txtlIdentityKTP.PlaceholderText = "";
+            txtlIdentityKTP.SelectedText = "";
+            txtlIdentityKTP.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtlIdentityKTP.Size = new Size(261, 46);
+            txtlIdentityKTP.TabIndex = 7;
+            txtlIdentityKTP.TextOffset = new Point(10, -2);
             // 
             // dragControl
             // 
@@ -517,39 +793,103 @@
             dragControl.TargetControl = tblContent;
             dragControl.UseTransparentDrag = true;
             // 
-            // FormExitHistory
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.ColumnCount = 4;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 140F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 270F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.Controls.Add(label1, 1, 0);
+            tableLayoutPanel2.Location = new Point(0, 0);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(200, 100);
+            tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(187, 98, 2);
+            label1.Location = new Point(-102, 39);
+            label1.Name = "label1";
+            label1.Size = new Size(126, 21);
+            label1.TabIndex = 7;
+            label1.Text = "Vehicle Number";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.Anchor = AnchorStyles.None;
+            guna2TextBox1.Animated = true;
+            guna2TextBox1.BackColor = Color.Transparent;
+            guna2TextBox1.BorderColor = Color.FromArgb(255, 231, 70);
+            guna2TextBox1.BorderRadius = 8;
+            guna2TextBox1.BorderThickness = 2;
+            guna2TextBox1.CustomizableEdges = customizableEdges25;
+            guna2TextBox1.DefaultText = "";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.Enabled = false;
+            guna2TextBox1.FillColor = Color.FromArgb(255, 249, 197);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            guna2TextBox1.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2TextBox1.ForeColor = Color.FromArgb(187, 98, 2);
+            guna2TextBox1.HoverState.BorderColor = Color.Transparent;
+            guna2TextBox1.IconLeftOffset = new Point(10, 0);
+            guna2TextBox1.IconRightOffset = new Point(10, 0);
+            guna2TextBox1.Location = new Point(39, 27);
+            guna2TextBox1.Margin = new Padding(0);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PasswordChar = '\0';
+            guna2TextBox1.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
+            guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            guna2TextBox1.Size = new Size(261, 46);
+            guna2TextBox1.TabIndex = 1;
+            guna2TextBox1.TextOffset = new Point(10, -2);
+            // 
+            // FormFineHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 254, 234);
             ClientSize = new Size(1000, 600);
-            Controls.Add(tblParent);
+            Controls.Add(tblContent);
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FormExitHistory";
+            Name = "FormFineHistory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Create Entry History";
-            tblParent.ResumeLayout(false);
             tblContent.ResumeLayout(false);
             tblContent.PerformLayout();
             tblButtonAction.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
             tbnFormContent.ResumeLayout(false);
             tbnFormContent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picIllustrator).EndInit();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse elipseForm;
         private UserControls.UC_TopBar ucTopBar;
-        private TableLayoutPanel tblParent;
         private TableLayoutPanel tblContent;
         private Label lblTitle;
         private Label lblDescription;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2TextBox txtVehicleNumber;
-        private Guna.UI2.WinForms.Guna2PictureBox picIllustrator;
         private TableLayoutPanel tblButtonAction;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private TableLayoutPanel tbnFormContent;
@@ -563,5 +903,20 @@
         private Label lblChange;
         private Guna.UI2.WinForms.Guna2TextBox txtPay;
         private Guna.UI2.WinForms.Guna2TextBox txtChange;
+        private TableLayoutPanel tableLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel2;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Label lblName;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private Label lblIdentityKTP;
+        private Label lblIdentitySIM;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdentitySIM;
+        private Label lblAddress;
+        private Label lblReason;
+        private Guna.UI2.WinForms.Guna2TextBox txtAddress;
+        private Guna.UI2.WinForms.Guna2TextBox txtReason;
+        private Guna.UI2.WinForms.Guna2TextBox txtlIdentityKTP;
     }
 }
