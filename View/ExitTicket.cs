@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParkEase.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace ParkEase.View
         public ExitTicket()
         {
             InitializeComponent();
+            dragControl.TargetControl = ucTopBar.GetPanel();
         }
 
         private void guna2TextBox8_TextChanged(object sender, EventArgs e)

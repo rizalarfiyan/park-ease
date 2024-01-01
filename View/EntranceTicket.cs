@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ParkEase.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace ParkEase.View
         public EntranceTicket()
         {
             InitializeComponent();
+            dragControl.TargetControl = ucTopBar.GetPanel();
         }
     }
 }

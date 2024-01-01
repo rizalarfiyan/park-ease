@@ -17,6 +17,7 @@ namespace ParkEase.View
             InitializeHeader();
             InitializeRole();
             InitializeChart();
+            dragControl.TargetControl = ucTopBar.GetPanel();
         }
 
         private void InitializeHeader()

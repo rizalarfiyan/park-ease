@@ -12,6 +12,7 @@ namespace ParkEase.View
             InitializeComponent();
             InitializeApp();
             _controller = new UserController();
+            dragControl.TargetControl = ucTopBar.GetPanel();
         }
 
         private void InitializeApp()

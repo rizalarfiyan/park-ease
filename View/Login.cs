@@ -13,6 +13,7 @@ namespace ParkEase.View
             this.Text = $"{App.APP_NAME} - Login";
             _controller = new AuthController();
             ucTopBar.HideMaximize();
+            dragControl.TargetControl = ucTopBar.GetPanel();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
