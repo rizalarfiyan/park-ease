@@ -409,6 +409,7 @@
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormLocation";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Location";
             tblParent.ResumeLayout(false);
             tblContent.ResumeLayout(false);
