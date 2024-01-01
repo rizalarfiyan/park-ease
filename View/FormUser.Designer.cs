@@ -93,11 +93,11 @@
             btnCancel.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.FromArgb(124, 62, 11);
             btnCancel.HoverState.FillColor = Color.FromArgb(255, 249, 197);
-            btnCancel.Location = new Point(50, 9);
+            btnCancel.Location = new Point(58, 12);
             btnCancel.Margin = new Padding(0);
             btnCancel.Name = "btnCancel";
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnCancel.Size = new Size(120, 46);
+            btnCancel.Size = new Size(137, 61);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
             btnCancel.TextOffset = new Point(0, -2);
@@ -122,12 +122,12 @@
             btnSave.ForeColor = Color.White;
             btnSave.HoverState.BorderColor = Color.FromArgb(187, 98, 2);
             btnSave.HoverState.FillColor = Color.FromArgb(187, 98, 2);
-            btnSave.Location = new Point(190, 9);
+            btnSave.Location = new Point(218, 12);
             btnSave.Margin = new Padding(0);
             btnSave.Name = "btnSave";
             btnSave.PressedColor = Color.FromArgb(187, 98, 2);
             btnSave.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSave.Size = new Size(120, 46);
+            btnSave.Size = new Size(137, 61);
             btnSave.TabIndex = 4;
             btnSave.Text = "Save";
             btnSave.TextOffset = new Point(0, -2);
@@ -139,7 +139,7 @@
             ucTopBar.Location = new Point(0, 0);
             ucTopBar.Margin = new Padding(0);
             ucTopBar.Name = "ucTopBar";
-            ucTopBar.Size = new Size(906, 42);
+            ucTopBar.Size = new Size(1035, 56);
             ucTopBar.TabIndex = 2;
             // 
             // tblParent
@@ -150,11 +150,12 @@
             tblParent.Controls.Add(tblContent, 0, 0);
             tblParent.Controls.Add(picIllustrator, 0, 0);
             tblParent.Dock = DockStyle.Fill;
-            tblParent.Location = new Point(0, 42);
+            tblParent.Location = new Point(0, 56);
+            tblParent.Margin = new Padding(3, 4, 3, 4);
             tblParent.Name = "tblParent";
             tblParent.RowCount = 1;
             tblParent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblParent.Size = new Size(906, 578);
+            tblParent.Size = new Size(1035, 771);
             tblParent.TabIndex = 6;
             // 
             // tblContent
@@ -166,19 +167,20 @@
             tblContent.Controls.Add(tblButtonAction, 0, 6);
             tblContent.Controls.Add(tbnFormContent, 0, 4);
             tblContent.Dock = DockStyle.Fill;
-            tblContent.Location = new Point(456, 3);
+            tblContent.Location = new Point(520, 4);
+            tblContent.Margin = new Padding(3, 4, 3, 4);
             tblContent.Name = "tblContent";
-            tblContent.Padding = new Padding(40, 10, 40, 10);
+            tblContent.Padding = new Padding(46, 13, 46, 13);
             tblContent.RowCount = 8;
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 53F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 280F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 373F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 93F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.Size = new Size(447, 572);
+            tblContent.Size = new Size(512, 763);
             tblContent.TabIndex = 13;
             // 
             // lblTitle
@@ -188,9 +190,9 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Ubuntu", 20F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
-            lblTitle.Location = new Point(181, 43);
+            lblTitle.Location = new Point(202, 60);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(84, 34);
+            lblTitle.Size = new Size(107, 43);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "USER";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -202,11 +204,11 @@
             lblDescription.BackColor = Color.FromArgb(255, 254, 234);
             lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblDescription.ForeColor = SystemColors.ControlDarkDark;
-            lblDescription.Location = new Point(63, 87);
-            lblDescription.MaximumSize = new Size(340, 0);
-            lblDescription.MinimumSize = new Size(0, 32);
+            lblDescription.Location = new Point(66, 117);
+            lblDescription.MaximumSize = new Size(389, 0);
+            lblDescription.MinimumSize = new Size(0, 43);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(320, 32);
+            lblDescription.Size = new Size(379, 43);
             lblDescription.TabIndex = 0;
             lblDescription.Text = "You are registered as a user at Park Ease, obey the rules and conditions. Safe and comfortable greetings.";
             lblDescription.TextAlign = ContentAlignment.MiddleCenter;
@@ -215,26 +217,27 @@
             // 
             tblButtonAction.ColumnCount = 5;
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 137F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 137F));
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblButtonAction.Controls.Add(btnCancel, 1, 0);
             tblButtonAction.Controls.Add(btnSave, 3, 0);
             tblButtonAction.Dock = DockStyle.Fill;
-            tblButtonAction.Location = new Point(43, 466);
+            tblButtonAction.Location = new Point(49, 622);
+            tblButtonAction.Margin = new Padding(3, 4, 3, 4);
             tblButtonAction.Name = "tblButtonAction";
             tblButtonAction.RowCount = 1;
             tblButtonAction.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblButtonAction.Size = new Size(361, 64);
+            tblButtonAction.Size = new Size(414, 85);
             tblButtonAction.TabIndex = 9;
             // 
             // tbnFormContent
             // 
             tbnFormContent.ColumnCount = 4;
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
-            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 270F));
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 114F));
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 309F));
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tbnFormContent.Controls.Add(lblUsername, 1, 0);
             tbnFormContent.Controls.Add(lblPassword, 1, 1);
@@ -247,16 +250,16 @@
             tbnFormContent.Controls.Add(cmbRole, 2, 3);
             tbnFormContent.Controls.Add(cmbStatus, 2, 4);
             tbnFormContent.Dock = DockStyle.Fill;
-            tbnFormContent.Location = new Point(40, 153);
+            tbnFormContent.Location = new Point(46, 205);
             tbnFormContent.Margin = new Padding(0);
             tbnFormContent.Name = "tbnFormContent";
             tbnFormContent.RowCount = 5;
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tbnFormContent.Size = new Size(367, 280);
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tbnFormContent.Size = new Size(420, 373);
             tbnFormContent.TabIndex = 10;
             // 
             // lblUsername
@@ -266,9 +269,9 @@
             lblUsername.BackColor = Color.Transparent;
             lblUsername.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblUsername.ForeColor = Color.FromArgb(187, 98, 2);
-            lblUsername.Location = new Point(2, 17);
+            lblUsername.Location = new Point(2, 11);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(85, 21);
+            lblUsername.Size = new Size(97, 52);
             lblUsername.TabIndex = 7;
             lblUsername.Text = "Username";
             lblUsername.TextAlign = ContentAlignment.MiddleLeft;
@@ -280,9 +283,9 @@
             lblPassword.BackColor = Color.Transparent;
             lblPassword.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblPassword.ForeColor = Color.FromArgb(187, 98, 2);
-            lblPassword.Location = new Point(2, 73);
+            lblPassword.Location = new Point(2, 99);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(81, 21);
+            lblPassword.Size = new Size(103, 26);
             lblPassword.TabIndex = 7;
             lblPassword.Text = "Password";
             lblPassword.TextAlign = ContentAlignment.MiddleLeft;
@@ -294,9 +297,9 @@
             lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblName.ForeColor = Color.FromArgb(187, 98, 2);
-            lblName.Location = new Point(2, 129);
+            lblName.Location = new Point(2, 174);
             lblName.Name = "lblName";
-            lblName.Size = new Size(54, 21);
+            lblName.Size = new Size(67, 26);
             lblName.TabIndex = 7;
             lblName.Text = "Name";
             lblName.TextAlign = ContentAlignment.MiddleLeft;
@@ -322,7 +325,7 @@
             txtUsername.HoverState.BorderColor = Color.Transparent;
             txtUsername.IconLeftOffset = new Point(10, 0);
             txtUsername.IconRightOffset = new Point(10, 0);
-            txtUsername.Location = new Point(103, 5);
+            txtUsername.Location = new Point(118, 7);
             txtUsername.Margin = new Padding(0);
             txtUsername.Name = "txtUsername";
             txtUsername.PasswordChar = '\0';
@@ -330,7 +333,7 @@
             txtUsername.PlaceholderText = "pajio";
             txtUsername.SelectedText = "";
             txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtUsername.Size = new Size(261, 46);
+            txtUsername.Size = new Size(298, 61);
             txtUsername.TabIndex = 1;
             txtUsername.TextOffset = new Point(10, -2);
             // 
@@ -355,7 +358,7 @@
             txtPassword.HoverState.BorderColor = Color.Transparent;
             txtPassword.IconLeftOffset = new Point(10, 0);
             txtPassword.IconRightOffset = new Point(10, 0);
-            txtPassword.Location = new Point(103, 61);
+            txtPassword.Location = new Point(118, 82);
             txtPassword.Margin = new Padding(0);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
@@ -363,7 +366,7 @@
             txtPassword.PlaceholderText = "Password";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtPassword.Size = new Size(261, 46);
+            txtPassword.Size = new Size(298, 61);
             txtPassword.TabIndex = 2;
             txtPassword.TextOffset = new Point(10, -2);
             // 
@@ -388,7 +391,7 @@
             txtName.HoverState.BorderColor = Color.Transparent;
             txtName.IconLeftOffset = new Point(10, 0);
             txtName.IconRightOffset = new Point(10, 0);
-            txtName.Location = new Point(103, 117);
+            txtName.Location = new Point(118, 157);
             txtName.Margin = new Padding(0);
             txtName.Name = "txtName";
             txtName.PasswordChar = '\0';
@@ -396,7 +399,7 @@
             txtName.PlaceholderText = "Paijo Royo Royo";
             txtName.SelectedText = "";
             txtName.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtName.Size = new Size(261, 46);
+            txtName.Size = new Size(298, 61);
             txtName.TabIndex = 3;
             txtName.TextOffset = new Point(10, -2);
             // 
@@ -407,9 +410,9 @@
             lblRole.BackColor = Color.Transparent;
             lblRole.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblRole.ForeColor = Color.FromArgb(187, 98, 2);
-            lblRole.Location = new Point(2, 185);
+            lblRole.Location = new Point(2, 249);
             lblRole.Name = "lblRole";
-            lblRole.Size = new Size(43, 21);
+            lblRole.Size = new Size(55, 26);
             lblRole.TabIndex = 7;
             lblRole.Text = "Role";
             lblRole.TextAlign = ContentAlignment.MiddleLeft;
@@ -421,9 +424,9 @@
             lblStatus.BackColor = Color.Transparent;
             lblStatus.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblStatus.ForeColor = Color.FromArgb(187, 98, 2);
-            lblStatus.Location = new Point(2, 241);
+            lblStatus.Location = new Point(2, 324);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(59, 21);
+            lblStatus.Size = new Size(75, 26);
             lblStatus.TabIndex = 7;
             lblStatus.Text = "Status";
             lblStatus.TextAlign = ContentAlignment.MiddleLeft;
@@ -445,11 +448,11 @@
             cmbRole.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
             cmbRole.ForeColor = Color.FromArgb(187, 98, 2);
             cmbRole.ItemHeight = 40;
-            cmbRole.Location = new Point(103, 173);
+            cmbRole.Location = new Point(118, 239);
             cmbRole.Margin = new Padding(0);
             cmbRole.Name = "cmbRole";
             cmbRole.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            cmbRole.Size = new Size(261, 46);
+            cmbRole.Size = new Size(298, 46);
             cmbRole.TabIndex = 4;
             cmbRole.TextOffset = new Point(10, -2);
             // 
@@ -470,11 +473,11 @@
             cmbStatus.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
             cmbStatus.ForeColor = Color.FromArgb(187, 98, 2);
             cmbStatus.ItemHeight = 40;
-            cmbStatus.Location = new Point(103, 229);
+            cmbStatus.Location = new Point(118, 314);
             cmbStatus.Margin = new Padding(0);
             cmbStatus.Name = "cmbStatus";
             cmbStatus.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            cmbStatus.Size = new Size(261, 46);
+            cmbStatus.Size = new Size(298, 46);
             cmbStatus.TabIndex = 4;
             cmbStatus.TextOffset = new Point(10, -2);
             // 
@@ -485,27 +488,26 @@
             picIllustrator.Dock = DockStyle.Fill;
             picIllustrator.Image = Properties.Resources.picture_users;
             picIllustrator.ImageRotate = 0F;
-            picIllustrator.Location = new Point(3, 2);
-            picIllustrator.Margin = new Padding(3, 2, 3, 2);
+            picIllustrator.Location = new Point(3, 3);
             picIllustrator.Name = "picIllustrator";
-            picIllustrator.Padding = new Padding(30);
+            picIllustrator.Padding = new Padding(34, 40, 34, 40);
             picIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            picIllustrator.Size = new Size(447, 574);
+            picIllustrator.Size = new Size(511, 765);
             picIllustrator.SizeMode = PictureBoxSizeMode.StretchImage;
             picIllustrator.TabIndex = 3;
             picIllustrator.TabStop = false;
             // 
             // FormUser
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 254, 234);
-            ClientSize = new Size(906, 620);
+            ClientSize = new Size(1035, 827);
             Controls.Add(tblParent);
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormUser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "User";
             tblParent.ResumeLayout(false);
             tblContent.ResumeLayout(false);

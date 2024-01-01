@@ -354,7 +354,7 @@
             guna2TextBox4.PlaceholderText = " ";
             guna2TextBox4.SelectedText = "";
             guna2TextBox4.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox4.Size = new Size(308, 42);
+            guna2TextBox4.Size = new Size(308, 45);
             guna2TextBox4.TabIndex = 7;
             guna2TextBox4.TextOffset = new Point(20, 0);
             // 
@@ -541,6 +541,7 @@
             Controls.Add(uC_TopBar1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EntranceTicket";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "EntranceTicket";
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();

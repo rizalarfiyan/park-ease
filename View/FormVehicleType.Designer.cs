@@ -85,11 +85,11 @@
             btnCancel.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.FromArgb(124, 62, 11);
             btnCancel.HoverState.FillColor = Color.FromArgb(255, 249, 197);
-            btnCancel.Location = new Point(50, 9);
+            btnCancel.Location = new Point(58, 12);
             btnCancel.Margin = new Padding(0);
             btnCancel.Name = "btnCancel";
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnCancel.Size = new Size(120, 46);
+            btnCancel.Size = new Size(137, 61);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
             btnCancel.TextOffset = new Point(0, -2);
@@ -114,12 +114,12 @@
             btnSave.ForeColor = Color.White;
             btnSave.HoverState.BorderColor = Color.FromArgb(187, 98, 2);
             btnSave.HoverState.FillColor = Color.FromArgb(187, 98, 2);
-            btnSave.Location = new Point(190, 9);
+            btnSave.Location = new Point(218, 12);
             btnSave.Margin = new Padding(0);
             btnSave.Name = "btnSave";
             btnSave.PressedColor = Color.FromArgb(187, 98, 2);
             btnSave.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSave.Size = new Size(120, 46);
+            btnSave.Size = new Size(137, 61);
             btnSave.TabIndex = 4;
             btnSave.Text = "Save";
             btnSave.TextOffset = new Point(0, -2);
@@ -131,7 +131,7 @@
             ucTopBar.Location = new Point(0, 0);
             ucTopBar.Margin = new Padding(0);
             ucTopBar.Name = "ucTopBar";
-            ucTopBar.Size = new Size(906, 42);
+            ucTopBar.Size = new Size(1035, 56);
             ucTopBar.TabIndex = 2;
             // 
             // tblParent
@@ -142,11 +142,12 @@
             tblParent.Controls.Add(tblContent, 0, 0);
             tblParent.Controls.Add(picIllustrator, 0, 0);
             tblParent.Dock = DockStyle.Fill;
-            tblParent.Location = new Point(0, 42);
+            tblParent.Location = new Point(0, 56);
+            tblParent.Margin = new Padding(3, 4, 3, 4);
             tblParent.Name = "tblParent";
             tblParent.RowCount = 1;
             tblParent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblParent.Size = new Size(906, 478);
+            tblParent.Size = new Size(1035, 637);
             tblParent.TabIndex = 6;
             // 
             // tblContent
@@ -158,19 +159,20 @@
             tblContent.Controls.Add(tblButtonAction, 0, 6);
             tblContent.Controls.Add(tbnFormContent, 0, 4);
             tblContent.Dock = DockStyle.Fill;
-            tblContent.Location = new Point(456, 3);
+            tblContent.Location = new Point(520, 4);
+            tblContent.Margin = new Padding(3, 4, 3, 4);
             tblContent.Name = "tblContent";
-            tblContent.Padding = new Padding(40, 10, 40, 10);
+            tblContent.Padding = new Padding(46, 13, 46, 13);
             tblContent.RowCount = 8;
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 53F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 168F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 224F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 93F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.Size = new Size(447, 472);
+            tblContent.Size = new Size(512, 629);
             tblContent.TabIndex = 13;
             // 
             // lblTitle
@@ -180,9 +182,9 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Ubuntu", 20F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
-            lblTitle.Location = new Point(122, 49);
+            lblTitle.Location = new Point(128, 67);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(203, 34);
+            lblTitle.Size = new Size(256, 43);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "VEHICLE TYPE";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -194,11 +196,11 @@
             lblDescription.BackColor = Color.FromArgb(255, 254, 234);
             lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblDescription.ForeColor = SystemColors.ControlDarkDark;
-            lblDescription.Location = new Point(60, 93);
-            lblDescription.MaximumSize = new Size(340, 0);
-            lblDescription.MinimumSize = new Size(0, 32);
+            lblDescription.Location = new Point(74, 119);
+            lblDescription.MaximumSize = new Size(389, 0);
+            lblDescription.MinimumSize = new Size(0, 43);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(326, 32);
+            lblDescription.Size = new Size(363, 53);
             lblDescription.TabIndex = 0;
             lblDescription.Text = "Choose your vehicle type at Park Ease, according to the type of vehicle you park. Safe and comfortable greetings.";
             lblDescription.TextAlign = ContentAlignment.MiddleCenter;
@@ -207,26 +209,27 @@
             // 
             tblButtonAction.ColumnCount = 5;
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 137F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 137F));
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblButtonAction.Controls.Add(btnCancel, 1, 0);
             tblButtonAction.Controls.Add(btnSave, 3, 0);
             tblButtonAction.Dock = DockStyle.Fill;
-            tblButtonAction.Location = new Point(43, 360);
+            tblButtonAction.Location = new Point(49, 480);
+            tblButtonAction.Margin = new Padding(3, 4, 3, 4);
             tblButtonAction.Name = "tblButtonAction";
             tblButtonAction.RowCount = 1;
             tblButtonAction.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblButtonAction.Size = new Size(361, 64);
+            tblButtonAction.Size = new Size(414, 85);
             tblButtonAction.TabIndex = 9;
             // 
             // tbnFormContent
             // 
             tbnFormContent.ColumnCount = 4;
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
-            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 270F));
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 114F));
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 309F));
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tbnFormContent.Controls.Add(lblCode, 1, 0);
             tbnFormContent.Controls.Add(lblName, 1, 1);
@@ -235,14 +238,14 @@
             tbnFormContent.Controls.Add(txtName, 2, 1);
             tbnFormContent.Controls.Add(txtPrice, 2, 2);
             tbnFormContent.Dock = DockStyle.Fill;
-            tbnFormContent.Location = new Point(40, 159);
+            tbnFormContent.Location = new Point(46, 212);
             tbnFormContent.Margin = new Padding(0);
             tbnFormContent.Name = "tbnFormContent";
             tbnFormContent.RowCount = 1;
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tbnFormContent.Size = new Size(367, 168);
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tbnFormContent.Size = new Size(420, 224);
             tbnFormContent.TabIndex = 10;
             // 
             // lblCode
@@ -252,9 +255,9 @@
             lblCode.BackColor = Color.Transparent;
             lblCode.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCode.ForeColor = Color.FromArgb(187, 98, 2);
-            lblCode.Location = new Point(2, 17);
+            lblCode.Location = new Point(2, 24);
             lblCode.Name = "lblCode";
-            lblCode.Size = new Size(49, 21);
+            lblCode.Size = new Size(61, 26);
             lblCode.TabIndex = 7;
             lblCode.Text = "Code";
             lblCode.TextAlign = ContentAlignment.MiddleLeft;
@@ -266,9 +269,9 @@
             lblName.BackColor = Color.Transparent;
             lblName.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblName.ForeColor = Color.FromArgb(187, 98, 2);
-            lblName.Location = new Point(2, 73);
+            lblName.Location = new Point(2, 99);
             lblName.Name = "lblName";
-            lblName.Size = new Size(54, 21);
+            lblName.Size = new Size(67, 26);
             lblName.TabIndex = 7;
             lblName.Text = "Name";
             lblName.TextAlign = ContentAlignment.MiddleLeft;
@@ -280,9 +283,9 @@
             lblPrice.BackColor = Color.Transparent;
             lblPrice.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblPrice.ForeColor = Color.FromArgb(187, 98, 2);
-            lblPrice.Location = new Point(2, 129);
+            lblPrice.Location = new Point(2, 174);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(47, 21);
+            lblPrice.Size = new Size(60, 26);
             lblPrice.TabIndex = 7;
             lblPrice.Text = "Price";
             lblPrice.TextAlign = ContentAlignment.MiddleLeft;
@@ -308,7 +311,7 @@
             txtCode.HoverState.BorderColor = Color.Transparent;
             txtCode.IconLeftOffset = new Point(10, 0);
             txtCode.IconRightOffset = new Point(10, 0);
-            txtCode.Location = new Point(103, 5);
+            txtCode.Location = new Point(118, 7);
             txtCode.Margin = new Padding(0);
             txtCode.Name = "txtCode";
             txtCode.PasswordChar = '\0';
@@ -316,7 +319,7 @@
             txtCode.PlaceholderText = "DOM001";
             txtCode.SelectedText = "";
             txtCode.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtCode.Size = new Size(261, 46);
+            txtCode.Size = new Size(298, 61);
             txtCode.TabIndex = 1;
             txtCode.TextOffset = new Point(10, -2);
             // 
@@ -341,7 +344,7 @@
             txtName.HoverState.BorderColor = Color.Transparent;
             txtName.IconLeftOffset = new Point(10, 0);
             txtName.IconRightOffset = new Point(10, 0);
-            txtName.Location = new Point(103, 61);
+            txtName.Location = new Point(118, 82);
             txtName.Margin = new Padding(0);
             txtName.Name = "txtName";
             txtName.PasswordChar = '\0';
@@ -349,7 +352,7 @@
             txtName.PlaceholderText = "Motorcycle";
             txtName.SelectedText = "";
             txtName.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtName.Size = new Size(261, 46);
+            txtName.Size = new Size(298, 61);
             txtName.TabIndex = 2;
             txtName.TextOffset = new Point(10, -2);
             // 
@@ -374,7 +377,7 @@
             txtPrice.HoverState.BorderColor = Color.Transparent;
             txtPrice.IconLeftOffset = new Point(10, 0);
             txtPrice.IconRightOffset = new Point(10, 0);
-            txtPrice.Location = new Point(103, 117);
+            txtPrice.Location = new Point(118, 157);
             txtPrice.Margin = new Padding(0);
             txtPrice.Name = "txtPrice";
             txtPrice.PasswordChar = '\0';
@@ -382,7 +385,7 @@
             txtPrice.PlaceholderText = "2000";
             txtPrice.SelectedText = "";
             txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtPrice.Size = new Size(261, 46);
+            txtPrice.Size = new Size(298, 61);
             txtPrice.TabIndex = 3;
             txtPrice.TextOffset = new Point(10, -2);
             // 
@@ -393,27 +396,26 @@
             picIllustrator.Dock = DockStyle.Fill;
             picIllustrator.Image = Properties.Resources.Parking_bro;
             picIllustrator.ImageRotate = 0F;
-            picIllustrator.Location = new Point(3, 2);
-            picIllustrator.Margin = new Padding(3, 2, 3, 2);
+            picIllustrator.Location = new Point(3, 3);
             picIllustrator.Name = "picIllustrator";
-            picIllustrator.Padding = new Padding(30);
+            picIllustrator.Padding = new Padding(34, 40, 34, 40);
             picIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            picIllustrator.Size = new Size(447, 474);
+            picIllustrator.Size = new Size(511, 631);
             picIllustrator.SizeMode = PictureBoxSizeMode.StretchImage;
             picIllustrator.TabIndex = 3;
             picIllustrator.TabStop = false;
             // 
             // FormVehicleType
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 254, 234);
-            ClientSize = new Size(906, 520);
+            ClientSize = new Size(1035, 693);
             Controls.Add(tblParent);
             Controls.Add(ucTopBar);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FormVehicleType";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "VehicleType";
             tblParent.ResumeLayout(false);
             tblContent.ResumeLayout(false);
