@@ -54,6 +54,35 @@ namespace ParkEase.View
             MoveImageBox(sender);
         }
 
+        private void frmDashboard_SizeChanged(object sender, EventArgs e)
+        {
+            // kondisi btn active
+            if (btnDashboard.Checked)
+            {
+                MoveImageBox(btnDashboard);
+            }
+            else if (btnPark.Checked)
+            {
+                MoveImageBox(btnPark);
+            }
+            else if (btnUsers.Checked)
+            {
+                MoveImageBox(btnUsers);
+            }
+            else if (btnLocation.Checked)
+            {
+                MoveImageBox(btnLocation);
+            }
+            else if (btnVehicleType.Checked)
+            {
+                MoveImageBox(btnVehicleType);
+            }
+            else
+            {
+                MoveImageBox(btnSettings);
+            }
+        }
+
         private void openChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();

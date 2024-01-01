@@ -472,6 +472,7 @@
             Name = "frmDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Home";
+            SizeChanged += frmDashboard_SizeChanged;
             ((System.ComponentModel.ISupportInitialize)imgSlide).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
             pnlSidebar.ResumeLayout(false);
