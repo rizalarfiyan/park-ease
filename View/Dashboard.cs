@@ -56,7 +56,6 @@ namespace ParkEase.View
 
         private void frmDashboard_SizeChanged(object sender, EventArgs e)
         {
-            // kondisi btn active
             if (btnDashboard.Checked)
             {
                 MoveImageBox(btnDashboard);
@@ -77,7 +76,7 @@ namespace ParkEase.View
             {
                 MoveImageBox(btnVehicleType);
             }
-            else
+            else if (btnSettings.Checked)
             {
                 MoveImageBox(btnSettings);
             }
