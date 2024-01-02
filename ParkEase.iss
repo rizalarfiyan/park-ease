@@ -17,6 +17,7 @@ UninstallDisplayIcon={app}\ParkEase.exe,0
 UninstallDisplayName=Park Ease
 VersionInfoVersion=1.0.0.0
 SetupIconFile=parking.ico
+LicenseFile=License.txt
 
 [Languages]
 Name: English; MessagesFile: Default.isl
