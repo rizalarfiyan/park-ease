@@ -2,7 +2,7 @@
 using ParkEase.Constants;
 using ParkEase.Controller;
 using ParkEase.Model.Entity;
-using System;
+using ParkEase.Utils;
 
 namespace ParkEase.View
 {
@@ -67,13 +67,13 @@ namespace ParkEase.View
 
         private void UpdateCard()
         {
-            cardTotalRevenue.CardValue = _content.RevenueTotal.ToString();
+            cardTotalRevenue.CardValue = Format.FormatCurrencyIDR(_content.RevenueTotal);
             cardTotalRevenue.CardDescription = $"from {_content.VehicleTotal} vehicle";
             cardAvailableSpace.CardValue = _content.CurrentVehicle.ToString();
             cardAvailableSpace.CardDescription = $"with availabe space {_content.AvailableSpace} vehicle";
-            cardExitGateway.CardValue = _content.ExitRevenue.ToString();
+            cardExitGateway.CardValue = Format.FormatCurrencyIDR(_content.ExitRevenue);
             cardExitGateway.CardDescription = $"from {_content.ExitTotal} vehicle";
-            cardFineReport.CardValue = _content.FineRevenue.ToString();
+            cardFineReport.CardValue = Format.FormatCurrencyIDR(_content.FineRevenue);
             cardFineReport.CardDescription = $"from {_content.FineTotal} vehicle";
         }
 

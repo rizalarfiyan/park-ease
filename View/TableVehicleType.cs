@@ -3,6 +3,7 @@ using ParkEase.Controller;
 using ParkEase.Model.Entity;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
+using ParkEase.Utils;
 
 namespace ParkEase.View
 {
@@ -76,7 +77,7 @@ namespace ParkEase.View
                             _limit*(_page-1)+idx+1,
                             val.Code,
                             val.Name,
-                            val.Price,
+                            Format.FormatCurrencyIDR(val.Price),
                     }
                 );
             }

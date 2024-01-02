@@ -99,7 +99,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_TopBar";
             Size = new Size(922, 34);
-            MouseDown += onMouseDown;
             pnlTopBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)Close).EndInit();
             ((System.ComponentModel.ISupportInitialize)Maximize).EndInit();
