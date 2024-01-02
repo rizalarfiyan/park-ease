@@ -42,6 +42,7 @@ Source: {#HasilCompile}\ParkEase.pdb; DestDir: {app}; Flags: ignoreversion
 Source: {#HasilCompile}\ParkEase.deps.json; DestDir: {app}; Flags: ignoreversion
 Source: {#HasilCompile}\runtimes\win\lib\net7.0\System.Management.dll; DestDir: {app}\runtimes\win\lib\net7.0; Flags: ignoreversion
 
+Source: logo-park-ease-oranye.bmp; DestDir: {app}; Flags: ignoreversion
 Source: parking.ico; DestDir: {app}; Flags: ignoreversion
 
 [Icons]
@@ -90,7 +91,7 @@ begin
   LogoImage.Top := ScaleY(80);
   LogoImage.Width := WelcomePage.SurfaceWidth;
   LogoImage.Height := ScaleY(80);
-  LogoImage.Bitmap.LoadFromFile(ExpandConstant('D:\kuliah\semester_3\pemrograman_lanjut\ParkEase\logo-park-ease-oranye.bmp'));
+  // LogoImage.Bitmap.LoadFromFile('logo-park-ease-oranye.bmp');
 
   // Add additional description text
   Label_3 := TNewStaticText.Create(WelcomePage);
