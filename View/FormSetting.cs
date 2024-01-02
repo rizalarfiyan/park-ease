@@ -34,14 +34,19 @@ namespace ParkEase.View
         {
             txtFineTicketCalculation.Text = _content.FineTicketCalculation.ToString();
             txtNextHourCalculation.Text = _content.NextHourCalculation.ToString();
+            txtMaxCapacity.Text = _content.MaxCapacity.ToString();
 
             string fineDescription = _content.FineTicketCalculationDescription;
             if (string.IsNullOrEmpty(fineDescription)) fineDescription = "No note";
             lblFineTicketCalculationDescription.Text = fineDescription;
 
-            string nextHourDescription = _content.FineTicketCalculationDescription;
+            string nextHourDescription = _content.NextHourCalculationDescription;
             if (string.IsNullOrEmpty(nextHourDescription)) nextHourDescription = "No note";
             lblNextHourCalculationDescription.Text = nextHourDescription;
+
+            string maxCapacityDescription = _content.NextHourCalculationDescription;
+            if (string.IsNullOrEmpty(maxCapacityDescription)) maxCapacityDescription = "No note";
+            lblMaxCapacityDescription.Text = maxCapacityDescription;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -53,12 +58,13 @@ namespace ParkEase.View
         {
             string fineTicketCalculation = txtFineTicketCalculation.Text.Trim();
             string nextHourCalculation = txtNextHourCalculation.Text.Trim();
+            string maxCapacity = txtMaxCapacity.Text.Trim();
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
 
             try
             {
-                _controller.CreateOrUpdateSetting(fineTicketCalculation, nextHourCalculation);
+                _controller.CreateOrUpdateSetting(fineTicketCalculation, nextHourCalculation, maxCapacity);
                 string message = "Success Update Setting";
                 LoadData();
                 MessageBox.Show(message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -29,7 +29,7 @@ namespace ParkEase.Controller
             return res;
         }
 
-        public void CreateOrUpdateSetting(string fineTicketCalculationTxt, string nextHourCalculationTxt)
+        public void CreateOrUpdateSetting(string fineTicketCalculationTxt, string nextHourCalculationTxt, string maxCapacityTxt)
         {
             if (string.IsNullOrEmpty(fineTicketCalculationTxt))
             {
@@ -40,6 +40,12 @@ namespace ParkEase.Controller
             {
                 throw new Exception("Next Hour Calculation cannot be blank.");
             }
+
+            if (string.IsNullOrEmpty(maxCapacityTxt))
+            {
+                throw new Exception("Max Capacity Calculation cannot be blank.");
+            }
+
 
             int fineTicketCalculation = 0;
             try
@@ -61,10 +67,21 @@ namespace ParkEase.Controller
                 throw new Exception("Next Hour Calculation not valid number type.");
             }
 
+            int maxCapacity = 0;
+            try
+            {
+                maxCapacity = Int32.Parse(maxCapacityTxt);
+            }
+            catch (FormatException)
+            {
+                throw new Exception("Max Capacity not valid number type.");
+            }
+
             var payload = new SettingRequest()
             {
                 FineTicketCalculation = fineTicketCalculation,
                 NextHourCalculation = nextHourCalculation,
+                MaxCapacity = maxCapacity,
             };
 
             BaseResponse<string?>? res = _repo.CreateOrUpdateSetting(payload);
