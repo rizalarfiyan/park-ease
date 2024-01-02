@@ -17,5 +17,9 @@
         public static readonly String[] LIST_STATUS = { "active", "banned" };
 
         public const int DEFAULT_STATUS_IDX = 0;
+
+        public static readonly String[] LIST_TIME_FREQUENCY = { "today", "week", "month", "quarter", "year" };
+
+        public const int DEFAULT_TIME_FREQUENCY_IDX = 0;
     }
 }

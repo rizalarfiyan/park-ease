@@ -9,7 +9,7 @@ namespace ParkEase.View
         public event LoadDataEvenHandler? OnLoadData;
         private HistoryController _controller;
         private LocationController _locationController;
-        private Location[] _location;
+        private Location[] _location = {};
         private string _entryHistoryId;
         private int _price;
 

@@ -12,6 +12,8 @@ namespace ParkEase.View
             InitializeComponent();
             InitializeApp();
             _controller = new UserController();
+            ucTopBar.SetForm(this);
+            ucTopBar.HideMaximize();
             dragControl.TargetControl = ucTopBar.GetPanel();
         }
 

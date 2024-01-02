@@ -81,4 +81,46 @@ namespace ParkEase.Model.Entity
         [JsonPropertyName("is_fine")]
         public bool IsFine { get; set; }
     }
+
+    public partial class HistoryStatistic
+    {
+        [JsonPropertyName("available_space")]
+        public int AvailableSpace { get; set; }
+
+        [JsonPropertyName("charts")]
+        public HistoryStatisticChart[] Charts { get; set; }
+
+        [JsonPropertyName("current_vehicle")]
+        public int CurrentVehicle { get; set; }
+
+        [JsonPropertyName("exit_revenue")]
+        public int ExitRevenue { get; set; }
+
+        [JsonPropertyName("exit_total")]
+        public int ExitTotal { get; set; }
+
+        [JsonPropertyName("fine_revenue")]
+        public int FineRevenue { get; set; }
+
+        [JsonPropertyName("fine_total")]
+        public int FineTotal { get; set; }
+
+        [JsonPropertyName("revenue_total")]
+        public int RevenueTotal { get; set; }
+
+        [JsonPropertyName("vehicle_total")]
+        public int VehicleTotal { get; set; }
+    }
+
+    public partial class HistoryStatisticChart
+    {
+        [JsonPropertyName("name")]
+        public required string Name { get; set; }
+
+        [JsonPropertyName("revenue")]
+        public long Revenue { get; set; }
+
+        [JsonPropertyName("vehicle")]
+        public long Vehicle { get; set; }
+    }
 }

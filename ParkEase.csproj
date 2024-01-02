@@ -49,6 +49,9 @@
     <Compile Update="View\TableHistory.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\DashboardAnalytics.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>

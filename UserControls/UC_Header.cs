@@ -41,6 +41,7 @@ namespace ParkEase.UserControls
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             var changePassword = new frmChangePassword();
+            changePassword.StartPosition = FormStartPosition.CenterScreen;
             changePassword.Show();
         }
     }

@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace ParkEase.UserControls
+﻿namespace ParkEase.UserControls
 {
     public partial class UC_TopBar : UserControl
     {
@@ -9,6 +7,9 @@ namespace ParkEase.UserControls
         public UC_TopBar()
         {
             InitializeComponent();
+            this.Close.Location = new Point(this.Width - 32, 8);
+            this.Maximize.Location = new Point(this.Width - 66, 8);
+            this.Minimize.Location = new Point(this.Width - 100, 8);
         }
 
         public void SetForm(Form form)
@@ -54,24 +55,6 @@ namespace ParkEase.UserControls
         {
             this.Minimize.Location = new Point(this.Width - 66, 8);
             this.Maximize.Hide();
-        }
-
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HTCAPTION = 0x2;
-        [DllImport("User32.dll")]
-        public static extern bool ReleaseCapture();
-        [DllImport("User32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-
-        private void onMouseDown(object sender, MouseEventArgs e)
-        {
-            System.Diagnostics.Debug.Print("OK");
-
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
-            }
         }
 
         public Panel GetPanel()

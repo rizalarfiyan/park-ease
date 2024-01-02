@@ -17,7 +17,7 @@ namespace ParkEase.View
             InitializeHeader();
             InitializeRole();
             dragControl.TargetControl = ucTopBar.GetPanel();
-            InitializeChart();
+            ShowDashboardAnalytics();
             changeLogoutLocation();
         }
 
@@ -39,9 +39,9 @@ namespace ParkEase.View
             }
         }
 
-        private void InitializeChart()
+        private void ShowDashboardAnalytics()
         {
-            openChildForm(new DashboardActive());
+            openChildForm(new DashboardAnalytics());
         }
 
         private void MoveImageBox(object sender)
@@ -135,7 +135,7 @@ namespace ParkEase.View
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            openChildForm(new DashboardActive());
+            ShowDashboardAnalytics();
         }
 
         private void btnPark_Click(object sender, EventArgs e)
