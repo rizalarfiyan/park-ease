@@ -6,10 +6,10 @@ using System.Reactive.Subjects;
 
 namespace ParkEase.View
 {
-    public partial class TableLocation : Form
+    public partial class TableHistory : Form
     {
-        protected LocationController _controller;
-        protected Location[]? _content;
+        protected HistoryController _controller;
+        protected History[]? _content;
         protected int _page = 1;
         protected int _limit = App.DEFAULT_PAGINATION_LIMIT;
         protected string? _search;
@@ -19,10 +19,10 @@ namespace ParkEase.View
         private DataGridViewColumn? lastColumn;
         Subject<string> _searchSubject;
 
-        public TableLocation()
+        public TableHistory()
         {
             InitializeComponent();
-            _controller = new LocationController();
+            _controller = new HistoryController();
             _searchSubject = new Subject<string>();
             LoadData();
             InitDebounce();
@@ -37,7 +37,7 @@ namespace ParkEase.View
 
         protected void LoadData()
         {
-            var param = new BaseRequestPagination<LocationFilterRequest>()
+            var param = new BaseRequestPagination()
             {
                 Limit = _limit,
                 Order = _order,
@@ -48,7 +48,7 @@ namespace ParkEase.View
 
             try
             {
-                var data = _controller.GetAllLocation(param);
+                var data = _controller.GetAllHistory(param);
                 var content = data?.Data?.Content;
                 if (content != null) _content = content;
                 var metadata = data?.Data?.Metadata;
@@ -74,9 +74,12 @@ namespace ParkEase.View
                     new object[]
                     {
                             _limit*(_page-1)+idx+1,
-                            val.Code,
-                            val.Name,
-                            val.IsExit,
+                            val.Id,
+                            val.LocationCode,
+                            val.VehicleTypeCode,
+                            val.VehicleNumber,
+                            val.Date,
+                            val.Type,
                     }
                 );
             }
@@ -129,14 +132,23 @@ namespace ParkEase.View
                 case "columnNo":
                     _orderBy = "date";
                     break;
-                case "columnName":
-                    _orderBy = "name";
+                case "columnId":
+                    _orderBy = "id";
                     break;
-                case "columnCode":
-                    _orderBy = "code";
+                case "columnLocation":
+                    _orderBy = "location_code";
                     break;
-                case "columnIsExit":
-                    _orderBy = "is_exit";
+                case "columnVehicleType":
+                    _orderBy = "vehicle_type_code";
+                    break;
+                case "columnVehicleNumber":
+                    _orderBy = "vehicle_number";
+                    break;
+                case "columnDate":
+                    _orderBy = "date";
+                    break;
+                case "columnType":
+                    _orderBy = "type";
                     break;
                 default:
                     _orderBy = null;
@@ -149,54 +161,10 @@ namespace ParkEase.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var frmInput = new FormLocation();
-            frmInput.IsCreate(true);
+            var frmInput = new FormEntryHistory();
             frmInput.OnLoadData += LoadData;
             frmInput.StartPosition = FormStartPosition.CenterScreen;
             frmInput.Show();
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            if (lvwTable.SelectedRows.Count <= 0)
-            {
-                MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            };
-
-            if (_content?.Length <= 0) return;
-            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
-            var frmInput = new FormLocation();
-            frmInput.IsCreate(false);
-            frmInput.OnLoadData += LoadData;
-            frmInput.SetData(selectedItem);
-            frmInput.StartPosition = FormStartPosition.CenterScreen;
-            frmInput.Show();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (lvwTable.SelectedRows.Count <= 0)
-            {
-                MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            };
-
-            DialogResult dialog = MessageBox.Show("Are you sure to delete this item?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            if (dialog == DialogResult.Cancel) return;
-
-            if (_content?.Length <= 0) return;
-            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
-            try
-            {
-                _controller.DeleteLocation(selectedItem.Code);
-                LoadData();
-                MessageBox.Show("Success delete Location", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -209,6 +177,58 @@ namespace ParkEase.View
         {
             _page -= 1;
             LoadData();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (lvwTable.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            };
+
+            if (_content?.Length <= 0) return;
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
+            var frmInput = new FormExitHistory();
+            frmInput.OnLoadData += LoadData;
+            frmInput.SetData(selectedItem);
+            frmInput.StartPosition = FormStartPosition.CenterScreen;
+            frmInput.GetPrice();
+            frmInput.Show();
+        }
+
+        private void btnFine_Click(object sender, EventArgs e)
+        {
+            if (lvwTable.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("No item selected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            };
+
+            if (_content?.Length <= 0) return;
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
+            var frmInput = new FormFineHistory();
+            frmInput.OnLoadData += LoadData;
+            frmInput.SetData(selectedItem);
+            frmInput.StartPosition = FormStartPosition.CenterScreen;
+            frmInput.GetPrice();
+            frmInput.Show();
+        }
+
+        private void onSelectionChange(object sender, EventArgs e)
+        {
+            btnExit.Enabled = false;
+            btnFine.Enabled = false;
+
+            if (lvwTable.SelectedRows.Count <= 0) return;
+            if (_content?.Length <= 0) return;
+            var selectedItem = _content![lvwTable.SelectedRows[0].Index];
+            if (selectedItem.Type == "entry")
+            {
+                btnExit.Enabled = true;
+                btnFine.Enabled = true;
+                return;
+            }
         }
     }
 }

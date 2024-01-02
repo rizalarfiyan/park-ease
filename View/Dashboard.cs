@@ -16,8 +16,9 @@ namespace ParkEase.View
             _controller = new AuthController();
             InitializeHeader();
             InitializeRole();
-            InitializeChart();
             dragControl.TargetControl = ucTopBar.GetPanel();
+            InitializeChart();
+            changeLogoutLocation();
         }
 
         private void InitializeHeader()
@@ -81,6 +82,12 @@ namespace ParkEase.View
             {
                 MoveImageBox(btnSettings);
             }
+            changeLogoutLocation();
+        }
+
+        private void changeLogoutLocation()
+        {
+            btnLogOut.Location = new Point(26, this.Height - 120);
         }
 
         private void openChildForm(Form childForm)
@@ -129,6 +136,11 @@ namespace ParkEase.View
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             openChildForm(new DashboardActive());
+        }
+
+        private void btnPark_Click(object sender, EventArgs e)
+        {
+            openChildForm(new TableHistory());
         }
     }
 }

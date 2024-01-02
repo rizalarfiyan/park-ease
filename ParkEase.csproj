@@ -21,10 +21,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="View\FormFineHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FormExitHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\FormLocation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\FormEntryHistory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\TableLocation.cs">
@@ -34,6 +43,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\TableHistory.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

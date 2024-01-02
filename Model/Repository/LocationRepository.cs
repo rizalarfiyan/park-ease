@@ -15,10 +15,14 @@ public class LocationRepository
         _api = new Api().Get();
     }
     
-    public BaseResponse<BaseResponsePagination<Location>>? GetAllLocation(BaseRequestPagination param)
+    public BaseResponse<BaseResponsePagination<Location>>? GetAllLocation(BaseRequestPagination<LocationFilterRequest> param)
     {
         var req = new RestRequest("/location", Method.Get);
         param.Build(req);
+        if (param?.Additional?.IsExit != null)
+        {
+            req.AddParameter("is_exit", (bool)param.Additional.IsExit ? "true" : "false");
+        }
         var res = _api.Execute<BaseResponse<BaseResponsePagination<Location>>?>(req);
         return res.Data;
     }

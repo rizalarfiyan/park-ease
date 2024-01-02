@@ -64,8 +64,10 @@ namespace ParkEase.Model.Entity
 
     public class UserFilterRequest
     {
+        [JsonPropertyName("role")]
         public string? Role { get; set; }
 
+        [JsonPropertyName("status")]
         public string? Status { get; set; }
     }
 }
