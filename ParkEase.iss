@@ -17,6 +17,7 @@ UninstallDisplayIcon={app}\ParkEase.exe,0
 UninstallDisplayName=Park Ease
 VersionInfoVersion=1.0.0.0
 SetupIconFile=parking.ico
+LicenseFile=License.txt
 
 [Languages]
 Name: English; MessagesFile: Default.isl
@@ -49,3 +50,53 @@ Name: {userdesktop}\Park Ease; Filename: {app}\ParkEase.exe; WorkingDir: {app}; 
 [Registry]
 ;mencatat lokasi instalasi program, ini dibutuhkan jika kita ingin membuat paket instalasi update
 Root: HKCU; Subkey: "Software\Park Ease"; ValueName: "installDir"; ValueType: String; ValueData: {app}; Flags: uninsdeletevalue
+
+[Code]
+var
+  WelcomePage: TWizardPage;
+  Label_1: TNewStaticText;
+  Label_2: TNewStaticText;
+  Label_3: TNewStaticText;
+  LogoImage: TBitmapImage;
+
+procedure InitializeWizard;
+begin
+  // Create a welcome page with a simple description
+  WelcomePage := CreateCustomPage(wpWelcome, 'Selamat Datang di Proses Instalasi Park Ease!', '');
+
+  // Add additional description text
+  Label_1 := TNewStaticText.Create(WelcomePage);
+  Label_1.Parent := WelcomePage.Surface;
+  Label_1.Left := ScaleX(0);
+  Label_1.Top := ScaleY(10);
+  Label_1.Width := WelcomePage.SurfaceWidth;
+  Label_1.WordWrap := True; // Allow text to wrap within the width
+  Label_1.Caption := 'Program ini akan memasang software Park Ease Version 1.0.0 pada perangkat komputer anda.';
+
+  // Add additional description text
+  Label_2 := TNewStaticText.Create(WelcomePage);
+  Label_2.Parent := WelcomePage.Surface;
+  Label_2.Left := ScaleX(0);
+  Label_2.Top := ScaleY(50);
+  Label_2.Width := WelcomePage.SurfaceWidth;
+  Label_2.WordWrap := True; // Allow text to wrap within the width
+  Label_2.Caption := 'Klik Next untuk melanjutkan, atau klik Cancel untuk keluar dari proses instalasi.';
+
+  // Add your logo image below the label
+  LogoImage := TBitmapImage.Create(WelcomePage);
+  LogoImage.Parent := WelcomePage.Surface;
+  LogoImage.Left := ScaleX(60);
+  LogoImage.Top := ScaleY(80);
+  LogoImage.Width := WelcomePage.SurfaceWidth;
+  LogoImage.Height := ScaleY(80);
+  LogoImage.Bitmap.LoadFromFile(ExpandConstant('C:\22.11.5209\park-ease\logo-park-ease-oranye.bmp'));
+
+  // Add additional description text
+  Label_3 := TNewStaticText.Create(WelcomePage);
+  Label_3.Parent := WelcomePage.Surface;
+  Label_3.Left := ScaleX(0);
+  Label_3.Top := ScaleY(180);
+  Label_3.Width := WelcomePage.SurfaceWidth;
+  Label_3.WordWrap := True; // Allow text to wrap within the width
+  Label_3.Caption := 'Dengan mengikuti langkah-langkah sederhana ini, Anda akan segera dapat menikmati fitur-fitur canggih dari Park Ease.';
+end;
