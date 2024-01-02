@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             tblWrapper = new TableLayoutPanel();
             lblTitle = new Label();
             lblDescription = new Label();
@@ -55,11 +53,16 @@
             tblNextHourCalculation = new TableLayoutPanel();
             txtNextHourCalculation = new Guna.UI2.WinForms.Guna2TextBox();
             lblNextHourCalculationDescription = new Label();
+            lblMaxCapacity = new Label();
+            tblMaxCapacity = new TableLayoutPanel();
+            txtMaxCapacity = new Guna.UI2.WinForms.Guna2TextBox();
+            lblMaxCapacityDescription = new Label();
             tblWrapper.SuspendLayout();
             tblAction.SuspendLayout();
             tbnFormContent.SuspendLayout();
             tblFineTicketCalculation.SuspendLayout();
             tblNextHourCalculation.SuspendLayout();
+            tblMaxCapacity.SuspendLayout();
             SuspendLayout();
             // 
             // tblWrapper
@@ -77,11 +80,11 @@
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 192F));
+            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 288F));
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblWrapper.Size = new Size(800, 400);
+            tblWrapper.Size = new Size(800, 520);
             tblWrapper.TabIndex = 17;
             // 
             // lblTitle
@@ -125,7 +128,7 @@
             tblAction.Controls.Add(btnSave, 3, 0);
             tblAction.Controls.Add(btnCancel, 1, 0);
             tblAction.Dock = DockStyle.Bottom;
-            tblAction.Location = new Point(3, 335);
+            tblAction.Location = new Point(3, 431);
             tblAction.Name = "tblAction";
             tblAction.RowCount = 1;
             tblAction.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -140,7 +143,7 @@
             btnSave.BorderThickness = 2;
             btnSave.CheckedState.FillColor = Color.FromArgb(187, 98, 2);
             btnSave.Cursor = Cursors.Hand;
-            btnSave.CustomizableEdges = customizableEdges13;
+            btnSave.CustomizableEdges = customizableEdges1;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -155,7 +158,7 @@
             btnSave.Margin = new Padding(0);
             btnSave.Name = "btnSave";
             btnSave.PressedColor = Color.FromArgb(187, 98, 2);
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnSave.Size = new Size(120, 46);
             btnSave.TabIndex = 19;
             btnSave.Text = "Save";
@@ -168,7 +171,7 @@
             btnCancel.BackColor = Color.FromArgb(255, 254, 234);
             btnCancel.BorderRadius = 8;
             btnCancel.Cursor = Cursors.Hand;
-            btnCancel.CustomizableEdges = customizableEdges15;
+            btnCancel.CustomizableEdges = customizableEdges3;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -180,7 +183,7 @@
             btnCancel.Location = new Point(267, 2);
             btnCancel.Margin = new Padding(0);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnCancel.Size = new Size(120, 46);
             btnCancel.TabIndex = 19;
             btnCancel.Text = "Cancel";
@@ -196,14 +199,17 @@
             tbnFormContent.Controls.Add(lblNextHourCalculation, 0, 1);
             tbnFormContent.Controls.Add(tblFineTicketCalculation, 1, 0);
             tbnFormContent.Controls.Add(tblNextHourCalculation, 1, 1);
+            tbnFormContent.Controls.Add(lblMaxCapacity, 0, 2);
+            tbnFormContent.Controls.Add(tblMaxCapacity, 1, 2);
             tbnFormContent.Dock = DockStyle.Fill;
             tbnFormContent.Location = new Point(0, 110);
             tbnFormContent.Margin = new Padding(0);
             tbnFormContent.Name = "tbnFormContent";
-            tbnFormContent.RowCount = 2;
+            tbnFormContent.RowCount = 3;
             tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 96F));
             tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 96F));
-            tbnFormContent.Size = new Size(800, 192);
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 96F));
+            tbnFormContent.Size = new Size(800, 288);
             tbnFormContent.TabIndex = 19;
             // 
             // lblFineTicketCalculation
@@ -257,7 +263,7 @@
             txtFineTicketCalculation.BorderColor = Color.FromArgb(255, 231, 70);
             txtFineTicketCalculation.BorderRadius = 8;
             txtFineTicketCalculation.BorderThickness = 2;
-            txtFineTicketCalculation.CustomizableEdges = customizableEdges17;
+            txtFineTicketCalculation.CustomizableEdges = customizableEdges5;
             txtFineTicketCalculation.DefaultText = "";
             txtFineTicketCalculation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtFineTicketCalculation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -277,7 +283,7 @@
             txtFineTicketCalculation.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
             txtFineTicketCalculation.PlaceholderText = "100";
             txtFineTicketCalculation.SelectedText = "";
-            txtFineTicketCalculation.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtFineTicketCalculation.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtFineTicketCalculation.Size = new Size(300, 45);
             txtFineTicketCalculation.TabIndex = 2;
             txtFineTicketCalculation.TextOffset = new Point(10, -2);
@@ -321,7 +327,7 @@
             txtNextHourCalculation.BorderColor = Color.FromArgb(255, 231, 70);
             txtNextHourCalculation.BorderRadius = 8;
             txtNextHourCalculation.BorderThickness = 2;
-            txtNextHourCalculation.CustomizableEdges = customizableEdges19;
+            txtNextHourCalculation.CustomizableEdges = customizableEdges7;
             txtNextHourCalculation.DefaultText = "";
             txtNextHourCalculation.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNextHourCalculation.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -334,15 +340,15 @@
             txtNextHourCalculation.HoverState.BorderColor = Color.Transparent;
             txtNextHourCalculation.IconLeftOffset = new Point(10, 0);
             txtNextHourCalculation.IconRightOffset = new Point(10, 0);
-            txtNextHourCalculation.Location = new Point(0, 0);
+            txtNextHourCalculation.Location = new Point(0, 1);
             txtNextHourCalculation.Margin = new Padding(0);
             txtNextHourCalculation.Name = "txtNextHourCalculation";
             txtNextHourCalculation.PasswordChar = '\0';
             txtNextHourCalculation.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
             txtNextHourCalculation.PlaceholderText = "100";
             txtNextHourCalculation.SelectedText = "";
-            txtNextHourCalculation.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtNextHourCalculation.Size = new Size(300, 45);
+            txtNextHourCalculation.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtNextHourCalculation.Size = new Size(300, 43);
             txtNextHourCalculation.TabIndex = 2;
             txtNextHourCalculation.TextOffset = new Point(10, -2);
             // 
@@ -361,12 +367,89 @@
             lblNextHourCalculationDescription.TabIndex = 8;
             lblNextHourCalculationDescription.Text = "No note";
             // 
+            // lblMaxCapacity
+            // 
+            lblMaxCapacity.AutoSize = true;
+            lblMaxCapacity.BackColor = Color.Transparent;
+            lblMaxCapacity.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblMaxCapacity.ForeColor = Color.FromArgb(187, 98, 2);
+            lblMaxCapacity.Location = new Point(3, 208);
+            lblMaxCapacity.Margin = new Padding(3, 16, 3, 0);
+            lblMaxCapacity.Name = "lblMaxCapacity";
+            lblMaxCapacity.Size = new Size(113, 21);
+            lblMaxCapacity.TabIndex = 7;
+            lblMaxCapacity.Text = "Max Capacity";
+            lblMaxCapacity.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // tblMaxCapacity
+            // 
+            tblMaxCapacity.ColumnCount = 1;
+            tblMaxCapacity.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tblMaxCapacity.Controls.Add(txtMaxCapacity, 0, 0);
+            tblMaxCapacity.Controls.Add(lblMaxCapacityDescription, 0, 1);
+            tblMaxCapacity.Dock = DockStyle.Fill;
+            tblMaxCapacity.Location = new Point(223, 195);
+            tblMaxCapacity.Name = "tblMaxCapacity";
+            tblMaxCapacity.RowCount = 2;
+            tblMaxCapacity.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tblMaxCapacity.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tblMaxCapacity.Size = new Size(574, 90);
+            tblMaxCapacity.TabIndex = 8;
+            // 
+            // txtMaxCapacity
+            // 
+            txtMaxCapacity.Anchor = AnchorStyles.Left;
+            txtMaxCapacity.Animated = true;
+            txtMaxCapacity.BackColor = Color.Transparent;
+            txtMaxCapacity.BorderColor = Color.FromArgb(255, 231, 70);
+            txtMaxCapacity.BorderRadius = 8;
+            txtMaxCapacity.BorderThickness = 2;
+            txtMaxCapacity.CustomizableEdges = customizableEdges9;
+            txtMaxCapacity.DefaultText = "";
+            txtMaxCapacity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtMaxCapacity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtMaxCapacity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtMaxCapacity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtMaxCapacity.FillColor = Color.FromArgb(255, 249, 197);
+            txtMaxCapacity.FocusedState.BorderColor = Color.FromArgb(226, 139, 0);
+            txtMaxCapacity.Font = new Font("Ubuntu", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMaxCapacity.ForeColor = Color.FromArgb(187, 98, 2);
+            txtMaxCapacity.HoverState.BorderColor = Color.Transparent;
+            txtMaxCapacity.IconLeftOffset = new Point(10, 0);
+            txtMaxCapacity.IconRightOffset = new Point(10, 0);
+            txtMaxCapacity.Location = new Point(0, 1);
+            txtMaxCapacity.Margin = new Padding(0);
+            txtMaxCapacity.Name = "txtMaxCapacity";
+            txtMaxCapacity.PasswordChar = '\0';
+            txtMaxCapacity.PlaceholderForeColor = Color.FromArgb(255, 183, 3);
+            txtMaxCapacity.PlaceholderText = "100";
+            txtMaxCapacity.SelectedText = "";
+            txtMaxCapacity.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtMaxCapacity.Size = new Size(300, 43);
+            txtMaxCapacity.TabIndex = 2;
+            txtMaxCapacity.TextOffset = new Point(10, -2);
+            // 
+            // lblMaxCapacityDescription
+            // 
+            lblMaxCapacityDescription.Anchor = AnchorStyles.Left;
+            lblMaxCapacityDescription.AutoSize = true;
+            lblMaxCapacityDescription.BackColor = Color.Transparent;
+            lblMaxCapacityDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMaxCapacityDescription.ForeColor = SystemColors.ControlDarkDark;
+            lblMaxCapacityDescription.ImageAlign = ContentAlignment.MiddleLeft;
+            lblMaxCapacityDescription.Location = new Point(3, 59);
+            lblMaxCapacityDescription.MaximumSize = new Size(470, 0);
+            lblMaxCapacityDescription.Name = "lblMaxCapacityDescription";
+            lblMaxCapacityDescription.Size = new Size(53, 16);
+            lblMaxCapacityDescription.TabIndex = 8;
+            lblMaxCapacityDescription.Text = "No note";
+            // 
             // FormSetting
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 400);
+            ClientSize = new Size(800, 520);
             Controls.Add(tblWrapper);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormSetting";
@@ -380,6 +463,8 @@
             tblFineTicketCalculation.PerformLayout();
             tblNextHourCalculation.ResumeLayout(false);
             tblNextHourCalculation.PerformLayout();
+            tblMaxCapacity.ResumeLayout(false);
+            tblMaxCapacity.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -400,5 +485,9 @@
         private TableLayoutPanel tblNextHourCalculation;
         private Guna.UI2.WinForms.Guna2TextBox txtNextHourCalculation;
         private Label lblNextHourCalculationDescription;
+        private Label lblMaxCapacity;
+        private TableLayoutPanel tblMaxCapacity;
+        private Guna.UI2.WinForms.Guna2TextBox txtMaxCapacity;
+        private Label lblMaxCapacityDescription;
     }
 }

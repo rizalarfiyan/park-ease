@@ -15,6 +15,12 @@ namespace ParkEase.Model.Entity
 
         [JsonPropertyName("next_hour_calculation_description")]
         public required string NextHourCalculationDescription { get; set; }
+
+        [JsonPropertyName("max_capacity")]
+        public int MaxCapacity { get; set; }
+
+        [JsonPropertyName("max_capacity_description")]
+        public required string MaxCapacityDescription { get; set; }
     }
 
     public class SettingRequest
@@ -24,5 +30,8 @@ namespace ParkEase.Model.Entity
 
         [JsonPropertyName("next_hour_calculation")]
         public int NextHourCalculation { get; set; }
+
+        [JsonPropertyName("max_capacity")]
+        public int MaxCapacity { get; set; }
     }
 }
