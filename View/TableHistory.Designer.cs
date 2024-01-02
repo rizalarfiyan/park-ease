@@ -81,38 +81,40 @@
             tblWrapper.Controls.Add(tblPrevNext, 0, 7);
             tblWrapper.Dock = DockStyle.Fill;
             tblWrapper.Location = new Point(0, 0);
+            tblWrapper.Margin = new Padding(3, 4, 3, 4);
             tblWrapper.Name = "tblWrapper";
             tblWrapper.RowCount = 8;
+            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 53F));
+            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 53F));
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             tblWrapper.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
-            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
-            tblWrapper.Size = new Size(800, 355);
+            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+            tblWrapper.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tblWrapper.Size = new Size(914, 473);
             tblWrapper.TabIndex = 17;
             // 
             // tblAction
             // 
             tblAction.ColumnCount = 6;
             tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
-            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
-            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 50F));
-            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 8F));
-            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 57F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 9F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 57F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 9F));
+            tblAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 137F));
             tblAction.Controls.Add(btnExit, 0, 0);
             tblAction.Controls.Add(txtSearch, 0, 0);
             tblAction.Controls.Add(btnAdd, 5, 0);
             tblAction.Controls.Add(btnFine, 3, 0);
             tblAction.Dock = DockStyle.Fill;
-            tblAction.Location = new Point(3, 113);
+            tblAction.Location = new Point(3, 150);
+            tblAction.Margin = new Padding(3, 4, 3, 4);
             tblAction.Name = "tblAction";
             tblAction.RowCount = 1;
             tblAction.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblAction.Size = new Size(794, 50);
+            tblAction.Size = new Size(908, 67);
             tblAction.TabIndex = 17;
             // 
             // btnExit
@@ -128,12 +130,12 @@
             btnExit.FillColor = Color.FromArgb(226, 139, 0);
             btnExit.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.White;
-            btnExit.Image = Properties.Resources.icon_trash;
-            btnExit.Location = new Point(558, 2);
+            btnExit.Image = Properties.Resources.icons_log_out;
+            btnExit.Location = new Point(639, 3);
             btnExit.Margin = new Padding(0);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnExit.Size = new Size(50, 46);
+            btnExit.Size = new Size(57, 61);
             btnExit.TabIndex = 19;
             btnExit.TextOffset = new Point(0, -2);
             btnExit.Click += btnExit_Click;
@@ -162,7 +164,7 @@
             txtSearch.IconLeft = Properties.Resources.icon_search;
             txtSearch.IconLeftOffset = new Point(10, 0);
             txtSearch.IconRightOffset = new Point(10, 0);
-            txtSearch.Location = new Point(0, 2);
+            txtSearch.Location = new Point(0, 3);
             txtSearch.Margin = new Padding(0);
             txtSearch.Name = "txtSearch";
             txtSearch.PasswordChar = '\0';
@@ -170,7 +172,7 @@
             txtSearch.PlaceholderText = "Search";
             txtSearch.SelectedText = "";
             txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSearch.Size = new Size(228, 46);
+            txtSearch.Size = new Size(261, 61);
             txtSearch.TabIndex = 1;
             txtSearch.TextOffset = new Point(10, -2);
             // 
@@ -188,11 +190,11 @@
             btnAdd.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.White;
             btnAdd.Image = Properties.Resources.icon_plus;
-            btnAdd.Location = new Point(674, 2);
+            btnAdd.Location = new Point(771, 3);
             btnAdd.Margin = new Padding(0);
             btnAdd.Name = "btnAdd";
             btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnAdd.Size = new Size(120, 46);
+            btnAdd.Size = new Size(137, 61);
             btnAdd.TabIndex = 18;
             btnAdd.Text = "Add";
             btnAdd.TextOffset = new Point(0, -2);
@@ -211,12 +213,12 @@
             btnFine.FillColor = Color.FromArgb(226, 139, 0);
             btnFine.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnFine.ForeColor = Color.White;
-            btnFine.Image = Properties.Resources.icon_pencil;
-            btnFine.Location = new Point(616, 2);
+            btnFine.Image = Properties.Resources.icons_fine;
+            btnFine.Location = new Point(705, 3);
             btnFine.Margin = new Padding(0);
             btnFine.Name = "btnFine";
             btnFine.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnFine.Size = new Size(50, 46);
+            btnFine.Size = new Size(57, 61);
             btnFine.TabIndex = 20;
             btnFine.TextOffset = new Point(0, -2);
             btnFine.Click += btnFine_Click;
@@ -252,8 +254,7 @@
             lvwTable.DefaultCellStyle = dataGridViewCellStyle3;
             lvwTable.Dock = DockStyle.Fill;
             lvwTable.GridColor = Color.FromArgb(255, 249, 197);
-            lvwTable.Location = new Point(3, 198);
-            lvwTable.Margin = new Padding(3, 2, 3, 2);
+            lvwTable.Location = new Point(3, 264);
             lvwTable.Name = "lvwTable";
             lvwTable.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -269,7 +270,7 @@
             dataGridViewCellStyle5.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
             lvwTable.RowsDefaultCellStyle = dataGridViewCellStyle5;
             lvwTable.RowTemplate.Height = 40;
-            lvwTable.Size = new Size(794, 69);
+            lvwTable.Size = new Size(908, 91);
             lvwTable.TabIndex = 15;
             lvwTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             lvwTable.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -309,6 +310,7 @@
             // 
             columnId.FillWeight = 60F;
             columnId.HeaderText = "ID";
+            columnId.MinimumWidth = 6;
             columnId.Name = "columnId";
             columnId.ReadOnly = true;
             columnId.Resizable = DataGridViewTriState.False;
@@ -347,6 +349,7 @@
             // columnDate
             // 
             columnDate.HeaderText = "Date";
+            columnDate.MinimumWidth = 6;
             columnDate.Name = "columnDate";
             columnDate.ReadOnly = true;
             columnDate.Resizable = DataGridViewTriState.False;
@@ -356,6 +359,7 @@
             // 
             columnType.FillWeight = 60F;
             columnType.HeaderText = "Type";
+            columnType.MinimumWidth = 6;
             columnType.Name = "columnType";
             columnType.ReadOnly = true;
             columnType.Resizable = DataGridViewTriState.False;
@@ -370,7 +374,7 @@
             lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
             lblTitle.Location = new Point(3, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(129, 40);
+            lblTitle.Size = new Size(162, 52);
             lblTitle.TabIndex = 6;
             lblTitle.Text = "History";
             lblTitle.TextAlign = ContentAlignment.MiddleLeft;
@@ -383,10 +387,10 @@
             lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblDescription.ForeColor = SystemColors.ControlDarkDark;
             lblDescription.ImageAlign = ContentAlignment.MiddleLeft;
-            lblDescription.Location = new Point(3, 44);
-            lblDescription.MaximumSize = new Size(480, 0);
+            lblDescription.Location = new Point(3, 60);
+            lblDescription.MaximumSize = new Size(549, 0);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(475, 32);
+            lblDescription.Size = new Size(523, 38);
             lblDescription.TabIndex = 8;
             lblDescription.Text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.";
             lblDescription.TextAlign = ContentAlignment.MiddleLeft;
@@ -395,18 +399,19 @@
             // 
             tblPrevNext.ColumnCount = 5;
             tblPrevNext.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tblPrevNext.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
-            tblPrevNext.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
-            tblPrevNext.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 100F));
+            tblPrevNext.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 114F));
+            tblPrevNext.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
+            tblPrevNext.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 114F));
             tblPrevNext.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblPrevNext.Controls.Add(btnPrev, 1, 0);
             tblPrevNext.Controls.Add(btnNext, 3, 0);
             tblPrevNext.Dock = DockStyle.Bottom;
-            tblPrevNext.Location = new Point(3, 302);
+            tblPrevNext.Location = new Point(3, 402);
+            tblPrevNext.Margin = new Padding(3, 4, 3, 4);
             tblPrevNext.Name = "tblPrevNext";
             tblPrevNext.RowCount = 1;
             tblPrevNext.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblPrevNext.Size = new Size(794, 50);
+            tblPrevNext.Size = new Size(908, 67);
             tblPrevNext.TabIndex = 18;
             // 
             // btnPrev
@@ -422,11 +427,11 @@
             btnPrev.FillColor = Color.FromArgb(226, 139, 0);
             btnPrev.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnPrev.ForeColor = Color.White;
-            btnPrev.Location = new Point(287, 2);
+            btnPrev.Location = new Point(328, 3);
             btnPrev.Margin = new Padding(0);
             btnPrev.Name = "btnPrev";
             btnPrev.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnPrev.Size = new Size(100, 46);
+            btnPrev.Size = new Size(114, 61);
             btnPrev.TabIndex = 19;
             btnPrev.Text = "Prev";
             btnPrev.TextOffset = new Point(0, -2);
@@ -445,11 +450,11 @@
             btnNext.FillColor = Color.FromArgb(226, 139, 0);
             btnNext.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnNext.ForeColor = Color.White;
-            btnNext.Location = new Point(407, 2);
+            btnNext.Location = new Point(465, 3);
             btnNext.Margin = new Padding(0);
             btnNext.Name = "btnNext";
             btnNext.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnNext.Size = new Size(100, 46);
+            btnNext.Size = new Size(114, 61);
             btnNext.TabIndex = 18;
             btnNext.Text = "Next";
             btnNext.TextOffset = new Point(0, -2);
@@ -457,12 +462,13 @@
             // 
             // TableHistory
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 355);
+            ClientSize = new Size(914, 473);
             Controls.Add(tblWrapper);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "TableHistory";
             Text = "TableHistory";
             tblWrapper.ResumeLayout(false);
