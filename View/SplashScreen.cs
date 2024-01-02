@@ -15,6 +15,7 @@ namespace ParkEase.View
         private string errorMessage = "Could't connect to server, please try again later!";
 
         private Task? authMeTask = null;
+        private Task? loadingTask = null;
 
         private AuthController _controller;
 
@@ -39,9 +40,8 @@ namespace ParkEase.View
             };
 
             lblLoadingInformation.Text = informations[0];
-            Thread thread = new Thread(new ThreadStart(ShowLoadingInformation));
-            thread.Start();
-
+            System.Diagnostics.Debug.Print("RUN?");
+            loadingTask = Task.Run(async () => await ShowLoadingInformation());
             authMeTask = Task.Run(async () => await AuthenticateAsync());
         }
 
@@ -88,14 +88,14 @@ namespace ParkEase.View
             }
         }
 
-        private void ShowLoadingInformation()
+        async Task ShowLoadingInformation()
         {
             Random random = new Random();
 
             for (int idx = 0; idx < informations.Count; idx++)
             {
                 SetLoadingInformation(informations[idx]);
-                Thread.Sleep(random.Next(800, 2500));
+                await Task.Delay(random.Next(800, 2500));
             }
 
             if (authMeTask != null && !authMeTask.IsCompleted)
@@ -106,9 +106,7 @@ namespace ParkEase.View
             if (isFinished)
             {
                 SetLoadingInformation("Welcome to Park Ease!");
-                Thread.Sleep(random.Next(300, 1200));
-
-                SplashScreenFinished();
+                await Task.Delay(random.Next(300, 1200));
                 return;
             }
 
@@ -119,15 +117,35 @@ namespace ParkEase.View
             }
         }
 
-        private void SplashScreenFinished()
+        private async Task TaskShowLoadingInformation()
         {
-            Application.Exit();
-            if (isLoggedIn)
+            await Task.Run(async () => await ShowLoadingInformation());
+        }
+
+        private async void formOnLoad(object sender, EventArgs e)
+        {
+            await TaskShowLoadingInformation();
+            if (!isFinished)
             {
-                Application.Run(new frmDashboard());
+                this.Close();
                 return;
             }
-            Application.Run(new frmLogin());
+            SplashScreenFinished();
+        }
+
+        private void SplashScreenFinished()
+        {
+            this.Hide();
+            if (isLoggedIn)
+            {
+                var formDashboard = new frmDashboard();
+                formDashboard.StartPosition = FormStartPosition.CenterScreen;
+                formDashboard.Show();
+                return;
+            }
+            var formLogin = new frmLogin();
+            formLogin.StartPosition = FormStartPosition.CenterScreen;
+            formLogin.Show();
         }
     }
 }

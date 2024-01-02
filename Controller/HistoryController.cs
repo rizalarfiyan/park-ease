@@ -194,5 +194,21 @@ namespace ParkEase.Controller
 
             return res;
         }
+
+        public BaseResponse<HistoryStatistic?>? HistoryStatistic(string timeFrequency)
+        {
+            BaseResponse<HistoryStatistic?>? res = _repo.HistoryStatistic(timeFrequency);
+            if (res == null)
+            {
+                throw new Exception("Something wrong for your request");
+            }
+
+            if (res.IsErrorConfirmation())
+            {
+                throw new Exception(res.Message);
+            }
+
+            return res;
+        }
     }
 }

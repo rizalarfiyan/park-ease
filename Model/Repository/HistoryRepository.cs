@@ -52,5 +52,16 @@ namespace ParkEase.Model.Repository
             var res = _api.Execute<BaseResponse<int?>?>(req);
             return res.Data;
         }
+
+        public BaseResponse<HistoryStatistic?>? HistoryStatistic(string timeFrequency)
+        {
+            var req = new RestRequest("/history/statistic", Method.Get);
+            if (!string.IsNullOrEmpty(timeFrequency))
+            {
+                req.AddParameter("time_frequency", timeFrequency);
+            }
+            var res = _api.Execute<BaseResponse<HistoryStatistic?>?>(req);
+            return res.Data;
+        }
     }
 }

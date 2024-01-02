@@ -167,6 +167,7 @@
             Name = "SplashScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SplashScreen";
+            Load += formOnLoad;
             ((System.ComponentModel.ISupportInitialize)imgIllustrator).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)imgLogoBottom).EndInit();
