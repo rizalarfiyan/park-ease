@@ -10,8 +10,8 @@ namespace ParkEase.View
         private HistoryController _controller;
         private VehicleTypeController _vehicleTypeController;
         private LocationController _locationController;
-        private VehicleType[] _vehicleType;
-        private Location[] _location;
+        private VehicleType[] _vehicleType = {};
+        private Location[] _location = {};
 
         public FormEntryHistory()
         {
