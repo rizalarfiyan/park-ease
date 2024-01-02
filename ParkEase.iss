@@ -36,6 +36,7 @@ Source: {#HasilCompile}\System.Reactive.dll; DestDir: {app}; Flags: ignoreversio
 Source: {#HasilCompile}\RestSharp.dll; DestDir: {app}; Flags: ignoreversion
 Source: {#HasilCompile}\ParkEase.dll; DestDir: {app}; Flags: ignoreversion
 Source: {#HasilCompile}\Guna.UI2.dll; DestDir: {app}; Flags: ignoreversion
+Source: {#HasilCompile}\Guna.Charts.WinForms.dll; DestDir: {app}; Flags: ignoreversion
 Source: {#HasilCompile}\ParkEase.runtimeconfig.json; DestDir: {app}; Flags: ignoreversion
 Source: {#HasilCompile}\ParkEase.pdb; DestDir: {app}; Flags: ignoreversion
 Source: {#HasilCompile}\ParkEase.deps.json; DestDir: {app}; Flags: ignoreversion
@@ -89,7 +90,7 @@ begin
   LogoImage.Top := ScaleY(80);
   LogoImage.Width := WelcomePage.SurfaceWidth;
   LogoImage.Height := ScaleY(80);
-  LogoImage.Bitmap.LoadFromFile(ExpandConstant('C:\22.11.5209\park-ease\logo-park-ease-oranye.bmp'));
+  LogoImage.Bitmap.LoadFromFile(ExpandConstant('D:\kuliah\semester_3\pemrograman_lanjut\ParkEase\logo-park-ease-oranye.bmp'));
 
   // Add additional description text
   Label_3 := TNewStaticText.Create(WelcomePage);
