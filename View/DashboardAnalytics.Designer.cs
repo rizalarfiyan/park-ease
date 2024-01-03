@@ -280,7 +280,7 @@
             // cardAvailableSpace
             // 
             cardAvailableSpace.CardDescription = "";
-            cardAvailableSpace.CardIcon = (Image)resources.GetObject("cardAvailableSpace.CardIcon");
+            cardAvailableSpace.CardIcon = Properties.Resources.icon_available_card;
             cardAvailableSpace.CardTitle = "Available Space";
             cardAvailableSpace.CardValue = "-";
             cardAvailableSpace.Dock = DockStyle.Fill;
@@ -292,7 +292,7 @@
             // cardExitGateway
             // 
             cardExitGateway.CardDescription = "";
-            cardExitGateway.CardIcon = (Image)resources.GetObject("cardExitGateway.CardIcon");
+            cardExitGateway.CardIcon = Properties.Resources.icon_exit_card;
             cardExitGateway.CardTitle = "Exit Gateway";
             cardExitGateway.CardValue = "-";
             cardExitGateway.Dock = DockStyle.Fill;
@@ -304,7 +304,7 @@
             // cardFineReport
             // 
             cardFineReport.CardDescription = "";
-            cardFineReport.CardIcon = (Image)resources.GetObject("cardFineReport.CardIcon");
+            cardFineReport.CardIcon = Properties.Resources.icon_fine_card;
             cardFineReport.CardTitle = "Fine Report";
             cardFineReport.CardValue = "-";
             cardFineReport.Dock = DockStyle.Fill;
