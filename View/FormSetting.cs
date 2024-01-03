@@ -44,7 +44,7 @@ namespace ParkEase.View
             if (string.IsNullOrEmpty(nextHourDescription)) nextHourDescription = "No note";
             lblNextHourCalculationDescription.Text = nextHourDescription;
 
-            string maxCapacityDescription = _content.NextHourCalculationDescription;
+            string maxCapacityDescription = _content.MaxCapacityDescription;
             if (string.IsNullOrEmpty(maxCapacityDescription)) maxCapacityDescription = "No note";
             lblMaxCapacityDescription.Text = maxCapacityDescription;
         }
