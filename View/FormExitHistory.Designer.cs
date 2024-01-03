@@ -48,7 +48,6 @@
             elipseForm = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
             btnSave = new Guna.UI2.WinForms.Guna2Button();
-            ucTopBar = new UserControls.UC_TopBar();
             tblParent = new TableLayoutPanel();
             tblContent = new TableLayoutPanel();
             lblTitle = new Label();
@@ -67,6 +66,7 @@
             txtChange = new Guna.UI2.WinForms.Guna2TextBox();
             picIllustrator = new Guna.UI2.WinForms.Guna2PictureBox();
             dragControl = new Guna.UI2.WinForms.Guna2DragControl(components);
+            ucTopBar = new UserControls.UC_TopBar();
             tblParent.SuspendLayout();
             tblContent.SuspendLayout();
             tblButtonAction.SuspendLayout();
@@ -94,11 +94,11 @@
             btnCancel.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.FromArgb(124, 62, 11);
             btnCancel.HoverState.FillColor = Color.FromArgb(255, 249, 197);
-            btnCancel.Location = new Point(85, 12);
+            btnCancel.Location = new Point(74, 9);
             btnCancel.Margin = new Padding(0);
             btnCancel.Name = "btnCancel";
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnCancel.Size = new Size(137, 61);
+            btnCancel.Size = new Size(120, 46);
             btnCancel.TabIndex = 5;
             btnCancel.Text = "Cancel";
             btnCancel.TextOffset = new Point(0, -2);
@@ -123,25 +123,16 @@
             btnSave.ForeColor = Color.White;
             btnSave.HoverState.BorderColor = Color.FromArgb(187, 98, 2);
             btnSave.HoverState.FillColor = Color.FromArgb(187, 98, 2);
-            btnSave.Location = new Point(245, 12);
+            btnSave.Location = new Point(214, 9);
             btnSave.Margin = new Padding(0);
             btnSave.Name = "btnSave";
             btnSave.PressedColor = Color.FromArgb(187, 98, 2);
             btnSave.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSave.Size = new Size(137, 61);
+            btnSave.Size = new Size(120, 46);
             btnSave.TabIndex = 4;
             btnSave.Text = "Save";
             btnSave.TextOffset = new Point(0, -2);
             btnSave.Click += btnSave_Click;
-            // 
-            // ucTopBar
-            // 
-            ucTopBar.Dock = DockStyle.Top;
-            ucTopBar.Location = new Point(0, 0);
-            ucTopBar.Margin = new Padding(0);
-            ucTopBar.Name = "ucTopBar";
-            ucTopBar.Size = new Size(1143, 56);
-            ucTopBar.TabIndex = 2;
             // 
             // tblParent
             // 
@@ -151,12 +142,11 @@
             tblParent.Controls.Add(tblContent, 0, 0);
             tblParent.Controls.Add(picIllustrator, 0, 0);
             tblParent.Dock = DockStyle.Fill;
-            tblParent.Location = new Point(0, 56);
-            tblParent.Margin = new Padding(3, 4, 3, 4);
+            tblParent.Location = new Point(0, 0);
             tblParent.Name = "tblParent";
             tblParent.RowCount = 1;
             tblParent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblParent.Size = new Size(1143, 744);
+            tblParent.Size = new Size(1000, 600);
             tblParent.TabIndex = 6;
             // 
             // tblContent
@@ -168,20 +158,19 @@
             tblContent.Controls.Add(tblButtonAction, 0, 6);
             tblContent.Controls.Add(tbnFormContent, 0, 4);
             tblContent.Dock = DockStyle.Fill;
-            tblContent.Location = new Point(574, 4);
-            tblContent.Margin = new Padding(3, 4, 3, 4);
+            tblContent.Location = new Point(503, 3);
             tblContent.Name = "tblContent";
-            tblContent.Padding = new Padding(46, 13, 46, 13);
+            tblContent.Padding = new Padding(40, 10, 40, 10);
             tblContent.RowCount = 8;
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 53F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 373F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 93F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 280F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tblContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 70F));
             tblContent.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblContent.Size = new Size(566, 736);
+            tblContent.Size = new Size(494, 594);
             tblContent.TabIndex = 13;
             // 
             // lblTitle
@@ -191,9 +180,9 @@
             lblTitle.BackColor = Color.Transparent;
             lblTitle.Font = new Font("Ubuntu", 20F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitle.ForeColor = Color.FromArgb(64, 64, 64);
-            lblTitle.Location = new Point(158, 46);
+            lblTitle.Location = new Point(148, 54);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(249, 43);
+            lblTitle.Size = new Size(198, 34);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "EXIT HISTORY";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -205,11 +194,11 @@
             lblDescription.BackColor = Color.FromArgb(255, 254, 234);
             lblDescription.Font = new Font("Ubuntu", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lblDescription.ForeColor = SystemColors.ControlDarkDark;
-            lblDescription.Location = new Point(101, 98);
-            lblDescription.MaximumSize = new Size(389, 0);
-            lblDescription.MinimumSize = new Size(0, 43);
+            lblDescription.Location = new Point(84, 98);
+            lblDescription.MaximumSize = new Size(340, 0);
+            lblDescription.MinimumSize = new Size(0, 32);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(363, 53);
+            lblDescription.Size = new Size(326, 32);
             lblDescription.TabIndex = 0;
             lblDescription.Text = "Choose your vehicle type at Park Ease, according to the type of vehicle you park. Safe and comfortable greetings.";
             lblDescription.TextAlign = ContentAlignment.MiddleCenter;
@@ -218,27 +207,26 @@
             // 
             tblButtonAction.ColumnCount = 5;
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 137F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 23F));
-            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 137F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 120F));
             tblButtonAction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tblButtonAction.Controls.Add(btnCancel, 1, 0);
             tblButtonAction.Controls.Add(btnSave, 3, 0);
             tblButtonAction.Dock = DockStyle.Fill;
-            tblButtonAction.Location = new Point(49, 608);
-            tblButtonAction.Margin = new Padding(3, 4, 3, 4);
+            tblButtonAction.Location = new Point(43, 477);
             tblButtonAction.Name = "tblButtonAction";
             tblButtonAction.RowCount = 1;
             tblButtonAction.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblButtonAction.Size = new Size(468, 85);
+            tblButtonAction.Size = new Size(408, 64);
             tblButtonAction.TabIndex = 9;
             // 
             // tbnFormContent
             // 
             tbnFormContent.ColumnCount = 4;
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 160F));
-            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 309F));
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 140F));
+            tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 270F));
             tbnFormContent.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tbnFormContent.Controls.Add(lblVehicleNumber, 1, 0);
             tbnFormContent.Controls.Add(txtVehicleNumber, 2, 0);
@@ -251,18 +239,18 @@
             tbnFormContent.Controls.Add(txtPay, 2, 3);
             tbnFormContent.Controls.Add(txtChange, 2, 4);
             tbnFormContent.Dock = DockStyle.Fill;
-            tbnFormContent.Location = new Point(46, 191);
+            tbnFormContent.Location = new Point(40, 164);
             tbnFormContent.Margin = new Padding(0);
             tbnFormContent.Name = "tbnFormContent";
             tbnFormContent.RowCount = 5;
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
-            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 27F));
-            tbnFormContent.Size = new Size(474, 373);
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tbnFormContent.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tbnFormContent.Size = new Size(414, 280);
             tbnFormContent.TabIndex = 10;
             // 
             // lblVehicleNumber
@@ -272,9 +260,9 @@
             lblVehicleNumber.BackColor = Color.Transparent;
             lblVehicleNumber.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblVehicleNumber.ForeColor = Color.FromArgb(187, 98, 2);
-            lblVehicleNumber.Location = new Point(5, 11);
+            lblVehicleNumber.Location = new Point(5, 17);
             lblVehicleNumber.Name = "lblVehicleNumber";
-            lblVehicleNumber.Size = new Size(88, 52);
+            lblVehicleNumber.Size = new Size(126, 21);
             lblVehicleNumber.TabIndex = 7;
             lblVehicleNumber.Text = "Vehicle Number";
             lblVehicleNumber.TextAlign = ContentAlignment.MiddleLeft;
@@ -301,7 +289,7 @@
             txtVehicleNumber.HoverState.BorderColor = Color.Transparent;
             txtVehicleNumber.IconLeftOffset = new Point(10, 0);
             txtVehicleNumber.IconRightOffset = new Point(10, 0);
-            txtVehicleNumber.Location = new Point(167, 7);
+            txtVehicleNumber.Location = new Point(146, 5);
             txtVehicleNumber.Margin = new Padding(0);
             txtVehicleNumber.Name = "txtVehicleNumber";
             txtVehicleNumber.PasswordChar = '\0';
@@ -309,7 +297,7 @@
             txtVehicleNumber.PlaceholderText = "";
             txtVehicleNumber.SelectedText = "";
             txtVehicleNumber.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtVehicleNumber.Size = new Size(298, 61);
+            txtVehicleNumber.Size = new Size(261, 46);
             txtVehicleNumber.TabIndex = 1;
             txtVehicleNumber.TextOffset = new Point(10, -2);
             // 
@@ -320,9 +308,9 @@
             lblLocation.BackColor = Color.Transparent;
             lblLocation.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblLocation.ForeColor = Color.FromArgb(187, 98, 2);
-            lblLocation.Location = new Point(5, 99);
+            lblLocation.Location = new Point(5, 73);
             lblLocation.Name = "lblLocation";
-            lblLocation.Size = new Size(94, 26);
+            lblLocation.Size = new Size(76, 21);
             lblLocation.TabIndex = 7;
             lblLocation.Text = "Location";
             lblLocation.TextAlign = ContentAlignment.MiddleLeft;
@@ -344,11 +332,11 @@
             cmbLocation.Font = new Font("Ubuntu", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point);
             cmbLocation.ForeColor = Color.FromArgb(187, 98, 2);
             cmbLocation.ItemHeight = 40;
-            cmbLocation.Location = new Point(167, 89);
+            cmbLocation.Location = new Point(146, 61);
             cmbLocation.Margin = new Padding(0);
             cmbLocation.Name = "cmbLocation";
             cmbLocation.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cmbLocation.Size = new Size(298, 46);
+            cmbLocation.Size = new Size(261, 46);
             cmbLocation.TabIndex = 2;
             cmbLocation.TextOffset = new Point(10, -2);
             // 
@@ -359,9 +347,9 @@
             lblPrice.BackColor = Color.Transparent;
             lblPrice.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblPrice.ForeColor = Color.FromArgb(187, 98, 2);
-            lblPrice.Location = new Point(5, 174);
+            lblPrice.Location = new Point(5, 129);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(60, 26);
+            lblPrice.Size = new Size(47, 21);
             lblPrice.TabIndex = 7;
             lblPrice.Text = "Price";
             lblPrice.TextAlign = ContentAlignment.MiddleLeft;
@@ -388,7 +376,7 @@
             txtPrice.HoverState.BorderColor = Color.Transparent;
             txtPrice.IconLeftOffset = new Point(10, 0);
             txtPrice.IconRightOffset = new Point(10, 0);
-            txtPrice.Location = new Point(167, 157);
+            txtPrice.Location = new Point(146, 117);
             txtPrice.Margin = new Padding(0);
             txtPrice.Name = "txtPrice";
             txtPrice.PasswordChar = '\0';
@@ -396,7 +384,7 @@
             txtPrice.PlaceholderText = "";
             txtPrice.SelectedText = "";
             txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtPrice.Size = new Size(298, 61);
+            txtPrice.Size = new Size(261, 46);
             txtPrice.TabIndex = 3;
             txtPrice.TextOffset = new Point(10, -2);
             // 
@@ -407,9 +395,9 @@
             lblPay.BackColor = Color.Transparent;
             lblPay.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblPay.ForeColor = Color.FromArgb(187, 98, 2);
-            lblPay.Location = new Point(5, 249);
+            lblPay.Location = new Point(5, 185);
             lblPay.Name = "lblPay";
-            lblPay.Size = new Size(47, 26);
+            lblPay.Size = new Size(38, 21);
             lblPay.TabIndex = 7;
             lblPay.Text = "Pay";
             lblPay.TextAlign = ContentAlignment.MiddleLeft;
@@ -421,9 +409,9 @@
             lblChange.BackColor = Color.Transparent;
             lblChange.Font = new Font("Ubuntu", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblChange.ForeColor = Color.FromArgb(187, 98, 2);
-            lblChange.Location = new Point(5, 324);
+            lblChange.Location = new Point(5, 241);
             lblChange.Name = "lblChange";
-            lblChange.Size = new Size(84, 26);
+            lblChange.Size = new Size(66, 21);
             lblChange.TabIndex = 7;
             lblChange.Text = "Change";
             lblChange.TextAlign = ContentAlignment.MiddleLeft;
@@ -449,7 +437,7 @@
             txtPay.HoverState.BorderColor = Color.Transparent;
             txtPay.IconLeftOffset = new Point(10, 0);
             txtPay.IconRightOffset = new Point(10, 0);
-            txtPay.Location = new Point(167, 232);
+            txtPay.Location = new Point(146, 173);
             txtPay.Margin = new Padding(0);
             txtPay.Name = "txtPay";
             txtPay.PasswordChar = '\0';
@@ -457,7 +445,7 @@
             txtPay.PlaceholderText = "";
             txtPay.SelectedText = "";
             txtPay.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtPay.Size = new Size(298, 61);
+            txtPay.Size = new Size(261, 46);
             txtPay.TabIndex = 4;
             txtPay.TextOffset = new Point(10, -2);
             txtPay.TextChanged += onPayChange;
@@ -484,7 +472,7 @@
             txtChange.HoverState.BorderColor = Color.Transparent;
             txtChange.IconLeftOffset = new Point(10, 0);
             txtChange.IconRightOffset = new Point(10, 0);
-            txtChange.Location = new Point(167, 307);
+            txtChange.Location = new Point(146, 229);
             txtChange.Margin = new Padding(0);
             txtChange.Name = "txtChange";
             txtChange.PasswordChar = '\0';
@@ -492,7 +480,7 @@
             txtChange.PlaceholderText = "";
             txtChange.SelectedText = "";
             txtChange.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtChange.Size = new Size(298, 61);
+            txtChange.Size = new Size(261, 46);
             txtChange.TabIndex = 5;
             txtChange.TextOffset = new Point(10, -2);
             // 
@@ -503,11 +491,12 @@
             picIllustrator.Dock = DockStyle.Fill;
             picIllustrator.Image = Properties.Resources.picture_exit1;
             picIllustrator.ImageRotate = 0F;
-            picIllustrator.Location = new Point(3, 3);
+            picIllustrator.Location = new Point(3, 2);
+            picIllustrator.Margin = new Padding(3, 2, 3, 2);
             picIllustrator.Name = "picIllustrator";
-            picIllustrator.Padding = new Padding(34, 40, 34, 40);
+            picIllustrator.Padding = new Padding(30);
             picIllustrator.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            picIllustrator.Size = new Size(565, 738);
+            picIllustrator.Size = new Size(494, 596);
             picIllustrator.SizeMode = PictureBoxSizeMode.StretchImage;
             picIllustrator.TabIndex = 3;
             picIllustrator.TabStop = false;
@@ -519,15 +508,25 @@
             dragControl.TargetControl = tblContent;
             dragControl.UseTransparentDrag = true;
             // 
+            // ucTopBar
+            // 
+            ucTopBar.Dock = DockStyle.Top;
+            ucTopBar.Location = new Point(0, 0);
+            ucTopBar.Margin = new Padding(3, 2, 3, 2);
+            ucTopBar.Name = "ucTopBar";
+            ucTopBar.Size = new Size(1000, 34);
+            ucTopBar.TabIndex = 11;
+            // 
             // FormExitHistory
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 254, 234);
-            ClientSize = new Size(1143, 800);
-            Controls.Add(tblParent);
+            ClientSize = new Size(1000, 600);
             Controls.Add(ucTopBar);
+            Controls.Add(tblParent);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormExitHistory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Create Entry History";
@@ -543,7 +542,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse elipseForm;
-        private UserControls.UC_TopBar ucTopBar;
         private TableLayoutPanel tblParent;
         private TableLayoutPanel tblContent;
         private Label lblTitle;
@@ -564,5 +562,6 @@
         private Label lblChange;
         private Guna.UI2.WinForms.Guna2TextBox txtPay;
         private Guna.UI2.WinForms.Guna2TextBox txtChange;
+        private UserControls.UC_TopBar ucTopBar;
     }
 }

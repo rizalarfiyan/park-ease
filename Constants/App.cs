@@ -18,7 +18,9 @@
 
         public const int DEFAULT_STATUS_IDX = 0;
 
-        public static readonly String[] LIST_TIME_FREQUENCY = { "today", "week", "month", "quarter", "year" };
+        public static readonly String[] LIST_TIME_FREQUENCY = { "Today", "Week", "Month", "Half", "Year" };
+
+        public static readonly String[] LIST_TIME_FREQUENCY_VALUE = { "today", "week", "month", "quarter", "year" };
 
         public const int DEFAULT_TIME_FREQUENCY_IDX = 0;
     }

@@ -68,9 +68,9 @@ namespace ParkEase.View
         private void UpdateCard()
         {
             cardTotalRevenue.CardValue = Format.FormatCurrencyIDR(_content.RevenueTotal);
-            cardTotalRevenue.CardDescription = $"from {_content.VehicleTotal} vehicle";
-            cardAvailableSpace.CardValue = _content.CurrentVehicle.ToString();
-            cardAvailableSpace.CardDescription = $"with availabe space {_content.AvailableSpace} vehicle";
+            cardTotalRevenue.CardDescription = $"from {_content.ExitTotal + _content.FineTotal} vehicle";
+            cardAvailableSpace.CardValue = _content.AvailableSpace.ToString();
+            cardAvailableSpace.CardDescription = $"from {_content.CurrentVehicle} vehicle";
             cardExitGateway.CardValue = Format.FormatCurrencyIDR(_content.ExitRevenue);
             cardExitGateway.CardDescription = $"from {_content.ExitTotal} vehicle";
             cardFineReport.CardValue = Format.FormatCurrencyIDR(_content.FineRevenue);
@@ -79,7 +79,7 @@ namespace ParkEase.View
 
         private void onTimeFramChange(object sender, EventArgs e)
         {
-            _timeFrequency = cmbTimeFrequency.Text;
+            _timeFrequency = App.LIST_TIME_FREQUENCY_VALUE[cmbTimeFrequency.SelectedIndex];
             UpdateData();
         }
     }
