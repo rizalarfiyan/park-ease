@@ -13,10 +13,18 @@ namespace ParkEase.Model.Repository
             _api = new Api().Get();
         }
 
-        public BaseResponse<BaseResponsePagination<History>>? GetAllHistory(BaseRequestPagination param)
+        public BaseResponse<BaseResponsePagination<History>>? GetAllHistory(BaseRequestPagination<HistoryFilterRequest> param)
         {
             var req = new RestRequest("/history", Method.Get);
             param.Build(req);
+            if (param.Additional.VehicleType != null)
+            {
+                req.AddParameter("vehicle_type", param.Additional.VehicleType);
+            }
+            if (param.Additional.Location != null)
+            {
+                req.AddParameter("location", param.Additional.Location);
+            }
             var res = _api.Execute<BaseResponse<BaseResponsePagination<History>>?>(req);
             return res.Data;
         }
