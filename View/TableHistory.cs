@@ -9,12 +9,18 @@ namespace ParkEase.View
     public partial class TableHistory : Form
     {
         protected HistoryController _controller;
+        protected LocationController _locationController;
+        protected VehicleTypeController _vehicleTypeController;
         protected History[]? _content;
+        protected Location[]? _locations;
+        protected VehicleType[]? _vehicleTypes;
         protected int _page = 1;
         protected int _limit = App.DEFAULT_PAGINATION_LIMIT;
         protected string? _search;
         protected string? _order;
         protected string? _orderBy;
+        protected string? _vehicleType;
+        protected string? _location;
         protected bool _hasNext = false;
         private DataGridViewColumn? lastColumn;
         Subject<string> _searchSubject;
@@ -23,10 +29,74 @@ namespace ParkEase.View
         {
             InitializeComponent();
             _controller = new HistoryController();
+            _locationController = new LocationController();
+            _vehicleTypeController = new VehicleTypeController();
             _searchSubject = new Subject<string>();
+            InitializeCombobox();
             LoadData();
+            InitializeLocation();
+            InitializeVehicleType();
             InitDebounce();
         }
+
+        private void InitializeCombobox()
+        {
+            cmbLocation.Items.Add("Location");
+            cmbVehicleType.Items.Add("Vehicle Type");
+            cmbLocation.SelectedIndex = 0;
+            cmbVehicleType.SelectedIndex = 0;
+        }
+
+        private void InitializeLocation()
+        {
+            var param = new BaseRequestPagination<LocationFilterRequest>()
+            {
+                Limit = App.DEFAULT_MAX_PAGINATION_LIMIT,
+                Page = 1,
+            };
+
+            try
+            {
+                var data = _locationController.GetAllLocation(param);
+                var content = data?.Data?.Content;
+                if (content != null) _locations = content;
+                if (_locations == null) return;
+                foreach (var location in _locations)
+                {
+                    cmbLocation.Items.Add(location.Name);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void InitializeVehicleType()
+        {
+            var param = new BaseRequestPagination()
+            {
+                Limit = App.DEFAULT_MAX_PAGINATION_LIMIT,
+                Page = 1
+            };
+
+            try
+            {
+                var data = _vehicleTypeController.GetAllVehicleType(param);
+                var content = data?.Data?.Content;
+                if (content != null) _vehicleTypes = content;
+                if (_vehicleTypes == null) return;
+                foreach (var vehicleType in _vehicleTypes)
+                {
+                    cmbVehicleType.Items.Add(vehicleType.Name);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
         public void InitDebounce()
         {
             _searchSubject
@@ -37,13 +107,19 @@ namespace ParkEase.View
 
         protected void LoadData()
         {
-            var param = new BaseRequestPagination()
+            System.Diagnostics.Debug.Print("run load data");
+            var param = new BaseRequestPagination<HistoryFilterRequest>()
             {
                 Limit = _limit,
                 Order = _order,
                 OrderBy = _orderBy,
                 Page = _page,
                 Search = _search,
+                Additional = new HistoryFilterRequest()
+                {
+                    Location = _location,
+                    VehicleType = _vehicleType,
+                }
             };
 
             try
@@ -229,6 +305,38 @@ namespace ParkEase.View
                 btnFine.Enabled = true;
                 return;
             }
+        }
+
+        private void onChangeVehicleType(object sender, EventArgs e)
+        {
+            if (_vehicleTypes == null) return;
+            string? currentValue = _vehicleType;
+            if (cmbVehicleType.SelectedIndex <= 0)
+            {
+                _vehicleType = null;
+            }
+            else
+            {
+                _vehicleType = _vehicleTypes[cmbVehicleType.SelectedIndex - 1].Code;
+            }
+            if (currentValue == _vehicleType) return;
+            LoadData();
+        }
+
+        private void onChangeLocation(object sender, EventArgs e)
+        {
+            if (_locations == null) return;
+            string? currentValue = _location;
+            if (cmbLocation.SelectedIndex <= 0)
+            {
+                _location = null;
+            }
+            else
+            {
+                _location = _locations[cmbLocation.SelectedIndex - 1].Code;
+            }
+            if (currentValue == _location) return;
+            LoadData();
         }
     }
 }

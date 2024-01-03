@@ -23,6 +23,15 @@ namespace ParkEase.Model.Entity
         public required string VehicleTypeCode { get; set; }
     }
 
+    public class HistoryFilterRequest
+    {
+        [JsonPropertyName("location")]
+        public string? Location { get; set; }
+
+        [JsonPropertyName("vehicle_type")]
+        public string? VehicleType { get; set; }
+    }
+
     public class EntryHistoryRequest
     {
         [JsonPropertyName("location_code")]

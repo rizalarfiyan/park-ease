@@ -13,7 +13,7 @@ namespace ParkEase.Controller
             _repo = new HistoryRepository();
         }
 
-        public BaseResponse<BaseResponsePagination<History>>? GetAllHistory(BaseRequestPagination param)
+        public BaseResponse<BaseResponsePagination<History>>? GetAllHistory(BaseRequestPagination<HistoryFilterRequest> param)
         {
             var res = _repo.GetAllHistory(param);
             if (res == null)

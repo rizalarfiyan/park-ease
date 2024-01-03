@@ -395,7 +395,7 @@
             pnlContentWrapper.Name = "pnlContentWrapper";
             pnlContentWrapper.Padding = new Padding(0, 12, 12, 12);
             pnlContentWrapper.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            pnlContentWrapper.Size = new Size(812, 676);
+            pnlContentWrapper.Size = new Size(964, 676);
             pnlContentWrapper.TabIndex = 4;
             // 
             // pnlDeepContent
@@ -407,7 +407,7 @@
             pnlDeepContent.Location = new Point(0, 12);
             pnlDeepContent.Name = "pnlDeepContent";
             pnlDeepContent.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            pnlDeepContent.Size = new Size(800, 652);
+            pnlDeepContent.Size = new Size(952, 652);
             pnlDeepContent.TabIndex = 0;
             // 
             // pnlContent
@@ -419,7 +419,7 @@
             pnlContent.Name = "pnlContent";
             pnlContent.Padding = new Padding(20, 0, 20, 20);
             pnlContent.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            pnlContent.Size = new Size(800, 599);
+            pnlContent.Size = new Size(952, 599);
             pnlContent.TabIndex = 1;
             // 
             // ucHeader
@@ -430,7 +430,7 @@
             ucHeader.Location = new Point(0, 0);
             ucHeader.Margin = new Padding(3, 2, 3, 2);
             ucHeader.Name = "ucHeader";
-            ucHeader.Size = new Size(800, 53);
+            ucHeader.Size = new Size(952, 53);
             ucHeader.TabIndex = 0;
             // 
             // guna2Elipse2
@@ -444,7 +444,7 @@
             ucTopBar.Location = new Point(0, 0);
             ucTopBar.Margin = new Padding(3, 2, 3, 2);
             ucTopBar.Name = "ucTopBar";
-            ucTopBar.Size = new Size(1072, 32);
+            ucTopBar.Size = new Size(1224, 32);
             ucTopBar.TabIndex = 1;
             // 
             // dragControl
@@ -459,7 +459,7 @@
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(226, 139, 0);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(1072, 708);
+            ClientSize = new Size(1224, 708);
             Controls.Add(pnlContentWrapper);
             Controls.Add(pnlSidebar);
             Controls.Add(ucTopBar);
